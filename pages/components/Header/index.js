@@ -75,7 +75,7 @@ export default function Header() {
           <Link className={styles.inside} href="/projects">
             Projects
           </Link>
-          <button id="profileButton" className={styles.profileButton} onClick={() => handleButtonClick()}>
+          <button id="menuButton" className={styles.menuButton} onClick={() => handleButtonClick()}>
               <i className={["fa", "fa-bars", styles.FABars].join(" ")} />
           </button>
         </div>
