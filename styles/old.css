@@ -1,0 +1,23 @@
+@media (prefers-color-scheme: light) {
+    :root {
+      --primary: grey; /* Main text */
+      --secondary-one: white; /* Background */
+      --accent-one: darkslategrey; /* Dark color */
+      --accent-two: darkslateblue; /* Dark color */
+      --contrast-one: black; /* Bright color */
+      --contrast-two: slateblue; /* Bright color */
+      --contrast-three: cornflowerblue; /* Bright color */
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: grey; /* Main text */
+      --secondary-one: black; /* Background */
+      --accent-one: darkslategrey; /* Dark color */
+      --accent-two: darkslateblue; /* Dark color */
+      --contrast-one: white; /* Bright color */
+      --contrast-two: slateblue; /* Bright color */
+      --contrast-three: cornflowerblue; /* Bright color */
+    }
+  }

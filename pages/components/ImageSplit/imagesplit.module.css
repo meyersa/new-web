@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex; 
+    flex-direction: row;
+    gap: 1rem; 
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.childrenWrapper {
+    width: 100%;
+
+}
+
+.childrenWrapper img {
+    background-color: white;
+    
+}

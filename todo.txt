@@ -1,0 +1,12 @@
+1. make desktop format into a 3 panel display 
+- for meyersa home this would just be so there is a runner track for the soc links 
+- for other sites this could show recent posts on home 
+
+2. make social links float to row in the middle after title page on mobile home 
+
+3. make it so the other homes are folders 
+- writeups
+- photography
+- projects 
+
+4. get rid of dynamic thing for home info, this should only be for posts

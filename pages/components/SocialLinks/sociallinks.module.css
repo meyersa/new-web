@@ -1,0 +1,43 @@
+.insideWrapper {
+    position: fixed;
+    left: 0;
+    top: 50%; 
+    width: 2.5dvw;
+    display: flex; 
+    flex-direction: column;
+    backdrop-filter: contrast(0.8);
+    padding: 1rem; 
+    border-radius: 1rem;
+    margin: 1rem;
+
+}
+
+.insideWrapper > a > img {
+    height: 50%;
+
+}
+
+@media (max-width: 740px) {
+    .insideWrapper {
+        flex-direction: row;
+        position: inherit;
+        backdrop-filter: none;
+        margin: 0 auto;
+        /* margin-top: 4rem; */
+        height: 5dvh;
+        width: 60dvw;
+        justify-content: center;
+        gap: 1rem; 
+
+    }
+    .insideWrapper > a > img {
+        height: 7.5dvh;
+        width: auto;
+
+    }
+    .insideWrapper a {
+        height: fit-content;
+        max-height: 100%;
+        
+    }
+}
