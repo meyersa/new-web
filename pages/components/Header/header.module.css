@@ -1,50 +1,33 @@
 .headerbar {
   list-style-type: none;
-  margin: 0;
   display: flex;
   height: 6em;
   align-items: center;
   justify-content: space-between;
-  background-position: center;
-  background-size: contain;
-  z-index: 10;
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: calc(100dvw - 2 * 2.5dvw);
-  padding: 0 2.5dvw;
+  width: calc(100dvw - 2 * 2.5dvw - 2 * 1rem);
+  padding: 0 calc(2.5dvw + 1rem);
+  backdrop-filter: contrast(0.8);
 
-}
-
-.inside {
-  color: inherit;
-  
 }
 
 .leftheader > a {
   font-size: 2rem;
-  color: var(--accent-two);
+  color: var(--contrast-two);
   padding: 0;
   border-radius: 0.5rem;
   text-decoration: inherit;
   font-weight: bolder;
+
 }
 
 .rightheader {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
+  gap: 1rem; 
 
-.rightheader > a {
-  padding: 0;
-  text-decoration-color: var(--contrast-one);
-  
-}
-
-.inside {
-  height: 100%;
-  padding: 0 1em 0 1em;
 }
 
 .profileButton {
@@ -54,10 +37,7 @@
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: none;
-}
 
-.headerImage {
-  border-radius: 50%;
 }
 
 .mobileMenu {
@@ -70,7 +50,7 @@
   transform: translateY(-100%);
   height: calc(100dvh - 6em);
   position: absolute;
-  justify-content: flex-start;
+
 }
 
 .headerOutside {
@@ -85,15 +65,19 @@
   gap: 2rem;
   flex-direction: column;
   padding: 1rem;
+  
 }
 
 .profileButton {
   display: none;
+  background: transparent; 
+
 }
 
 .FABars {
   color: var(--contrast-two);
   font-size: 2.5rem !important;
+  
 }
 
 .menuitem {
@@ -101,39 +85,25 @@
   margin: auto;
   font-size: 1.5rem;
   text-align: center;
-  color: var(--contrast-one);
   border: none;
-  background: var(--blue);
   border-radius: 2em;
   padding: 0.5rem;
   text-decoration: underline;
   text-decoration-color: var(--contrast-two);
+  background: transparent; 
+
 }
 
-.menuitemsmall {
-  padding: 1.5em;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.headerText {
-  font-size: 1.2rem;
-}
 
 @media (max-width: 740px) {
-  .burgerWrapper {
-    display: block;
-  }
-
-  .inside {
-    padding: 0;
-  }
-
   .rightheader .inside,
   .headerText {
     display: none;
+
   }
+
   .profileButton {
     display: inline;
+
   }
 }
