@@ -36,7 +36,7 @@ export default function SkillLevel({ amount, threshold }) {
         <div className={styles.progressBarContainer}>
             <div 
                 className={styles.progressBar} 
-                style={{ width: `${fillAmount}%`, backgroundColor: 'var(--accent-one)' }}
+                style={{ width: `${fillAmount}%`}}
             />
         </div>
     );

@@ -2,10 +2,10 @@
 :root {
   color-scheme: light dark;
   
-  --white: #F4F1E3;
+  --white: #f5f4f3;
   --black: #111927;
-  --dark: #59408c;
-  --bright: #B0C9FF;  
+  --dark: #283D4F;
+  --bright: #0071CE;  
 
 }
 
@@ -75,15 +75,20 @@ img {
 
 h1 {
   color: var(--contrast-one);
+  filter: brightness(1.25);
 
 }
 
 h2 {
   color: var(--contrast-two);
+  filter: brightness(1.5);
+
 }
 
 h3 {
   color: var(--contrast-three);
+  filter: brightness(1.75);
+
 }
 
 img {

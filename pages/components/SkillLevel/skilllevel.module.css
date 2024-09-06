@@ -10,6 +10,7 @@
 
 .progressBar {
     height: 100%;
-    background-color: var(--accent-one);
-    
+    background-color: var(--contrast-one);
+    filter: brightness(1.75);
+
 }
