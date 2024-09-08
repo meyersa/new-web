@@ -26,14 +26,14 @@ export default function Home() {
             I'm either experimenting in my lab learning something new, out exploring the world with my camera, or
             playing video games (if I have time)
           </p>
-          <Image src="/images/selfie.jpeg" width="724" height="1086" alt="Picture of me in the reflection of a window"/>
+          <Image src="/images/home/selfie.jpeg" width="724" height="1086" alt="Picture of me in the reflection of a window"/>
         </TitlePage>
         <ColorBox>
           <div>
             <h1>Education</h1>
 
             <StyledList>
-              <ImageSplit image="/images/cmu.png">
+              <ImageSplit image="/images/home/cmu.png" alt="CMU Logo">
                 <h3>Undergrad - Central Michigan University - May 2024</h3>
                 <p>Double major in Information Technology and Computer Science with minor in Math</p>
                 <p>GPA 3.98</p>
@@ -55,15 +55,15 @@ export default function Home() {
           <div>
             <h1>Experience</h1>
             <StyledList>
-              <ImageSplit image="/images/comerica.jpg" alt="Comerica bank logo">
+              <ImageSplit image="/images/home/comerica.jpg" alt="Comerica bank logo">
                 <h3>Site Reliability Engineer Intern - Comerica Bank - Summer/Fall 2023 and 2024</h3>
                 <p>Standardizing monitoring, transitioning to deployment as code and further automation</p>
               </ImageSplit>
-              <ImageSplit image="/images/cmu.png" alt="Central Michigan University logo">
+              <ImageSplit image="/images/home/cmu.png" alt="Central Michigan University logo">
                 <h3>Student Technician - Central Michigan - October 2020 to Present</h3>
                 <p>Supporting faculty and staff on day to day operations as well as helping maintain infrastructure</p>
               </ImageSplit>
-              <ImageSplit image="/images/seds.jpg" alt="SEDS USA Logo">
+              <ImageSplit image="/images/home/seds.jpg" alt="SEDS USA Logo">
                 <h3>Vice President - SEDS RSO</h3>
                 <p>
                   Creating and leading a student organization to coordinate students across various fields to use
@@ -84,7 +84,7 @@ export default function Home() {
           <div>
             <h1>Programming</h1>
             <StyledList>
-              <ImageSplit image="/images/python.png" alt="Python logo">
+              <ImageSplit image="/images/home/python.png" alt="Python logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>Python</h3>
@@ -96,7 +96,7 @@ export default function Home() {
                   <SkillLevel amount={9}></SkillLevel>
                 </FlexSpaceBetween>
               </ImageSplit>
-              <ImageSplit image="/images/js.png" alt="JavaScript logo">
+              <ImageSplit image="/images/home/js.png" alt="JavaScript logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>JS/TS</h3>
@@ -105,7 +105,7 @@ export default function Home() {
                   <SkillLevel amount={8}></SkillLevel>
                 </FlexSpaceBetween>
               </ImageSplit>
-              <ImageSplit image="/images/react.png" alt="React Logo">
+              <ImageSplit image="/images/home/react.png" alt="React Logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>React</h3>
@@ -117,7 +117,7 @@ export default function Home() {
                   <SkillLevel amount={8}></SkillLevel>
                 </FlexSpaceBetween>
               </ImageSplit>
-              <ImageSplit image="/images/c.png" alt="C Found. Logo">
+              <ImageSplit image="/images/home/c.png" alt="C Found. Logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>C</h3>
@@ -138,7 +138,7 @@ export default function Home() {
           <div>
             <h1>Technology</h1>
             <StyledList>
-              <ImageSplit image="/images/docker.webp" alt="Docker logo">
+              <ImageSplit image="/images/home/docker.webp" alt="Docker logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>Docker</h3>
@@ -147,7 +147,7 @@ export default function Home() {
                   <SkillLevel amount={9}></SkillLevel>
                 </FlexSpaceBetween>
               </ImageSplit>
-              <ImageSplit image="/images/dynatrace.png" alt="Dynatrace logo">
+              <ImageSplit image="/images/home/dynatrace.png" alt="Dynatrace logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>Dynatrace</h3>
@@ -156,7 +156,7 @@ export default function Home() {
                   <SkillLevel amount={9}></SkillLevel>
                 </FlexSpaceBetween>
               </ImageSplit>
-              <ImageSplit image="/images/debian.png" alt="Debian logo">
+              <ImageSplit image="/images/home/debian.png" alt="Debian logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>Linux (Debian)</h3>
@@ -165,7 +165,7 @@ export default function Home() {
                   <SkillLevel amount={9}></SkillLevel>
                 </FlexSpaceBetween>
               </ImageSplit>
-              <ImageSplit image="/images/ansible.png" alt="Ansible logo">
+              <ImageSplit image="/images/home/ansible.png" alt="Ansible logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>Ansible</h3>
@@ -174,7 +174,7 @@ export default function Home() {
                   <SkillLevel amount={8}></SkillLevel>
                 </FlexSpaceBetween>
               </ImageSplit>
-              <ImageSplit image="/images/adobe.png" alt="Adobe logo">
+              <ImageSplit image="/images/home/adobe.png" alt="Adobe logo">
                 <FlexSpaceBetween>
                   <div>
                     <h3>Adobe LR/PS</h3>

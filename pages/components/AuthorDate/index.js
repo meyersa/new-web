@@ -4,9 +4,11 @@ import Image from "next/image";
 export default function AuthorDate({ author, authorImage, date }) {
   if (author == null) {
     author = "August Meyers";
-    authorImage = "/images/selfie.jpeg";
+    authorImage = "/images/home/selfie.jpeg";
+    
   } else if (authorImage == null) {
-    authorImage = "/images/defaultAuthor.png";
+    authorImage = "/images/components/AuthorDate/defaultAuthor.png";
+
   }
 
   return (

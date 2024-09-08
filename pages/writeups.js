@@ -13,7 +13,7 @@ export default function Writeups({ allPostsData }) {
       <Header />
       <div>
         <TitlePage>
-          <Image src="/images/code.png" height="500" width="500" alt="Code view" />
+          <Image src="/images/writeups/code.png" height="500" width="500" alt="Code view" />
           <h1>Writeups</h1>
         </TitlePage>
           {allPostsData.map(({ id, date, title, exerpt, author, authorImg, image }, index) => (
