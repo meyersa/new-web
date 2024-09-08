@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
+  const [path, setPath] = useState("/")
+
   const router = useRouter() 
   
   // Push /login on desktop and open menu on mobile
@@ -17,6 +19,7 @@ export default function Header() {
       document.body.style.overflow = "hidden";
       setDisplayed(true);
       return;
+
     }
 
     // Hide menu
@@ -43,26 +46,21 @@ export default function Header() {
   /* 
    * Dynamically get home path
    */
-  const splitHomePaths = router.asPath.split('/')
-  var homePath 
+  useEffect(() => {
+    const splitHomePaths = router.asPath.split('/')
 
-  if (splitHomePaths.length < 3) {
-    homePath = '/'
-
-  } else {
-    homePath = `/${splitHomePaths[1]}`
-
-  }
-
-  console.log(homePath) 
-
-
+    if (splitHomePaths.length > 2) {
+      setPath(`/${splitHomePaths[1]}`)
+      
+    }
+  })
+  
   return (
     <div className={styles.headerOutside} id="headerOutside">
       <div className={styles.headerbar}>
         <div className={styles.leftheader}>
-          <Link className={styles.inside} href={homePath}>
-            {homePath}
+          <Link className={styles.inside} href={path}>
+            {path}
           </Link>
         </div>
         <div className={styles.rightheader}>
@@ -82,8 +80,8 @@ export default function Header() {
       </div>
       <div id="mobileMenu" className={styles.mobileMenu}>
         <div className={styles.mobileTop}>
-          <button className={styles.menuitem} onClick={() => handleMobileRedirect("/home")}>
-            Home
+          <button className={styles.menuitem} onClick={() => handleMobileRedirect(path)}>
+            {path}
           </button>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/writeups")}>
             Writeups

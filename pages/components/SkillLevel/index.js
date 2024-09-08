@@ -13,15 +13,15 @@ export default function SkillLevel({ amount, threshold }) {
     }
 
     if (typeof amount !== "number" || typeof threshold !== "number") {
-        throw new Error("Expected both amount and threshold to be numbers");
+        console.error("Expected both amount and threshold to be numbers");
     }
 
     if (amount <= 0 || threshold <= 0) {
-        throw new Error("Amount and threshold should be greater than zero");
+        console.error("Amount and threshold should be greater than zero");
     }
 
     if (amount > threshold) {
-        throw new Error("Amount should be less than or equal to threshold");
+        console.error("Amount should be less than or equal to threshold");
     }
 
     /*

@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function ImageSplit({ image, alt, children }) {
     if (image == null) {
-        throw new Error("Image cannot be null")
+        console.error("Image cannot be null")
 
     }
 
     if (children == null) {
-        throw new Error("Children cannot be null")
+        console.error("Children cannot be null")
 
     }
 
