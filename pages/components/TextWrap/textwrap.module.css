@@ -1,0 +1,23 @@
+.wrapper {
+    width: calc(100% - 2 * 1rem); 
+    max-width: 1000px;
+    padding: 1rem; 
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+.wrapper > div > * {
+    padding: .25rem; 
+
+}
+
+.wrapper img {
+    max-height: 50dvh;
+    margin: 2rem auto; 
+    border-radius: 1rem;
+    display: block;
+    box-shadow: 0 0 0.25rem 0.02rem var(--contrast-one);
+
+}

@@ -7,6 +7,7 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import ColorBox from "../components/ColorBox";
 import AuthorDate from "../components/AuthorDate";
 import FlexSpaceBetween from "../components/FlexSpaceBetween";
+import TextWrap from "../components/TextWrap";
 
 export default function Writeup({ postData }) {
   const router = useRouter();
@@ -16,14 +17,11 @@ export default function Writeup({ postData }) {
       <TitlePage>
         <Image src={postData.image} alt="Cover image" width="500" height="500" priority="True" />
         <h1>{postData.title}</h1>
-        <FlexSpaceBetween>
-          <AuthorDate author={postData.author} authorImage={postData.authorImage} date={postData.date} />
-          <p>{postData.exerpt}</p>
-        </FlexSpaceBetween>
+        <AuthorDate author={postData.author} authorImage={postData.authorImage} date={postData.date} />
       </TitlePage>
-      <ColorBox>
+      <TextWrap>
         <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </ColorBox>
+      </TextWrap>
       <Footer />
     </div>
   );

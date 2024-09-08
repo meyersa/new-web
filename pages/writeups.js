@@ -5,6 +5,7 @@ import Link from "next/link";
 import ColorBox from "./components/ColorBox";
 import Footer from "./components/Footer"
 import Image from "next/image";
+import AuthorDate from "./components/AuthorDate"
 
 export default function Writeups({ allPostsData }) {
   return (
@@ -20,7 +21,6 @@ export default function Writeups({ allPostsData }) {
                 <h1>
                   <Link href={`writeups/${id}`}>{title}</Link>
                 </h1>
-                <br />
                 <p>{date}</p>
                 <Link href={`${id}`}>
                   <Image
