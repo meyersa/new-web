@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./header.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Footer from "../Footer"
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
@@ -93,7 +93,7 @@ export default function Header() {
             Projects
           </button>
         </div>
-        <div className={styles.mobileArrow} />
+        <Footer />
       </div>
     </div>
   );
