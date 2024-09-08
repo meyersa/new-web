@@ -7,7 +7,9 @@
   justify-content: center;
   background-image: linear-gradient(to top, transparent, var(--secondary), transparent),
   linear-gradient(to bottom, transparent, var(--accent-one), transparent);
-
+  box-shadow: 0 0 0.25rem 0.15rem var(--contrast-one);
+  width: calc(100dvw - 2 * 2.5dvw - 2 * 1rem);
+  padding: 0 calc(2.5dvw + 1rem);
 }
 
 .wrapper > img {
@@ -20,13 +22,12 @@
   right: 0;
   object-fit: cover;
   z-index: -1;
-  filter: blur(0.3rem) contrast(0.5) grayscale(1);
+  filter: blur(0.3rem);
 
 }
 
 .wrapper > h1 {
   font-size: 5rem;
-  margin: 1rem;
   padding: 1rem;
   font-weight: bold;
   font-family: "Paytone One", monospace;

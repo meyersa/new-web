@@ -93,10 +93,24 @@ h3 {
 
 img {
   max-width: 100%;
+
 }
 
 a {
   text-decoration-color: var(--contrast-one);
   color: inherit; 
 
+}
+
+p {
+  line-height: 1.15rem; 
+  
+}
+
+blockquote {
+  margin: 1rem;
+  padding: 1rem !important; 
+  backdrop-filter: contrast(0.8);
+  border-radius: 1rem;
+  
 }
