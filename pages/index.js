@@ -9,7 +9,6 @@ import SocialLinks from "./components/SocialLinks";
 import ImageSplit from "./components/ImageSplit";
 import FlexSpaceBetween from "./components/FlexSpaceBetween";
 import SmallBox from "./components/SmallBox";
-
 import Link from "next/link";
 
 export default function Home() {
@@ -19,6 +18,7 @@ export default function Home() {
       <div>
         <TitlePage>
           <h1>August Meyers</h1>
+          <SocialLinks />
           <p>
             Hello! I'm August. I'm currently pursuing a double major in Information Technology and Computer Science with
             a minor in Math at Central Michigan University. While here, I'm working as a Student Technician for the

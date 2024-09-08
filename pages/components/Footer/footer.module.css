@@ -6,7 +6,7 @@
 }
 
 .innerWrapper {
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     display: flex; 
     flex-direction: row;
     justify-content: center;

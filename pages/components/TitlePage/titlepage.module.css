@@ -37,7 +37,8 @@
   background-color: var(--secondary);
   width: fit-content;
   box-shadow: 0 0 0.25rem 0.15rem var(--contrast-one);
-
+  margin: 1rem; 
+  
 }
 
 .wrapper > p {
