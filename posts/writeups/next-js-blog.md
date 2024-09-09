@@ -1,7 +1,7 @@
 --- 
 title: 'Making a NextJS Blog Site' 
 exerpt: 'Creating a spot to post writeups, such as making this website, using NextJS and other technologies'
-image: '/images/writeups/nextjs.png'
+image: '/images/writeups/nextjs.webp'
 --- 
 
 ## Intro/Inspo
