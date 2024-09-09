@@ -1,4 +1,5 @@
 import PostItem from "../RecentPostItem"
+import { formatRelative } from 'date-fns'
 
 export default function RecentPosts({ dir, allPostsData }) {
     /*
@@ -11,6 +12,13 @@ export default function RecentPosts({ dir, allPostsData }) {
 
     }
 
+    function getDate(date) {
+      const raw = formatRelative(date, new Date(), { addSuffix: true })
+
+      return raw.charAt(0).toUpperCase() + raw.slice(1) 
+
+    }
+
     return (
         <div>
         {allPostsData.map(({ id, date, title, exerpt, image }) => (
@@ -19,7 +27,7 @@ export default function RecentPosts({ dir, allPostsData }) {
             key={id} 
             id={id} 
             title={title} 
-            date={date} 
+            date={getDate(date)} 
             exerpt={exerpt} 
             image={image} 
           />
