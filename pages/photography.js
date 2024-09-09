@@ -1,13 +1,11 @@
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
 import Footer from "./components/Footer"
-import Image from "next/image";
 import SmallBox from "./components/SmallBox"
 import ColorBox from "./components/ColorBox"
 import TextWrap from "./components/TextWrap"
 import SpacerDots from "./components/SpacerDots";
 import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
 import RecentPosts from "./components/RecentPosts";
 
 const dir = "photography"

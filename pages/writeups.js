@@ -5,7 +5,6 @@ import Link from "next/link";
 import ColorBox from "./components/ColorBox";
 import Footer from "./components/Footer";
 import Image from "next/image";
-import AuthorDate from "./components/AuthorDate";
 
 export default function Writeups({ allPostsData }) {
   return (
