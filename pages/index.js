@@ -24,10 +24,10 @@ export default function Home() {
         <TextWrap>
           <h1>About me...</h1>
           <p>
-            Hello! I'm August. I'm currently pursuing a double major in Information Technology and Computer Science with
-            a minor in Math at Central Michigan University. While here, I'm working as a Student Technician for the
+            Hello! I&apos;m August. I&apos;m currently pursuing a double major in Information Technology and Computer Science with
+            a minor in Math at Central Michigan University. While here, I&apos;m working as a Student Technician for the
             Office of Information Technology helping support Faculty and Staff with their technology. In my free time
-            I'm either experimenting in my lab learning something new, out exploring the world with my camera, or
+            I&apos;m either experimenting in my lab learning something new, out exploring the world with my camera, or
             playing video games (if I have time)
           </p>
         </TextWrap>
@@ -122,7 +122,7 @@ export default function Home() {
                   <div>
                     <h3>C</h3>
                     <p>
-                      I've worked on a couple projects that utilize Arduino/Pis that have to run lightweight code where
+                      I&apos;ve worked on a couple projects that utilize Arduino/Pis that have to run lightweight code where
                       C comes in
                     </p>
                   </div>

@@ -53,7 +53,7 @@ export default function Header() {
       setPath(`/${splitHomePaths[1]}`)
       
     }
-  })
+  }, [router.asPath])
   
   return (
     <div className={styles.headerOutside} id="headerOutside">

@@ -12,7 +12,7 @@ export default function Projects() {
       <div>
         <TitlePage header="Projects">
           <p>
-            Some of the interesting things I've worked on to progress my knowledge of Computer Science and Information
+            Some of the interesting things I&apos;ve worked on to progress my knowledge of Computer Science and Information
             Technology
           </p>
         </TitlePage>
@@ -37,7 +37,7 @@ export default function Projects() {
           <ColorBox>
             <h1>ShodanETL</h1>
             <p>
-              My first attempt at an ETL pipeline. It uses Shodan.io's APIs to gather information about previous scrapes
+              My first attempt at an ETL pipeline. It uses Shodan.io&apos;s APIs to gather information about previous scrapes
               to build a dashboard on Django to display the information. Information goes through a Kafka topic between
               parts to ensure connectivity between components. You can find the live dashboard{" "}
               <Link href="https://shodanetl.meyersa.com">here</Link> and the source code on Github{" "}

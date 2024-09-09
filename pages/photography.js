@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
 import Footer from "./components/Footer"
+import Image from "next/image";
 import SmallBox from "./components/SmallBox"
 import ColorBox from "./components/ColorBox"
 import TextWrap from "./components/TextWrap"
@@ -26,7 +27,7 @@ export default function Photography({ allPostsData }) {
         <h1>
             Trips, Portraits, Sports, and more..
           </h1>
-          <p>On this page are my favorite collections of photos, mostly of trips I've been on, but also including some sports photography.</p>
+          <p>On this page are my favorite collections of photos, mostly of trips I&apos;ve been on, but also including some sports photography.</p>
           <p>No portraits though..</p>
         </TextWrap>
         <RecentPosts dir={dir} allPostsData={allPostsData} />
@@ -41,7 +42,7 @@ export default function Photography({ allPostsData }) {
           <p>- Normally paired with a Tamron 100-400 or a Sigma 24-105 f4 Art</p>
           <p>- Peak design quick release straps</p>
           <h3>Backup Camera - Canon 6D</h3>
-          <p>For when both a telephoto and a wide angle are needed, this carries whatever's not on the main camera</p>
+          <p>For when both a telephoto and a wide angle are needed, this carries whatever&apos;s not on the main camera</p>
         </ColorBox>
       </div>
       <Footer />
