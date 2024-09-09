@@ -14,10 +14,12 @@
 }
 
 .wrapper img {
-    max-height: 50dvh;
-    margin: 2rem auto; 
-    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 3rem; 
+    margin-bottom: 3rem;
     display: block;
-    box-shadow: 0 0 0.25rem 0.02rem var(--contrast-one);
+    height: auto;
+    width: 100%;
+    box-shadow: 0 0 0.5rem 0.05rem var(--black);
 
 }

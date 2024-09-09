@@ -10,6 +10,8 @@ import ImageSplit from "./components/ImageSplit";
 import FlexSpaceBetween from "./components/FlexSpaceBetween";
 import SmallBox from "./components/SmallBox";
 import Link from "next/link";
+import attentionbuttons from "./components/AttentionButtons";
+import AttentionButtons from "./components/AttentionButtons";
 
 export default function Home() {
   return (
@@ -26,12 +28,12 @@ export default function Home() {
             I'm either experimenting in my lab learning something new, out exploring the world with my camera, or
             playing video games (if I have time)
           </p>
+          <AttentionButtons />
           <Image src="/images/home/selfie.jpeg" width="724" height="1086" alt="Picture of me in the reflection of a window"/>
         </TitlePage>
         <ColorBox>
           <div>
             <h1>Education</h1>
-
             <StyledList>
               <ImageSplit image="/images/home/cmu.png" alt="CMU Logo">
                 <h3>Undergrad - Central Michigan University - May 2024</h3>
