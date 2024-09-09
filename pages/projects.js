@@ -11,9 +11,7 @@ export default function Projects() {
     <div>
       <Header />
       <div>
-        <TitlePage>
-          <Image src="/images/code.png" height="500" width="500" alt="Code view" />
-          <h1>Projects</h1>
+        <TitlePage header="Projects">
           <p>
             Some of the interesting things I've worked on to progress my knowledge of Computer Science and Information
             Technology

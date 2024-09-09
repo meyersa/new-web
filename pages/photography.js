@@ -17,9 +17,7 @@ export default function Photography({ allPostsData }) {
     <div>
       <Header />
       <div>
-        <TitlePage>
-          <Image src="/images/photography/background.jpg" height="500" width="500" alt="Background picture of Georgia" />
-          <h1>Photography</h1>
+        <TitlePage header="Photography" image="/images/photography/background.jpg">
           <p>Showcase of one of my main hobbies - Photography</p>
         </TitlePage>
         <p style={{margin: "0 auto", padding: "1rem", width: "fit-content"}}>

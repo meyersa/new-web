@@ -18,9 +18,7 @@ export default function Home() {
     <div>
       <Header />
       <div>
-        <TitlePage>
-          <h1>August Meyers</h1>
-          <SocialLinks />
+        <TitlePage header={"August Meyers"} image={"/images/home/selfie.jpeg"}>
           <p>
             Hello! I'm August. I'm currently pursuing a double major in Information Technology and Computer Science with
             a minor in Math at Central Michigan University. While here, I'm working as a Student Technician for the
@@ -29,22 +27,20 @@ export default function Home() {
             playing video games (if I have time)
           </p>
           <AttentionButtons />
-          <Image src="/images/home/selfie.jpeg" width="724" height="1086" alt="Picture of me in the reflection of a window"/>
         </TitlePage>
+        <div id="down" />
         <ColorBox>
-          <div>
-            <h1>Education</h1>
-            <StyledList>
-              <ImageSplit image="/images/home/cmu.png" alt="CMU Logo">
-                <h3>Undergrad - Central Michigan University - May 2024</h3>
-                <p>Double major in Information Technology and Computer Science with minor in Math</p>
-                <p>GPA 3.98</p>
-                <h3>Graduate - Central Michigan University - May 2025</h3>
-                <p>Accelerated Masters Degree in Computer Science</p>
-                <p>GPA 3.9</p>
-              </ImageSplit>
-            </StyledList>
-          </div>
+          <h1>Education</h1>
+          <StyledList>
+            <ImageSplit image="/images/home/cmu.png" alt="CMU Logo">
+              <h3>Undergrad - Central Michigan University - May 2024</h3>
+              <p>Double major in Information Technology and Computer Science with minor in Math</p>
+              <p>GPA 3.98</p>
+              <h3>Graduate - Central Michigan University - May 2025</h3>
+              <p>Accelerated Masters Degree in Computer Science</p>
+              <p>GPA 3.9</p>
+            </ImageSplit>
+          </StyledList>
         </ColorBox>
         <SmallBox>
           <p>
@@ -123,7 +119,10 @@ export default function Home() {
                 <FlexSpaceBetween>
                   <div>
                     <h3>C</h3>
-                    <p>I've worked on a couple projects that utilize Arduino/Pis that have to run lightweight code where C comes in</p>
+                    <p>
+                      I've worked on a couple projects that utilize Arduino/Pis that have to run lightweight code where
+                      C comes in
+                    </p>
                   </div>
                   <SkillLevel amount={4}></SkillLevel>
                 </FlexSpaceBetween>
@@ -144,7 +143,10 @@ export default function Home() {
                 <FlexSpaceBetween>
                   <div>
                     <h3>Docker</h3>
-                    <p>Almost every project I work on ends up being deployed and tested in Docker containers for their reproducibility</p>
+                    <p>
+                      Almost every project I work on ends up being deployed and tested in Docker containers for their
+                      reproducibility
+                    </p>
                   </div>
                   <SkillLevel amount={9}></SkillLevel>
                 </FlexSpaceBetween>
@@ -153,7 +155,10 @@ export default function Home() {
                 <FlexSpaceBetween>
                   <div>
                     <h3>Dynatrace</h3>
-                    <p>While at Comerica, I worked extensively on Dynatrace deployments with their API and become a sort of Subject Matter Expert</p>
+                    <p>
+                      While at Comerica, I worked extensively on Dynatrace deployments with their API and become a sort
+                      of Subject Matter Expert
+                    </p>
                   </div>
                   <SkillLevel amount={9}></SkillLevel>
                 </FlexSpaceBetween>
@@ -162,7 +167,9 @@ export default function Home() {
                 <FlexSpaceBetween>
                   <div>
                     <h3>Linux (Debian)</h3>
-                    <p>My server deployments are exclusively on linux now, with Debian based being the primary distro</p>
+                    <p>
+                      My server deployments are exclusively on linux now, with Debian based being the primary distro
+                    </p>
                   </div>
                   <SkillLevel amount={9}></SkillLevel>
                 </FlexSpaceBetween>
@@ -171,7 +178,10 @@ export default function Home() {
                 <FlexSpaceBetween>
                   <div>
                     <h3>Ansible</h3>
-                    <p>Management platform for all cloud and local servers, which I am tempted to manage my own computers with as well</p>
+                    <p>
+                      Management platform for all cloud and local servers, which I am tempted to manage my own computers
+                      with as well
+                    </p>
                   </div>
                   <SkillLevel amount={8}></SkillLevel>
                 </FlexSpaceBetween>
@@ -180,7 +190,10 @@ export default function Home() {
                 <FlexSpaceBetween>
                   <div>
                     <h3>Adobe LR/PS</h3>
-                    <p>Sort of out of place here, but I have worked a lot on media design in my free time and especially LightRoom to become the goto photographer for friends and family</p>
+                    <p>
+                      Sort of out of place here, but I have worked a lot on media design in my free time and especially
+                      LightRoom to become the goto photographer for friends and family
+                    </p>
                   </div>
                   <SkillLevel amount={8}></SkillLevel>
                 </FlexSpaceBetween>

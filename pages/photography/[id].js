@@ -1,22 +1,15 @@
-import { useRouter } from "next/router";
 import Header from "../components/Header";
 import TitlePage from "../components/TitlePage";
 import Footer from "../components/Footer";
-import Image from "next/image";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import ColorBox from "../components/ColorBox";
 import AuthorDate from "../components/AuthorDate";
-import FlexSpaceBetween from "../components/FlexSpaceBetween";
 import TextWrap from "../components/TextWrap";
 
-export default function Writeup({ postData }) {
-  const router = useRouter();
+export default function Writeup({ postData }) {  
   return (
     <div>
       <Header />
-      <TitlePage>
-        <Image src={postData.image} alt="Cover image" width="500" height="500" priority="True" />
-        <h1>{postData.title}</h1>
+      <TitlePage header={postData.title} image={postData.image}>
         <AuthorDate author={postData.author} authorImage={postData.authorImage} date={postData.date} />
       </TitlePage>
       <TextWrap>

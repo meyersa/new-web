@@ -9,8 +9,7 @@ export default function Custom404() {
   return (
     <div>
       <Header />
-      <TitlePage>
-        <h1>404</h1>
+      <TitlePage header="404">
         <p>Page was not found</p>
       </TitlePage>
       <Footer />
