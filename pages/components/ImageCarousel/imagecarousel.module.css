@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex; 
+    flex-direction: row;
+    overflow: scroll;
+    gap: 1rem; 
+    margin: 3rem 0; 
+    height: 15dvh;
+    backdrop-filter: contrast(0.8);
+    padding: 1rem; 
+    
+}
+
+.wrapper img {
+    height: 100%;
+    width: auto;
+
+}
+
+.wrapper img:hover {
+    box-shadow: 0 0 .1rem .1rem var(--bright);
+}

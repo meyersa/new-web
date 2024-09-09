@@ -8,7 +8,7 @@ import TextWrap from "./components/TextWrap"
 import SpacerDots from "./components/SpacerDots";
 import { getSortedPostsData } from "../lib/posts";
 import RecentPosts from "./components/RecentPosts";
-
+import FullScreenImage from "./components/FullScreenImage";
 const dir = "photography"
 
 export default function Photography({ allPostsData }) {
@@ -23,6 +23,9 @@ export default function Photography({ allPostsData }) {
           Above image was taken in Georgia with an EOS R and a Sigma 24-105 f4 Art
         </p>
         <SpacerDots />
+
+        <FullScreenImage img={"/images/photography/background.jpg"} alt="test" caption="test"/>
+
         <TextWrap>
         <h1>
             Trips, Portraits, Sports, and more..
@@ -32,7 +35,7 @@ export default function Photography({ allPostsData }) {
         </TextWrap>
         <RecentPosts dir={dir} allPostsData={allPostsData} />
         <SmallBox>
-          <p>There is currently no way to view <i>all</i> posts but that should be a thing eventually</p>
+          <p>There is currently no way to view <span style={{fontStyle: "italic"}}>all</span> posts but that should be a thing eventually</p>
         </SmallBox>
         <ColorBox>
           <h1>

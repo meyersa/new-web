@@ -1,0 +1,80 @@
+.invis {
+  display: contents; 
+
+}
+
+.invisButton {
+  display: contents;
+  border: none; 
+  padding: 0;
+  background: transparent;
+
+}
+
+.wrapper {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary);
+  top: 0;
+  bottom: 0; 
+  height: 100dvh;
+  backdrop-filter: brightness(0.2) blur(0.3rem);
+  z-index: 20;
+
+}
+
+.wrapper img {
+  width: 100%;
+  height: auto;
+  max-width: calc(100dvw - 2 * 1.5rem);
+  max-height: 50dvh;
+  margin: 0; 
+
+}
+
+.imageWrapper {
+  backdrop-filter: contrast(0.8);
+  text-align: center;
+
+}
+
+.innerWrapper {
+  display: flex; 
+  height: calc(100dvh - 6em - 2 * calc(2.5dvw + 1rem));
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: calc(2.5dvw + 1rem);
+
+}
+
+.controls {
+  display: flex; 
+  display: None; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: contrast(0.8);
+  padding: 3rem; 
+  gap: 3rem; 
+  margin: 1rem;
+  border-radius: 1rem;
+  font-size: 2.5rem;
+
+}
+
+.controls > * {
+  padding: 1rem; 
+
+}
+
+.flexRight {
+  height: 6em;
+  display: flex;
+  flex-direction: row;
+  width: calc(100dvw - 2 * calc(2.5dvw + 1rem));
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 calc(2.5dvw + 1rem);
+
+}

@@ -119,3 +119,9 @@ blockquote {
   border-radius: 1rem;
   
 }
+
+i {
+  color: var(--contrast-one);
+  font-size: 2.5rem !important;
+
+}
