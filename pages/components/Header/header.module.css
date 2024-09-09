@@ -11,7 +11,7 @@
   z-index: 20;
   background-color: var(--secondary);
   box-shadow: 0 0 0.25rem 0.15rem var(--contrast-one);
-  
+
 }
 
 .leftheader > a {
@@ -48,12 +48,13 @@
   transition: transform 0.7s cubic-bezier(0.84, -0.01, 0.59, 0.3);
   flex-direction: column;
   transform: translateY(-100%);
-  height: calc(100dvh - 6em);
+  height: calc(100dvh - 6em - 2rem);
+  padding-top: 2rem; 
   position: fixed;
   z-index: 10;
   background-color: var(--secondary);
   justify-content: space-between;
-  
+
 }
 
 .mobileTop {

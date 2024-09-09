@@ -80,9 +80,6 @@ export default function Header() {
       </div>
       <div id="mobileMenu" className={styles.mobileMenu}>
         <div className={styles.mobileTop}>
-          <button className={styles.menuitem} onClick={() => handleMobileRedirect(path)}>
-            {path}
-          </button>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/writeups")}>
             Writeups
           </button>
