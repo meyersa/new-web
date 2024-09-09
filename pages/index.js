@@ -1,17 +1,16 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ColorBox from "./components/ColorBox";
-import Image from "next/image";
 import SkillLevel from "./components/SkillLevel";
 import StyledList from "./components/StyledList";
 import TitlePage from "./components/TitlePage";
-import SocialLinks from "./components/SocialLinks";
 import ImageSplit from "./components/ImageSplit";
 import FlexSpaceBetween from "./components/FlexSpaceBetween";
 import SmallBox from "./components/SmallBox";
 import Link from "next/link";
-import attentionbuttons from "./components/AttentionButtons";
 import AttentionButtons from "./components/AttentionButtons";
+import TextWrap from "./components/TextWrap";
+
 
 export default function Home() {
   return (
@@ -19,6 +18,11 @@ export default function Home() {
       <Header />
       <div>
         <TitlePage header={"August Meyers"} image={"/images/home/selfie.jpeg"}>
+          <AttentionButtons />
+        </TitlePage>
+        <div id="down" />
+        <TextWrap>
+          <h1>About me...</h1>
           <p>
             Hello! I'm August. I'm currently pursuing a double major in Information Technology and Computer Science with
             a minor in Math at Central Michigan University. While here, I'm working as a Student Technician for the
@@ -26,9 +30,7 @@ export default function Home() {
             I'm either experimenting in my lab learning something new, out exploring the world with my camera, or
             playing video games (if I have time)
           </p>
-          <AttentionButtons />
-        </TitlePage>
-        <div id="down" />
+        </TextWrap>
         <ColorBox>
           <h1>Education</h1>
           <StyledList>
