@@ -8,9 +8,10 @@
     z-index: 1;
     font-family: "Paytone One", monospace;
     object-fit: cover;
-    background-size: contain;
+    background-size: cover;
     flex: 40%; 
     margin: 1rem; 
     max-width: 40rem;
-
+    background-color: var(--accent-one);
+    
 }

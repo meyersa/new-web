@@ -7,6 +7,11 @@ export default function AttentionButton({ text, loc, background }) {
     
   }
 
+  if (background == null) {
+    background = "/svgs/circuit.svg"
+    
+  }
+
   function redirect(loc) {
     window.location.href = loc;
 

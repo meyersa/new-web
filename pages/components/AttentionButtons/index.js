@@ -5,9 +5,9 @@ export default function AttentionButtons() {
 
   return (
       <div className={styles.wrapper}>
-        <AttentionButton text={"Scroll"} loc="#down" background={"/images/writeups/code.png"} />
+        <AttentionButton text={"Me"} loc="#down" />
         <AttentionButton text={"Projects"} loc="/projects" background={"/images/writeups/code.png"} />
-        <AttentionButton text={"Writeups"} loc="/writeups" background={"/images/writeups/code.png"} />
+        <AttentionButton text={"Writeups"} loc="/writeups" />
         <AttentionButton text={"Photo"} loc="/photography" background={"/images/photography/background.jpg"} />
       </div>
   );
