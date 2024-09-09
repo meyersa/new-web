@@ -1,36 +1,25 @@
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
 import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import ColorBox from "./components/ColorBox";
 import Footer from "./components/Footer";
-import Image from "next/image";
+import RecentPosts from "./components/RecentPosts";
+import TextWrap from "./components/TextWrap";
+import SpacerDots from "./components/SpacerDots";
 
+const dir = "writeups"
 export default function Writeups({ allPostsData }) {
   return (
     <div>
       <Header />
       <div>
-        <TitlePage image={"/images/writeups/code.png"} header={"Writeups"}></TitlePage>
-        {allPostsData.map(({ id, date, title, exerpt, author, authorImg, image }, index) => (
-          <ColorBox key={id}>
-            <h1>
-              <Link href={`writeups/${id}`}>{title}</Link>
-            </h1>
-            <p>{date}</p>
-            <Link href={`${id}`}>
-              <Image
-                src={image}
-                alt="Cover image"
-                width={500}
-                height={500}
-                priority={true}
-                style={{ width: "100%", height: "10rem" }}
-              />
-            </Link>
-            <p>{exerpt}</p>
-          </ColorBox>
-        ))}
+        <TitlePage image={"/images/writeups/code.png"} header={"Writeups"}>
+          <p>Things I've tackled in computer science and information technology that aren't as representable as a "project"</p>
+        </TitlePage>
+        <TextWrap>
+          <h1 style={{textAlign: "center"}}>Recent posts</h1>
+          <SpacerDots />
+        </TextWrap>
+        <RecentPosts dir={dir} allPostsData={allPostsData} />
       </div>
       <Footer />
     </div>
@@ -38,9 +27,9 @@ export default function Writeups({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  console.log("Fetching post data from writeups");
+  console.log(`Fetching post data from ${dir}`);
 
-  const allPostsData = getSortedPostsData("writeups");
+  const allPostsData = getSortedPostsData(dir);
 
   return {
     props: {

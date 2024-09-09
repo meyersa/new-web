@@ -14,14 +14,14 @@ export default function PostItem({ dir, id, title, date, exerpt, image }) {
         <Link href={`${dir}/${id}`}>{title}</Link>
       </h1>
       <p>{date}</p>
-      <Link href={`${id}`}>
+      <Link href={`${dir}/${id}`}>
         <Image
           src={image}
           alt="Cover image"
           width={500}
           height={500}
           priority={true}
-          style={{ width: "100%", height: "10rem" }}
+          style={{ width: "100%", height: "10rem", objectFit: "cover" }}
         />
       </Link>
       <p>{exerpt}</p>
