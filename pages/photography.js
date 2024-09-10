@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
 import Footer from "./components/Footer"
-import Image from "next/image";
 import SmallBox from "./components/SmallBox"
 import ColorBox from "./components/ColorBox"
 import TextWrap from "./components/TextWrap"
@@ -32,7 +31,7 @@ export default function Photography({ allPostsData }) {
         </TextWrap>
         <RecentPosts dir={dir} allPostsData={allPostsData} />
         <SmallBox>
-          <p>There is currently no way to view <i>all</i> posts but that should be a thing eventually</p>
+          <p>There is currently no way to view <span style={{fontStyle: "italic"}}>all</span> posts but that should be a thing eventually</p>
         </SmallBox>
         <ColorBox>
           <h1>
