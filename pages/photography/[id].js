@@ -5,7 +5,9 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import AuthorDate from "../components/AuthorDate";
 import TextWrap from "../components/TextWrap";
 import { getAllPhotos } from "../../lib/photos";
-import ImageCarousel from "../components/ImageCarousel";
+
+import ImageSwiper from "../components/ImageSwiper";
+
 export default function Writeup({ postData, photos }) {  
   return (
     <div>
@@ -13,7 +15,7 @@ export default function Writeup({ postData, photos }) {
       <TitlePage header={postData.title} image={postData.image}>
         <AuthorDate author={postData.author} authorImage={postData.authorImage} date={postData.date} />
       </TitlePage>
-      <ImageCarousel imageList={photos} />
+      <ImageSwiper imageList={photos} />
       <TextWrap>
         <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </TextWrap>

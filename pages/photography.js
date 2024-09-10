@@ -1,14 +1,13 @@
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
 import Footer from "./components/Footer"
-import Image from "next/image";
 import SmallBox from "./components/SmallBox"
 import ColorBox from "./components/ColorBox"
 import TextWrap from "./components/TextWrap"
 import SpacerDots from "./components/SpacerDots";
 import { getSortedPostsData } from "../lib/posts";
 import RecentPosts from "./components/RecentPosts";
-import FullScreenImage from "./components/FullScreenImage";
+
 const dir = "photography"
 
 export default function Photography({ allPostsData }) {
@@ -23,9 +22,6 @@ export default function Photography({ allPostsData }) {
           Above image was taken in Georgia with an EOS R and a Sigma 24-105 f4 Art
         </p>
         <SpacerDots />
-
-        <FullScreenImage img={"/images/photography/background.jpg"} alt="test" caption="test"/>
-
         <TextWrap>
         <h1>
             Trips, Portraits, Sports, and more..
