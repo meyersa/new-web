@@ -13,7 +13,7 @@ export default function Writeups({ allPostsData }) {
       <Header />
       <div>
         <TitlePage image={"/images/writeups/code.png"} header={"Writeups"}>
-          <p>Things I've tackled in computer science and information technology that aren't as representable as a "project"</p>
+          <p>Things I&apos;ve tackled in computer science and information technology that aren&apos;t as representable as a &quot;project&quot;</p>
         </TitlePage>
         <TextWrap>
           <h1 style={{textAlign: "center"}}>Recent posts</h1>
