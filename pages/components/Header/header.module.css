@@ -58,9 +58,18 @@
   align-items: center;
 }
 
-.FABars {
-  color: var(--contrast-two);
-  font-size: 2.5rem !important;
+.menuButton > i {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.iconShrink {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.iconGrow {
+  transform: rotate(90deg);
+  opacity: 1;
 }
 
 .menuitem {

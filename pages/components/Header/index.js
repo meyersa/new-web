@@ -72,7 +72,11 @@ export default function Header() {
             Projects
           </Link>
           <button id="menuButton" className={styles.menuButton} onClick={() => handleButtonClick()}>
-            <i className={["fa", "fa-bars", styles.FABars].join(" ")} />
+            {menuDisplayed ? (
+              <i className={["fa-solid", "fa-minus", styles.iconGrow].join(" ")} />
+            ) : (
+              <i className={["fa-solid", "fa-bars", styles.iconShrink].join(" ")} />
+            )}
           </button>
         </div>
       </div>
