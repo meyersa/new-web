@@ -10,7 +10,7 @@ import SmallBox from "./components/SmallBox";
 import Link from "next/link";
 import AttentionButtons from "./components/AttentionButtons";
 import TextWrap from "./components/TextWrap";
-
+import ScrollHelper from "./components/ScrollHelper";
 
 export default function Home() {
   return (
@@ -31,6 +31,7 @@ export default function Home() {
             playing video games (if I have time)
           </p>
         </TextWrap>
+        <ScrollHelper />
         <ColorBox>
           <h1>Education</h1>
           <StyledList>
