@@ -2,14 +2,14 @@ import Link from "next/link";
 import styles from "./header.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Footer from "../Footer"
+import Footer from "../Footer";
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
-  const [path, setPath] = useState("/")
+  const [path, setPath] = useState("/");
 
-  const router = useRouter() 
-  
+  const router = useRouter();
+
   // Push /login on desktop and open menu on mobile
   function handleButtonClick() {
     // Display menu
@@ -19,7 +19,6 @@ export default function Header() {
       document.body.style.overflow = "hidden";
       setDisplayed(true);
       return;
-
     }
 
     // Hide menu
@@ -43,18 +42,17 @@ export default function Header() {
     return;
   }
 
-  /* 
+  /*
    * Dynamically get home path
    */
   useEffect(() => {
-    const splitHomePaths = router.asPath.split('/')
+    const splitHomePaths = router.asPath.split("/");
 
     if (splitHomePaths.length > 2) {
-      setPath(`/${splitHomePaths[1]}`)
-      
+      setPath(`/${splitHomePaths[1]}`);
     }
-  }, [router.asPath])
-  
+  }, [router.asPath]);
+
   return (
     <div className={styles.headerOutside} id="headerOutside">
       <div className={styles.headerbar}>
@@ -74,20 +72,20 @@ export default function Header() {
             Projects
           </Link>
           <button id="menuButton" className={styles.menuButton} onClick={() => handleButtonClick()}>
-              <i className={["fa", "fa-bars", styles.FABars].join(" ")} />
+            <i className={["fa", "fa-bars", styles.FABars].join(" ")} />
           </button>
         </div>
       </div>
       <div id="mobileMenu" className={styles.mobileMenu}>
         <div className={styles.mobileTop}>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/writeups")}>
-            Writeups
+            <h3>Writeups</h3>
           </button>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/photography")}>
-            Photography
+            <h3>Photography</h3>
           </button>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/projects")}>
-            Projects
+            <h3>Projects</h3>
           </button>
         </div>
         <Footer />
