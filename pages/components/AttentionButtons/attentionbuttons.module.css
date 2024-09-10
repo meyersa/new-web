@@ -2,7 +2,7 @@
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
-    height: 20dvh;
+    height: 20vh;
     max-width: 1000px;
     
 }
@@ -11,7 +11,7 @@
     .wrapper {
         flex-wrap: wrap;
         max-height: max-content;
-        height: 30dvh;
+        height: 30vh;
         
     }
 

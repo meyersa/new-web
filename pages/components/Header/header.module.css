@@ -48,7 +48,7 @@
   transition: transform 0.7s cubic-bezier(0.84, -0.01, 0.59, 0.3);
   flex-direction: column;
   transform: translateY(-100%);
-  height: calc(100dvh - 6em - 2rem);
+  height: calc(100vh - 6em - 2rem);
   padding-top: 2rem; 
   position: fixed;
   z-index: 10;
