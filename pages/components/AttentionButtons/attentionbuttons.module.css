@@ -10,7 +10,6 @@
 @media (max-width: 740px) {
     .wrapper {
         flex-wrap: wrap;
-        max-height: max-content;
         height: 30vh;
         
     }
