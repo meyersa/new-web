@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useSearchParams, usePathname } from 'next/navigation';
 
-export default function FullScreenImageButton({ src, alt }) {
+export default function FullScreenImageButton({ src, alt, index }) {
   /* 
    * Complimentary component to FullScreenImageView 
    * Separated to allow for full screen view since the other is under 
@@ -17,7 +17,7 @@ export default function FullScreenImageButton({ src, alt }) {
     const params = new URLSearchParams(searchParams)
 
     // Appends path and pushes without reloading
-    params.set('showImage', src)
+    params.set('showImage', index)
     router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
 
   }

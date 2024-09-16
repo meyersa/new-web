@@ -22,7 +22,16 @@ export default function FullScreenImageView({ imageList }) {
   const showImage = searchParams.get("showImage");
 
   useEffect(() => {
-    setImage(showImage);
+    var curNum = Number.parseInt(showImage);
+
+    if (isNaN(curNum)) {
+      curNum = null;
+    }
+
+    if (0 > curNum || curNum > imageList.length - 1) {
+      curNum = null;
+    }
+    setImage(curNum);
   }, [showImage]);
 
   // If no image then we don't show anything
@@ -33,23 +42,57 @@ export default function FullScreenImageView({ imageList }) {
   // Handle closing the view
   function closeView() {
     // TODO: Disable scroll
-    
+
     const params = new URLSearchParams(searchParams);
 
-    // Change path and push without reloading
     params.delete("showImage");
     router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
   }
-  
+
+  function incrementParam(amount) {
+    const params = new URLSearchParams(searchParams);
+
+    const curImage = Number.parseInt(showImage);
+    var newImage = curImage + amount;
+
+    if (newImage < 0) {
+      newImage = imageList.length - 1;
+    }
+
+    if (newImage > imageList.length - 1) {
+      newImage = 0;
+    }
+
+    params.set("showImage", newImage);
+    router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <div style={{ display: "contents" }} onClick={() => closeView()}>
-          <i class={"fa-solid fa-square-xmark"}></i>
+          <i className={"fa-solid fa-square-xmark"}></i>
         </div>
       </div>
       <div className={styles.imageWrapper}>
-        <Image src={image} width="500" height="500" />
+        <Image src={imageList[image]["img"]} width="500" height="500" alt="Full screen image" />
+      </div>
+      <div className={styles.bottom}>
+        <div className={styles.info}>
+          {Object.entries(imageList[image]["info"]).map(([key, val]) => (
+            <p key={key}>
+              <strong>{key}:</strong> {val}
+            </p>
+          ))}
+        </div>
+        <div className={styles.controls}>
+          <div className={styles.arrow} onClick={() => incrementParam(-1)}>
+            <i className={"fa-solid fa-caret-left"}></i>
+          </div>
+          <div className={styles.arrow} onClick={() => incrementParam(1)}>
+            <i className={"fa-solid fa-caret-right"}></i>
+          </div>
+        </div>
       </div>
     </div>
   );

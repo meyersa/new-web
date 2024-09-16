@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "date-fns": "^3.6.0",
+    "exifreader": "^4.23.5",
     "gray-matter": "^4.0.3",
     "next": "latest",
     "react": "18.2.0",

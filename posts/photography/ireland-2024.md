@@ -1,7 +1,7 @@
 --- 
 title: 'Ireland 2024' 
 exerpt: 'The land of guinness and Game of Thrones'
-image: '/images/photography/ireland-2024/20240812-068-Canon EOS R-13.jpg'
+image: '/images/photography/ireland-2024/giants-causeway.jpg'
 --- 
 
 ## Day 1

@@ -14,12 +14,12 @@ import styles from "./imageswiper.module.css";
 export default function ImageSwiper({ imageList }) {
   if (!imageList) {
     console.error("Image list cannot be null");
-    return null; // Ensure null is returned
+    return null; 
   }
 
   return (
     <div>
-      <FullScreenImageView />
+      <FullScreenImageView imageList={imageList}/>
       <Swiper
         scrollbar={{
           hide: true,
@@ -37,7 +37,8 @@ export default function ImageSwiper({ imageList }) {
         {imageList.map((image, index) => (
           <SwiperSlide key={`${image}-${index}`} className={styles.swiperSlide}>
             <FullScreenImageButton
-              src={image}
+              src={image.img}
+              index={index}
               alt={`Image ${index + 1}`}
               width={500}
               height={500}
