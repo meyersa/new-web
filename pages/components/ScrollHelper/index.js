@@ -23,9 +23,10 @@ export default function ScrollHelper() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setDown(true);
+          
         } else {
-          console.log("Not intersecting");
           setDown(false);
+
         }
       });
     });
