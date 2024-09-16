@@ -63,14 +63,14 @@ export default function Header() {
           </Link>
         </div>
         <div className={styles.rightheader}>
-          <Link className={styles.inside} href="/writeups">
-            Writeups
+          <Link className={styles.inside} href="/projects">
+            Projects
           </Link>
           <Link className={styles.inside} href="/photography">
             Photography
           </Link>
-          <Link className={styles.inside} href="/projects">
-            Projects
+          <Link className={styles.inside} href="/travel">
+            Travel
           </Link>
           <button id="menuButton" className={styles.menuButton} onClick={() => handleButtonClick()}>
             {menuDisplayed ? (
@@ -83,14 +83,14 @@ export default function Header() {
       </div>
       <div id="mobileMenu" className={styles.mobileMenu}>
         <div className={styles.mobileTop}>
-          <button className={styles.menuitem} onClick={() => handleMobileRedirect("/writeups")}>
-            <h3>Writeups</h3>
+          <button className={styles.menuitem} onClick={() => handleMobileRedirect("/projects")}>
+            <h3>Projects</h3>
           </button>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/photography")}>
             <h3>Photography</h3>
           </button>
-          <button className={styles.menuitem} onClick={() => handleMobileRedirect("/projects")}>
-            <h3>Projects</h3>
+          <button className={styles.menuitem} onClick={() => handleMobileRedirect("/travel")}>
+            <h3>Travel</h3>
           </button>
         </div>
         <Footer />
