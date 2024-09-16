@@ -32,7 +32,7 @@ export default function FullScreenImageView({ imageList }) {
       curNum = null;
     }
     setImage(curNum);
-  }, [showImage]);
+  }, [showImage, imageList.length]);
 
   // If no image then we don't show anything
   if (image == null) {

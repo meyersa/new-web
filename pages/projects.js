@@ -27,7 +27,7 @@ export default function Projects({ allPostsData }) {
         <TextWrap>
           <p style={{ textAlign: "center" }}>
             If you are interested in more of what I have worked on, check out my{" "}
-            <Link href="https://github.com/meyersa">github</Link>. There are a lot of other things I haven't taken the
+            <Link href="https://github.com/meyersa">github</Link>. There are a lot of other things I haven&apos;t taken the
             time to write about on there
           </p>
         </TextWrap>
