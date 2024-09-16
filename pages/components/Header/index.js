@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Footer from "../Footer";
+import Shadow from "../../../styles/Shadow.module.css"
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
@@ -55,7 +56,7 @@ export default function Header() {
 
   return (
     <div className={styles.headerOutside} id="headerOutside">
-      <div className={styles.headerbar}>
+      <div className={[styles.headerbar, Shadow.class].join(" ")}>
         <div className={styles.leftheader}>
           <Link className={styles.inside} href={path}>
             {path}

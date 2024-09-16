@@ -1,4 +1,5 @@
 import styles from "./attentionbutton.module.css";
+import Shadow from "../../../styles/Shadow.module.css"
 
 export default function AttentionButton({ text, loc, background }) {
   if (text == null || loc == null) {
@@ -19,7 +20,7 @@ export default function AttentionButton({ text, loc, background }) {
 
   return (
     <button
-      className={styles.button}
+      className={[styles.button, Shadow.class].join(" ")}
       style={{ backgroundImage: `url(${background})` }}
       onClick={() => {
         redirect(`${loc}`);

@@ -4,7 +4,6 @@
     border: none; 
     border-radius: 1rem; 
     font-size: 1.5rem;
-    box-shadow: 0 0 0.25rem 0.15rem var(--contrast-one);
     z-index: 1;
     font-family: "Paytone One", monospace;
     object-fit: cover;
