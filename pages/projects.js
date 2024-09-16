@@ -16,7 +16,7 @@ export default function Projects({ allPostsData }) {
           <p>Things I&apos;ve tackled in computer science and information technology that aren&apos;t as representable as a &quot;project&quot;</p>
         </TitlePage>
         <TextWrap>
-          <h1 style={{textAlign: "center"}}>Recent posts</h1>
+          <h1 style={{textAlign: "center"}}>Recent</h1>
           <SpacerDots />
         </TextWrap>
         <RecentPosts dir={dir} allPostsData={allPostsData} />

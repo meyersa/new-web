@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useSearchParams, usePathname } from 'next/navigation';
 
-export default function FullScreenImageButton({ src }) {
+export default function FullScreenImageButton({ src, alt }) {
   /* 
    * Complimentary component to FullScreenImageView 
    * Separated to allow for full screen view since the other is under 
@@ -24,7 +24,7 @@ export default function FullScreenImageButton({ src }) {
 
   return (
     <div onClick={() => openView()} style={{display: "contents"}}>
-      <Image src={src} height="500" width="500" />
+      <Image src={src} height="500" width="500" alt={alt}/>
     </div>
   )
 }
