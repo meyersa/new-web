@@ -1,7 +1,7 @@
 --- 
 title: 'Making a NextJS Blog Site' 
-exerpt: 'Creating a spot to post writeups, such as making this website, using NextJS and other technologies'
-image: '/images/writeups/nextjs.webp'
+exerpt: 'Creating a spot to post projects, such as making this website, using NextJS and other technologies'
+image: '/images/projects/nextjs.webp'
 --- 
 
 ## Intro/Inspo
@@ -22,7 +22,7 @@ With something like Wordpress the process of making a page is simply loading the
 
 Now that I found the technology, the first step was to play around with it. The first generations were rough, basic code from other projects such as the NextJS documentation and other blog sites such as [Tina.io](https://tina.io/blog/simple-markdown-blog-nextjs/). This turned out to be rather useful, and I realized that this would not be too bad of a project to code. 
 
-![Initial Code](/images/writeups/initial-code.png)
+![Initial Code](/images/projects/initial-code.png)
 
 ### Implementation 
 

@@ -21,7 +21,7 @@ export default function Writeup({ postData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds("writeups");
+  const paths = getAllPostIds("projects");
   return {
     paths,
     fallback: false,
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id, "writeups");
+  const postData = await getPostData(params.id, "projects");
   return {
     props: {
       postData,
