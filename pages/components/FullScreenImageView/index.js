@@ -40,7 +40,7 @@ export default function FullScreenImageView({ imageList }) {
     params.delete("showImage");
     router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
   }
-
+  
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>

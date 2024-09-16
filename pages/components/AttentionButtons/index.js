@@ -8,7 +8,6 @@ export default function AttentionButtons() {
         <AttentionButton text={"Me"} loc="#down" />
         <AttentionButton text={"Projects"} loc="/projects" background={"/images/projects/code.png"} />
         <AttentionButton text={"Photo"} loc="/photography" background={"/images/photography/background.jpg"} />
-        <AttentionButton text={"Travel"} loc="/travel" />
       </div>
   );
 }

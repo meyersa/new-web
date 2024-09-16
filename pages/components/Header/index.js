@@ -69,9 +69,6 @@ export default function Header() {
           <Link className={styles.inside} href="/photography">
             Photography
           </Link>
-          <Link className={styles.inside} href="/travel">
-            Travel
-          </Link>
           <button id="menuButton" className={styles.menuButton} onClick={() => handleButtonClick()}>
             {menuDisplayed ? (
               <i className={["fa-solid", "fa-minus", styles.iconGrow].join(" ")} />
@@ -88,9 +85,6 @@ export default function Header() {
           </button>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/photography")}>
             <h3>Photography</h3>
-          </button>
-          <button className={styles.menuitem} onClick={() => handleMobileRedirect("/travel")}>
-            <h3>Travel</h3>
           </button>
         </div>
         <Footer />
