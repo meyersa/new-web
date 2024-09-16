@@ -12,7 +12,7 @@ export default function Projects({ allPostsData }) {
     <div>
       <Header />
       <div>
-        <TitlePage image={"/images/projects/code.png"} header={"Projects"}>
+        <TitlePage image={"/images/projects/background.webp"} header={"Projects"}>
           <p>Things I&apos;ve tackled in computer science and information technology that aren&apos;t as representable as a &quot;project&quot;</p>
         </TitlePage>
         <TextWrap>
