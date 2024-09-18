@@ -15,9 +15,7 @@
 
 /* TODO: Target this somehow */
 .wrapper img {
-    margin: 0 auto;
-    margin-top: 3rem; 
-    margin-bottom: 3rem;
+    margin: 1rem auto;
     display: block;
     max-height: 50vh;
     width: auto;
@@ -31,5 +29,17 @@
 
 .wrapper p {
     font-family: sans-serif;
-    
+
+}
+
+.wrapper > div > div:has(img, div) {
+    margin: auto;
+    margin-top: 3rem; 
+    margin-bottom: 3rem;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 1rem;
+    backdrop-filter: contrast(0.8);
+    width: fit-content;
+
 }
