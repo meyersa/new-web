@@ -13,8 +13,9 @@ import styles from "./imageswiper.module.css";
 
 export default function ImageSwiper({ imageList }) {
   if (!imageList) {
-    console.error("Image list cannot be null");
-    return null; 
+    console.error("Image list is null");
+    return; 
+    
   }
 
   return (
