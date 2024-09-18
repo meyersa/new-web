@@ -24,11 +24,9 @@ export default function Home() {
         <TextWrap>
           <h1>About me...</h1>
           <p>
-            Hello! I&apos;m August. I&apos;m currently pursuing a double major in Information Technology and Computer Science with
-            a minor in Math at Central Michigan University. While here, I&apos;m working as a Student Technician for the
-            Office of Information Technology helping support Faculty and Staff with their technology. In my free time
-            I&apos;m either experimenting in my lab learning something new, out exploring the world with my camera, or
-            playing video games (if I have time)
+            Dedicated and developing IT/CPS student. Currently in the process of building experience while working as a
+            student technician and learning in classes towards an accelerated masters in CPS. In my free time, I am
+            always looking for new projects and experiences to further my knowledge in the technical field.
           </p>
         </TextWrap>
         <ScrollHelper />
@@ -38,10 +36,9 @@ export default function Home() {
             <ImageSplit image="/images/home/cmu.png" alt="CMU Logo">
               <h3>Undergrad - Central Michigan University - May 2024</h3>
               <p>Double major in Information Technology and Computer Science with minor in Math</p>
-              <p>GPA 3.98</p>
-              <h3>Graduate - Central Michigan University - May 2025</h3>
+              <p>Summa Cum Laude</p>
+              <h3>Graduate - Central Michigan University - Expected May 2025</h3>
               <p>Accelerated Masters Degree in Computer Science</p>
-              <p>GPA 3.9</p>
             </ImageSplit>
           </StyledList>
         </ColorBox>
@@ -123,8 +120,8 @@ export default function Home() {
                   <div>
                     <h3>C</h3>
                     <p>
-                      I&apos;ve worked on a couple projects that utilize Arduino/Pis that have to run lightweight code where
-                      C comes in
+                      I&apos;ve worked on a couple projects that utilize Arduino/Pis that have to run lightweight code
+                      where C comes in
                     </p>
                   </div>
                   <SkillLevel amount={4}></SkillLevel>

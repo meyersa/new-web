@@ -15,8 +15,7 @@ export default function Projects({ allPostsData }) {
       <div>
         <TitlePage image={"/images/projects/background.webp"} header={"Projects"}>
           <p>
-            Things I&apos;ve tackled in computer science and information technology that aren&apos;t as representable as
-            a &quot;project&quot;
+            Things I&apos;ve tackled in computer science and information technology to improve my knowledge
           </p>
         </TitlePage>
         <TextWrap>
