@@ -14,10 +14,6 @@
 
 .header {
   height: 6em;
-  display: flex; 
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
 
 }
 
@@ -30,10 +26,7 @@
 }
 
 .bottom {
-  display: flex;
-  flex-direction: row;
   margin: 1rem;
-  justify-content: space-between;
 
 }
 
@@ -41,6 +34,10 @@
   max-width: 700px;
   padding: 0 calc(2.5dvw + 1rem); 
   width: calc(100dvw - 2 * 2.5dvw - 2 * 1rem);
+  justify-content: space-between;
+  align-items: center;
+  display: flex; 
+  flex-direction: row;
 
 }
 

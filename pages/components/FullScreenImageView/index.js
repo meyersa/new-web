@@ -70,12 +70,13 @@ export default function FullScreenImageView({ imageList }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
+        <p>{imageList[image]["alt"]}</p>
         <div style={{ display: "contents" }} onClick={() => closeView()}>
           <i className={"fa-solid fa-square-xmark"}></i>
         </div>
       </div>
       <div className={styles.imageWrapper}>
-        <Image src={imageList[image]["img"]} width="500" height="500" alt="Full screen image" />
+        <Image src={imageList[image]["img"]} width="500" height="500" alt={imageList[image]["alt"]} />
       </div>
       <div className={styles.bottom}>
         <div className={styles.info}>
