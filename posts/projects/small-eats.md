@@ -9,9 +9,17 @@ image: '/images/projects/small-eats/background.png'
 [Github](https://github.com/meyersa/aws-flask)
 [Live](https://smalleats.meyersa.com)
 
+## Images 
+
+![What it ended up looking like](/images/projects/small-eats/background.png)
+
 ## Intro/Inspo
 
-WIP...
+One undergraduate class, ITC466 Cloud Automation, had a final project to deploy something on AWS using a couple of services. The obvious solution here was to deploy a website to EC2 and have it connect to RDS - knocking out two big services pretty easily. 
+
+## Conclusion 
+
+Despite all this work, somehow we were the only group who actually deployed something to AWS.. but oh well. 
 
 ## Technologies 
 
