@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
 /* Colors */
 :root {
   color-scheme: light dark;
@@ -63,7 +65,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: monospace;
+  font-family: "ABeeZee", monospace;
   font-size: 1em;
   color: var(--primary);
   background-color: var(--secondary);
