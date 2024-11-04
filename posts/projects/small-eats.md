@@ -7,7 +7,7 @@ image: '/images/projects/small-eats/background.png'
 ## Links 
 
 [Github](https://github.com/meyersa/aws-flask)
-[Live](https://smalleats.meyersa.com)
+[Live](https://awsflask.meyersa.com)
 
 ## Images 
 
