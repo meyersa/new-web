@@ -28,7 +28,7 @@
 
 .leftheader > a {
   font-size: 2rem;
-  color: var(--contrast-two);
+  color: var(--contrast);
   padding: 0;
   border-radius: 0.5rem;
   text-decoration: inherit;

@@ -33,7 +33,7 @@
   background-color: var(--secondary);
   width: fit-content;
   margin: 1rem; 
-  border: solid var(--contrast-one);
+  border: solid var(--dark);
 
 }
 

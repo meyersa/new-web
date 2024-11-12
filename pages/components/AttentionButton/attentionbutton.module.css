@@ -23,11 +23,16 @@
 }
 
 .button:nth-child(1n) {
-    background-color: var(--accent-one);
+    background-color: var(--bright);
 
 }
   
 .button:nth-child(2n) {
-    background-color: var(--primary); 
+    background-color: var(--black); 
+
+}
+
+.button:nth-child(3n) {
+    background-color: var(--distract); 
 
 }

@@ -15,18 +15,12 @@
     
 }
 
-.wrapper > p > a {
-    text-decoration-color: var(--contrast-three);
-    color: inherit; 
-
-}
-
 .wrapper > * {
     padding: 0; 
 
 }
 
 .divider { 
-    color: var(--contrast-two);
+    color: var(--contrast);
 
 }

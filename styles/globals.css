@@ -9,6 +9,7 @@
   --black: #111927;
   --dark: #283D4F;
   --bright: #0071CE;  
+  --distract: #e6b14e;  
 
 }
 
@@ -18,40 +19,20 @@
     --primary: var(--black);
     /* Background */
     --secondary: var(--white); 
-    /* Contrast One: h1 dots */
-    --contrast-one: var(--dark);
-    /* Contrast two: h2  */
-    --contrast-two: var(--dark); 
-    /* Contrast three: h3 special-text */
-    --contrast-three: var(--dark); 
-    /* Acccent One: shadow */
-    --accent-one: var(--bright);
-    /* Accent Two: links */
-    --accent-two: var(--bright);
-    /* Accent Three */
-    --accent-three: var(--bright); 
+    /* Contrast: Headers, dots, special text */
+    --contrast: var(--dark); 
+    /* Accent: Not really used lol */
+    --accent: var(--bright);
 
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Text */
     --primary: var(--white);
-    /* Background */
     --secondary: var(--black); 
-    /* Contrast One: h1 dots */
-    --contrast-one: var(--bright);
-    /* Contrast two: h2  */
-    --contrast-two: var(--bright); 
-    /* Contrast three: h3 special-text */
-    --contrast-three: var(--bright); 
-    /* Acccent One: shadow */
-    --accent-one: var(--dark);
-    /* Accent Two: links */
-    --accent-two: var(--dark);
-    /* Accent Three */
-    --accent-three: var(--dark); 
+    --contrast: var(--bright);
+    --accent: var(--dark);
 
   }
 }
@@ -84,20 +65,20 @@ img {
 }
 
 h1 {
-  color: var(--contrast-one);
+  color: var(--contrast);
   font-family: "Paytone One", Impact;
 
 }
 
 h2 {
-  color: var(--contrast-two);
+  color: var(--contrast);
   filter: brightness(1.5);
   font-family: "Paytone One", Impact;
 
 }
 
 h3 {
-  color: var(--contrast-three);
+  color: var(--contrast);
   filter: brightness(1.75);
   font-family: "Paytone One", Impact;
 
@@ -109,7 +90,7 @@ img {
 }
 
 a {
-  text-decoration-color: var(--contrast-one);
+  text-decoration-color: var(--distract);
   color: inherit; 
 
 }
@@ -128,7 +109,7 @@ blockquote {
 }
 
 i {
-  color: var(--contrast-one);
+  color: var(--contrast);
   font-size: 2.5rem;
 
 }
