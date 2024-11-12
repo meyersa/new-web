@@ -2,6 +2,7 @@
 title: 'Ireland 2024' 
 exerpt: 'The land of guinness and Game of Thrones'
 image: '/images/photography/ireland-2024/giants-causeway-up-close.jpg'
+date: '8/11/2024'
 --- 
 
 ## Day 1
