@@ -1,15 +1,10 @@
 import styles from "./attentionbutton.module.css";
 import Shadow from "../../../styles/Shadow.module.css"
 
-export default function AttentionButton({ text, loc, background }) {
+export default function AttentionButton({ text, loc, emphasize }) {
   if (text == null || loc == null) {
     console.error("Colorbox inputs cannot be null");
     return;
-    
-  }
-
-  if (background == null) {
-    background = "/svgs/circuit.svg"
     
   }
 
@@ -21,12 +16,12 @@ export default function AttentionButton({ text, loc, background }) {
   return (
     <button
       className={[styles.button, Shadow.class].join(" ")}
-      style={{ backgroundImage: `url(${background})` }}
       onClick={() => {
         redirect(`${loc}`);
       }}
     >
       {text}
+      <span className={styles.emphasize}>{emphasize}</span>
     </button>
   );
 }
