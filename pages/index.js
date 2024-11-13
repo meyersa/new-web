@@ -10,7 +10,6 @@ import SmallBox from "./components/SmallBox";
 import Link from "next/link";
 import AttentionButtons from "./components/AttentionButtons";
 import TextWrap from "./components/TextWrap";
-import ScrollHelper from "./components/ScrollHelper";
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
         <TitlePage header={"August Meyers"} image={"/images/home/selfie.jpeg"}>
           <AttentionButtons />
         </TitlePage>
-        <div id="down" />
         <TextWrap>
           <h1>About me...</h1>
           <p>
@@ -29,7 +27,6 @@ export default function Home() {
             always looking for new projects and experiences to further my knowledge in the technical field.
           </p>
         </TextWrap>
-        <ScrollHelper />
         <ColorBox>
           <h1>Education</h1>
           <StyledList>
