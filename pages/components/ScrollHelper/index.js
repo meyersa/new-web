@@ -1,13 +1,13 @@
 import styles from "./scrollhelper.module.css";
 import { useState, useEffect, useRef } from "react";
-import Shadow from "../../../styles/Shadow.module.css"
+import Shadow from "../../../styles/Shadow.module.css";
 
 export default function ScrollHelper() {
   const [pointDown, setDown] = useState(true);
   const tRef = useRef(null);
 
   function scrollUp() {
-    window.location.href = `#t`;
+    window.location.href = `#`;
   }
 
   function scrollDown() {
@@ -19,32 +19,16 @@ export default function ScrollHelper() {
   }
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setDown(true);
-          
-        } else {
-          setDown(false);
-
-        }
-      });
+    // Listen for scroll events
+    window.addEventListener("scroll", () => {
+      setDown(window.scrollY === 0);
     });
 
-    if (tRef.current) {
-      observer.observe(tRef.current);
-    }
-
-    return () => {
-      if (tRef.current) {
-        observer.unobserve(tRef.current);
-      }
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div style={{ display: "contents" }}>
-      <div id="t" className={styles.top} ref={tRef} />
       <div id="c" className={styles.content} />
       <div className={[styles.wrapper, Shadow.class].join(" ")} onClick={() => scroll()}>
         <i

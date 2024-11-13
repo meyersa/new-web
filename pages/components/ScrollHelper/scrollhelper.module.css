@@ -12,13 +12,6 @@
 
 }
 
-.top {
-    position: absolute; 
-    top: 0; 
-    height: 1vh;
-
-}
-
 .content {
     position: absolute;
     top: calc(100vh + 3rem); 
