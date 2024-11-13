@@ -5,7 +5,7 @@ export default function AttentionButtons() {
 
   return (
       <div className={styles.wrapper}>
-        <AttentionButton text={"Me"} emphasize={"🙋"} loc="#down" />
+        <AttentionButton text={"Me"} emphasize={"🙋"} loc="#c" />
         <AttentionButton text={"Projects"} emphasize={"🏗️"} loc="/projects" />
         <AttentionButton text={"Photo"} emphasize={"📸"} loc="/photography" />
       </div>
