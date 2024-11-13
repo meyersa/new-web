@@ -3,6 +3,7 @@
 ## Todo
 - Move posts to one directory and tag with type for parsing for individual area 
 - Add a recent page all section on main portfolio 
+- Make a python notebook or something for optimizing images in directory to webp
 
 ## Prod Build 
 A Dockerfile has been provided for production building 
