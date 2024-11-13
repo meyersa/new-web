@@ -40,7 +40,8 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden; 
   width: 100dvw;
-  
+  scroll-padding-top: 6rem;
+
 }
 
 body {
