@@ -5,17 +5,17 @@ image: '/images/projects/nextjs-blog/initial-code.png'
 date: '2/20/2024'
 --- 
 
-## Intro/Inspo
+# Intro/Inspo
 
 Technical writing is something that is very common in Computer Science and Information Technology. Without it no one would really know what is happening, except the person who wrote it. For a while the things I hosted did not need any technical writing, because I was the one making it. Until it started to get to the point where I couldn't even remember what I had done. Then I knew it was time to make a blog of sorts. 
 
 Instead of just spinning up another wordpress instance which I inevitably run into issues with styling, I decided it would be easier to make something more complicated. Introducing NextJS with remark to have the easy writing of Wordpress (kind of) in the style of markdown, but with the granularity of NextJS. 
 
-## Process 
+# Process 
 
 This can be broken down into a couple major phases 
 
-### Research 
+## Research 
 
 The first step was to research what technology to use. At this point I was in a sort of web phase, after working on a senior project [Institution Penguin](https://github.com/meyersa/institution-penguin). Our senior design project revolved heavily around a React router project called NextJS. It was pretty easy to use and it could do everything I wanted. 
 
@@ -25,7 +25,7 @@ Now that I found the technology, the first step was to play around with it. The 
 
 ![Initial Code](/images/projects/nextjs-blog/initial-code.png)
 
-### Implementation 
+## Implementation 
 
 With some examples and guidelines found it was time to assemble a general NextJS site using my other projects as a reference point. This honestly took a lot longer than working with the JS for the posting since I had to dial everything into a point that I was happy with. 
 
@@ -35,7 +35,7 @@ One of the first problems I ran into was that I didn't know NextJS as well as I 
 
 Another problem I ran into was I had been working with Python so long that JavaScript syntax became a little confusing. Everything in Python just makes sense, its like writing English, but it's code. JSX with Next also did not help with this, it takes that syntax to even more complicated places. Especially when trying to pass arrays in to functions, which ends up being a mess of curly braces. 
 
-### Styling 
+## Styling 
 
 At this point I almost feel like being a developer makes you into a part time UX designer. Websites never look good to me until I mess with them for a while. They start off with nice and neat CSS files broken up by module in Next, but end with random small fixes thrown in all over the place. (Part of the reason I want to get that asset host up is to remediate this problem). 
 
@@ -43,7 +43,7 @@ I really wanted to distinguish post locations, but using shadows or different co
 
 Once again this process made me reflect on my other projects. Apache has so many websites, but they are not consistently themed. I have multiple, and it made me think about themeing them all the same, but maybe the color changes per site, but the rest is the same? Something about that sounds so satisfying. 
 
-### Deployment 
+## Deployment 
 
 NextJS provides some Dockerfiles that easily get the job done. Simply adding them and specifying the build directory took no time at all. 
 
@@ -53,6 +53,6 @@ And again I had Github workflows for deployment that I can reuse to have it get 
 
 And for now adding a route is easy, deploying with Cloudflare tunnels is just typing in the container name in the CF dashboard. In the future though, this will get moved into my Traefik mesh network on Oracle for better deployment standards and reliability.
 
-### Making content 
+## Making content 
 
 With this blog site mostly done, it was time to consider content for it. I had unfortunately not really taken good notes of assembling this site, since it happened at random times and my memory isn't great, but now I had somewhere I could easily start writing a markdown file, or even just copy in from somewhere else, which should make the documentation process a lot easier. 
