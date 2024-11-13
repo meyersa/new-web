@@ -1,6 +1,6 @@
 --- 
 title: 'New Meyersa' 
-exerpt: 'Portfolio site reimaged'
+excerpt: 'Portfolio site reimaged'
 image: '/images/projects/new-meyersa/v3.png'
 date: '11/12/2024'
 --- 

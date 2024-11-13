@@ -19,8 +19,8 @@ export default function RecentPosts({ dir, allPostsData }) {
 
   return (
     <div style={{marginTop: "3rem", marginBottom: "3rem"}}>
-      {allPostsData.map(({ id, date, title, exerpt, image }) => (
-        <PostItem dir={dir} key={id} id={id} title={title} date={getDate(date)} exerpt={exerpt} image={image} />
+      {allPostsData.map(({ id, date, title, excerpt, image }) => (
+        <PostItem dir={dir} key={id} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
       ))}
     </div>
   );

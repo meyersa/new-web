@@ -1,6 +1,6 @@
 --- 
 title: 'Shodan ETL Pipeline' 
-exerpt: 'My first attempt at an ETL pipeline using Shodan.io APIs to gather information about previous scrapes to build a dashboard on ExpressJS to display the information'
+excerpt: 'My first attempt at an ETL pipeline using Shodan.io APIs to gather information about previous scrapes to build a dashboard on ExpressJS to display the information'
 image: '/images/projects/shodan-etl/background.png'
 date: '9/13/2023'
 --- 

@@ -54,7 +54,7 @@ export default function Writeup({ postData }) {
       </TitlePage>
       <TextWrap>
         <h2>Excerpt</h2>
-        <p>{postData.exerpt}</p>
+        <p>{postData.excerpt}</p>
         <nav>
           <h2>Table of Contents</h2>
           <ul>

@@ -4,7 +4,7 @@ import ColorBox from "../ColorBox";
 import SpacerDots from "../SpacerDots";
 import styles from "./recentpostitem.module.css";
 
-export default function PostItem({ dir, id, title, date, exerpt, image }) {
+export default function PostItem({ dir, id, title, date, excerpt, image }) {
   if (dir == null) {
     console.error("DIR cannot be null");
     return;
@@ -18,7 +18,7 @@ export default function PostItem({ dir, id, title, date, exerpt, image }) {
             <Link href={`${dir}/${id}`}>{title}</Link>
           </h1>
           <p>{date}</p>
-          <p>{exerpt}</p>
+          <p>{excerpt}</p>
         </div>
         <div className={styles.target}>
           <ColorBox>

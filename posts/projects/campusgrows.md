@@ -1,6 +1,6 @@
 --- 
 title: 'CampusGrows.CMU' 
-exerpt: 'Website to show awareness for sustainability/gardens on campus'
+excerpt: 'Website to show awareness for sustainability/gardens on campus'
 image: '/images/projects/campusgrows/background.png'
 date: '9/22/2024'
 --- 
