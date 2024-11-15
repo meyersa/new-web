@@ -110,6 +110,13 @@ i {
 
 }
 
+hr {
+  padding: 0 !important;
+  margin: 0 .25rem; 
+  border: 0.09rem solid var(--contrast); 
+
+}
+
 pre[class*="language-"] {
   font-size: .75rem !important;
   background: none !important;
