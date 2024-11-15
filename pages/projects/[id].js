@@ -5,34 +5,30 @@ import Footer from "../components/Footer";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import AuthorDate from "../components/AuthorDate";
 import TextWrap from "../components/TextWrap";
+import "prismjs/themes/prism.css";
+import "prismjs";
+import "prismjs/plugins/autoloader/prism-autoloader.min.js"; // Import the Autoloader plugin
 
 export default function Writeup({ postData }) {
   const [contentHtml, setContentHtml] = useState(postData.contentHtml);
   const [headings, setHeadings] = useState([]);
+  const [isClient, setIsClient] = useState(false); // Flag to track client-side rendering
 
   useEffect(() => {
-    /*
-     * Display a table of contents at the top of posts
-     * - Parse HTML from postData to find h1s, and then
-     *   go back and add IDs to them
-     * - Those IDs are then saved and passed to the nav
-     *   to be used for scrolling to them
-     */
+    setIsClient(true); // Indicate that we are on the client side
 
-    // Temp container for parsing HTML
+    // Display a table of contents at the top of posts
     const tempDiv = document.createElement("div");
     tempDiv.innerHTML = postData.contentHtml;
 
     // Select all <h1> elements and extract text and ID
     const h1Elements = tempDiv.querySelectorAll("h1");
     const tocItems = Array.from(h1Elements).map((heading, index) => {
-      // Generate an ID based on the heading text or index
       let headingId = heading.innerText
         .toLowerCase()
         .replace(/\s+/g, "-")
         .replace(/[^\w-]/g, "");
 
-      // Ensure the ID is unique
       if (tempDiv.querySelectorAll(`#${headingId}`).length > 0) {
         headingId = `${headingId}-${index}`;
       }
@@ -41,10 +37,16 @@ export default function Writeup({ postData }) {
       return { text: heading.innerText, id: heading.id };
     });
 
-    // Update the state
     setHeadings(tocItems);
     setContentHtml(tempDiv.innerHTML);
   }, [postData.contentHtml]);
+
+  // Apply PrismJS syntax highlighting only after component has mounted
+  useEffect(() => {
+    if (isClient) {
+      Prism.highlightAll(); // Apply syntax highlighting
+    }
+  }, [isClient, contentHtml]);
 
   return (
     <div>
@@ -67,7 +69,10 @@ export default function Writeup({ postData }) {
         </nav>
       </TextWrap>
       <TextWrap>
-        <div className="innerHTML" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        {/* Only render the content after component is mounted */}
+        {isClient && (
+          <div className="innerHTML" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        )}
       </TextWrap>
       <Footer />
     </div>
