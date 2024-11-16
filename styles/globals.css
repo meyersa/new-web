@@ -65,6 +65,11 @@ h1 {
 
 }
 
+h1:not(:has(a)) {
+  border-bottom: solid .25rem var(--contrast);
+
+}
+
 h2 {
   color: var(--contrast);
   filter: brightness(1.5);
@@ -110,13 +115,6 @@ i {
 
 }
 
-hr {
-  padding: 0 !important;
-  margin: 0 .25rem; 
-  border: 0.09rem solid var(--contrast); 
-
-}
-
 pre[class*="language-"] {
   font-size: .75rem !important;
   background: none !important;
@@ -131,4 +129,15 @@ pre[class*="language-"] * {
   font-family: monospace !important;
   text-shadow: none !important;
   
+}
+
+ul ul {
+  /* padding: 0.25rem; */
+  margin: 0.75rem !important;
+
+}
+
+ul > li {
+  margin: 0.25rem 0;
+
 }

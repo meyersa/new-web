@@ -5,24 +5,25 @@ image: "/images/projects/cloudsct/ui.png"
 date: "11/15/2024"
 ---
 
+# CloudSCT
+Disaggregating SmartCityTracker for the cloud
+
+# Contents 
+
 # Links
----
 
 [Github](https://github.com/meyersa/CloudSCT)
 [Live](https://cloudsct.meyersa.com)
 
 # Images
----
 
 ![Web UI](/images/projects/cloudsct/ui.png)
 
 # Intro/Inspo
----
 
 To demonstrate the advantages of service-based architecture and cloud services in general - I took on a venture to modify an existing project into a cloud-ready project. In general, being cloud-ready means that the project is not based upon a single point of failure or monolithic service, instead, it breaks up as much as possible into smaller services. This provides advantages for performance being able to scale up the amount of services and being able to load balance across multiple servers. There are many more advantages, but that's something I'd have to focus on in an upcoming wrap-up for my migration to Kubernetes.
 
 # SmartCityTracker
----
 
 The perfect contender for this project would have to be something unique, interesting, and cloud-applicable. Originally, my goal was to use one of the previous senior design projects at CMU - however, it seems that none of them utilized GitHub so this was not possible...
 
@@ -35,7 +36,6 @@ This means that every time the database is updated, the HTML root has to be uplo
 ![Nested HTML to load all of the data](/images/projects/cloudsct/nested-html.png)
 
 # Disaggregating
----
 
 To keep things fairly simple, the breakdown here would be to separate the frontend from the backend and the data from static assets.
 
@@ -157,14 +157,12 @@ So as it turns out, the Github was the golden source of truth in this project an
 This part is not as exciting and was actually quite boring. Basically, you just create a GCP Project to organize the environment, create a Firestore NoSQL database, create a service worker, add `Database User` to the service worker, generate an auth token, install the Node.js SDK, and you are off to the races. 
 
 # Conclusion 
----
 
 All in all, this project turned out to be pretty interesting. I love throwing myself into projects that I know absolutely nothing about and having to learn a ton of new information. In this case, I learned what a smart city was, how to interact with Firebase, and how to use Leaflet. 
 
 I also reinforced my ego on web design. But that's not as important.
 
 # Technologies
----
 
 - Docker
 - Node.js
