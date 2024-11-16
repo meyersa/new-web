@@ -117,15 +117,12 @@ i {
 
 pre[class*="language-"] {
   font-size: .75rem !important;
-  background: none !important;
   border-radius: 1rem;
   padding: 1rem;
-  backdrop-filter: contrast(0.8);
 
 }
 
 pre[class*="language-"] * {
-  background: none !important;
   font-family: monospace !important;
   text-shadow: none !important;
   
