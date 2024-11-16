@@ -5,9 +5,7 @@ import Footer from "../components/Footer";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import AuthorDate from "../components/AuthorDate";
 import TextWrap from "../components/TextWrap";
-import "prismjs/themes/prism-tomorrow.css";
-import "prismjs";
-import "prismjs/plugins/autoloader/prism-autoloader.min.js";
+import "@wooorm/starry-night/style/both"
 
 export default function Writeup({ postData }) {
   return (

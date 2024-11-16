@@ -115,18 +115,13 @@ i {
 
 }
 
-pre[class*="language-"] {
-  font-size: .75rem !important;
+pre {
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1rem !important;
+  backdrop-filter: contrast(0.8);
 
 }
 
-pre[class*="language-"] * {
-  font-family: monospace !important;
-  text-shadow: none !important;
-  
-}
 
 ul ul {
   /* padding: 0.25rem; */
