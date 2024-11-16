@@ -71,8 +71,7 @@ h1:not(:has(a)) {
 }
 
 h2 {
-  color: var(--contrast);
-  filter: brightness(1.5);
+  color: var(--primary);
   font-family: "Paytone One", Impact;
 
 }
