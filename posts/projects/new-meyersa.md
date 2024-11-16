@@ -5,6 +5,14 @@ image: '/images/projects/new-meyersa/v3.png'
 date: '11/12/2024'
 --- 
 
+# New Meyersa
+Portfolio site reimaged
+
+[Github](https://github.com/meyersa/new-web)
+[Live (This website)](https://meyersa.com)
+
+## Contents 
+
 # Why does there need to be a V3
 Simple. The current site, v2, was not up to par with my current skill level and the information was mostly outdated. Also, I was a little ashamed to include the link on my LinkedIn or Resume since it was a little ugly looking back... 
 

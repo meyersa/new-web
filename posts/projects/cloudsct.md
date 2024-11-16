@@ -8,16 +8,10 @@ date: "11/15/2024"
 # CloudSCT
 Disaggregating SmartCityTracker for the cloud
 
-# Contents 
-
-# Links
-
 [Github](https://github.com/meyersa/CloudSCT)
 [Live](https://cloudsct.meyersa.com)
 
-# Images
-
-![Web UI](/images/projects/cloudsct/ui.png)
+## Contents 
 
 # Intro/Inspo
 
@@ -102,6 +96,8 @@ This solved some pretty major problems and made it easily off to the races. Howe
 In a perfect world, the API could be separated into another service, but there simply is not enough traffic to justify this and the dataset is pretty lightweight as it is. However, if it came down to it, separately the two would allow for much easier scaling of the data. And if it came down to it, Firestore can directly be accessed by clients, eliminating the need for an API.
 
 In a similarly perfect world, I would not have rewritten the entire project including the HTML and CSS, but here we are. Welcome to the fully redesigned Cloud SmartCityTracker!
+
+![Web UI](/images/projects/cloudsct/ui.png)
 
 ## Backend 
 

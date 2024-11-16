@@ -1,10 +1,13 @@
---- 
-title: 'String' 
-excerpt: 'String'
-image: 'String'
-author: 'String' (Optional)
-authorImg: 'String' (Optional)
-authorLink: 'String' (Optional)
---- 
- 
-CONTENT
+---
+title: 
+excerpt:
+image: 
+date: 
+---
+
+# Title
+Except
+
+## Contents 
+
+# Start

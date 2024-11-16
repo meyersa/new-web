@@ -5,14 +5,15 @@ image: '/images/projects/shodan-etl/background.png'
 date: '9/13/2023'
 --- 
 
-# Links 
+# Shodan ETL Pipeline
+My first attempt at an ETL pipeline using Shodan.io APIs to gather information about previous scrapes to build a dashboard on ExpressJS to display the information
 
 [Github](https://github.com/meyersa/shodan-etl)
 [Live](https://shodanetl.meyersa.com)
 
-# Images
-
 ![What it ended up looking like](/images/projects/shodan-etl/background.png)
+
+## Contents 
 
 # Intro/Inspo
 

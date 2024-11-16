@@ -5,14 +5,15 @@ image: '/images/projects/small-eats/background.png'
 date: '4/25/2024'
 --- 
 
-# Links 
+# AWS Flask: Small Eats 
+A flask website used to showcase templating and dynamic deployment onto ec2 for ITC466
 
 [Github](https://github.com/meyersa/aws-flask)
 [Live](https://awsflask.meyersa.com)
 
-# Images 
-
 ![What it ended up looking like](/images/projects/small-eats/background.png)
+
+## Contents 
 
 # Intro/Inspo
 

@@ -5,14 +5,15 @@ image: '/images/projects/campusgrows/background.png'
 date: '9/22/2024'
 --- 
 
-# Links 
+# CampusGrows.CMU 
+Website to show awareness for sustainability/gardens on campus
 
 [Github](https://github.com/meyersa/campusgrows)
 [Live](https://campusgrows.com)
 
-# Images 
-
 ![What it ended up looking like](/images/projects/campusgrows/background.png)
+
+## Contents 
 
 # Intro/Inspo
 

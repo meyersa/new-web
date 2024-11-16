@@ -5,6 +5,13 @@ image: '/images/projects/nextjs-blog/initial-code.png'
 date: '2/20/2024'
 --- 
 
+# Making a NextJS Blog Site
+Creating a spot to post projects using NextJS and other technologies
+
+[Github](https://github.com/meyersa/writeups)
+
+## Contents
+
 # Intro/Inspo
 
 Technical writing is something that is very common in Computer Science and Information Technology. Without it no one would really know what is happening, except the person who wrote it. For a while the things I hosted did not need any technical writing, because I was the one making it. Until it started to get to the point where I couldn't even remember what I had done. Then I knew it was time to make a blog of sorts. 
