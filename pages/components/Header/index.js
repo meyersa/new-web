@@ -16,6 +16,7 @@ export default function Header() {
     // Display menu
     if (!menuDisplayed) {
       document.getElementById("mobileMenu").style.transform = "translateY(calc(0% + 6em))";
+      document.getElementById("mobileMenu").style.visibility = "visible";
       document.body.style.height = "100%";
       document.body.style.overflow = "hidden";
       setDisplayed(true);
@@ -24,6 +25,7 @@ export default function Header() {
 
     // Hide menu
     document.getElementById("mobileMenu").style.transform = "translateY(-100%)";
+    document.getElementById("mobileMenu").style.visibility = "hidden";
     document.body.style.height = "initial";
     document.body.style.overflow = "initial";
     setDisplayed(false);
