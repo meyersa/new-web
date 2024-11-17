@@ -119,7 +119,8 @@ pre {
   border-radius: 1rem;
   padding: 1rem !important;
   backdrop-filter: contrast(0.8);
-
+  overflow: scroll;
+  
 }
 
 
