@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import ColorBox from "../ColorBox";
-import SpacerDots from "../SpacerDots";
 import styles from "./recentpostitem.module.css";
 
 export default function PostItem({ dir, id, title, date, excerpt, image }) {
@@ -35,7 +34,6 @@ export default function PostItem({ dir, id, title, date, excerpt, image }) {
           </ColorBox>
         </div>
       </div>
-      <SpacerDots />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { formatRelative } from "date-fns";
 import { useState } from "react";
 import styles from "./recentposts.module.css";
 import Shadow from "../../../styles/Shadow.module.css"
+import SpacerDots from "../SpacerDots";
 
 export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) {
   /*
@@ -32,8 +33,11 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) 
 
   return (
     <div className={styles.wrapper}>
-      {currentPosts.map(({ id, date, title, excerpt, image }) => (
-        <PostItem dir={dir} key={id} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
+      {currentPosts.map(({ id, date, title, excerpt, image }, index) => (
+        <div key={id} style={{display: "contents"}}>
+          <PostItem dir={dir} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
+          {index !== currentPosts.length - 1 && <SpacerDots />}
+        </div>
       ))}
       {isPaginated && (
         <div className={styles.paginatedWrapper}>
@@ -53,6 +57,7 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) 
           </button>
         </div>
       )}
+      <SpacerDots />
     </div>
   );
 }
