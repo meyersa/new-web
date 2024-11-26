@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Footer from "../Footer";
-import Shadow from "../../../styles/Shadow.module.css"
+import Shadow from "../../../styles/Shadow.module.css";
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
@@ -72,10 +72,10 @@ export default function Header() {
             Photography
           </Link>
           <Link className={styles.inside} href="/search">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className={["fa-solid", "fa-magnifying-glass"].join(" ")}></i>
           </Link>
           <button className={styles.menuButton} onClick={() => handleMobileRedirect("/search")}>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className={["fa-solid", "fa-magnifying-glass"].join(" ")}></i>
           </button>
           <button id="menuButton" className={styles.menuButton} onClick={() => handleButtonClick()}>
             {menuDisplayed ? (
