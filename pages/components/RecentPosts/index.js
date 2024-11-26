@@ -6,6 +6,8 @@ import Shadow from "../../../styles/Shadow.module.css"
 import SpacerDots from "../SpacerDots";
 
 export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true, topButtons = true}) {
+  const [currentPage, setCurrentPage] = useState(1);
+
   /*
    * Basic checks before processing
    *  - dir should not be invalid
@@ -13,9 +15,8 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
   if (allPostsData == null) {
     console.error("allPostsData cannot be null");
     return;
-  }
 
-  const [currentPage, setCurrentPage] = useState(1);
+  }
 
   // Determine whether pagination is needed, if not then show all
   const isPaginated = (postsPerPage != null) && (postsPerPage < allPostsData.length);
