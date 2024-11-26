@@ -21,3 +21,7 @@
     background-color: var(--bright);
     width: 7rem;
 }
+
+.paginatedButton:disabled {
+    filter: grayscale(1);
+}
