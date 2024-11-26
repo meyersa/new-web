@@ -5,7 +5,7 @@ import styles from "./recentposts.module.css";
 import Shadow from "../../../styles/Shadow.module.css"
 import SpacerDots from "../SpacerDots";
 
-export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true}) {
+export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true, topButtons = true}) {
   /*
    * Basic checks before processing
    *  - dir should not be invalid
@@ -43,7 +43,7 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
 
   return (
     <div className={styles.wrapper}>
-      {(isPaginated && allPostsData.length > 3) && (
+      {(isPaginated && allPostsData.length > 3 && topButtons) && (
         <div className={styles.paginatedWrapper}>
           <button
             onClick={() => handlePageChange(currentPage - 1)}
@@ -61,9 +61,9 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
           </button>
         </div>
       )}
-      {currentPosts.map(({ id, date, title, excerpt, image }, index) => (
+      {currentPosts.map(({ id, type, date, title, excerpt, image }, index) => (
         <div key={id} style={{display: "contents"}}>
-          <PostItem dir={dir} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
+          <PostItem dir={type} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
           {index !== currentPosts.length - 1 && <SpacerDots />}
         </div>
       ))}

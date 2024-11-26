@@ -10,8 +10,10 @@ import SmallBox from "./components/SmallBox";
 import Link from "next/link";
 import AttentionButtons from "./components/AttentionButtons";
 import TextWrap from "./components/TextWrap";
+import { getRecentPosts } from "../lib/posts";
+import RecentPosts from "./components/RecentPosts";
 
-export default function Home() {
+export default function Home({ allPostsData }) {
   return (
     <div>
       <Header />
@@ -198,8 +200,26 @@ export default function Home() {
             </StyledList>
           </div>
         </ColorBox>
+        <TextWrap>
+          <h1>Recent Posts</h1>
+        </TextWrap>
+        <RecentPosts allPostsData={allPostsData} postsPerPage={1} scrollToTop={false} topButtons={false} />
+        <TextWrap>
+          <p>
+            More posts can be found in the respect <Link href="/projects">Projects</Link> and{" "}
+            <Link href="/photography">Photography</Link> directories.
+          </p>
+        </TextWrap>
       </div>
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      allPostsData: getRecentPosts(),
+    },
+  };
 }
