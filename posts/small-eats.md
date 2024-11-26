@@ -1,5 +1,5 @@
 --- 
-title: 'AWS Flask: Small Eats' 
+title: 'Small Eats' 
 excerpt: 'A flask website used to showcase templating and dynamic deployment onto ec2 for ITC466'
 image: '/images/projects/small-eats/background.png'
 date: '4/25/2024'
