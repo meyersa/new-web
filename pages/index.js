@@ -205,7 +205,7 @@ export default function Home({ allPostsData }) {
         </TextWrap>
         <RecentPosts allPostsData={allPostsData} postsPerPage={1} scrollToTop={false} topButtons={false} />
         <TextWrap>
-          <p>
+          <p style={{textAlign: "center"}}>
             More posts can be found in the respect <Link href="/projects">Projects</Link> and{" "}
             <Link href="/photography">Photography</Link> directories.
           </p>
