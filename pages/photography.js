@@ -29,7 +29,7 @@ export default function Photography({ allPostsData }) {
           </p>
           <p>No portraits though..</p>
         </TextWrap>
-        <RecentPosts dir={type} allPostsData={allPostsData} />
+        <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5}/>
         <ColorBox>
           <h1>Equipment</h1>
           <h3>Main Camera - Canon EOS R</h3>

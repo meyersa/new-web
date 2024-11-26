@@ -1,7 +1,10 @@
 import PostItem from "../RecentPostItem";
 import { formatRelative } from "date-fns";
+import { useState } from "react";
+import styles from "./recentposts.module.css";
+import Shadow from "../../../styles/Shadow.module.css"
 
-export default function RecentPosts({ dir, allPostsData }) {
+export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) {
   /*
    * Basic checks before processing
    *  - dir should not be invalid
@@ -11,17 +14,45 @@ export default function RecentPosts({ dir, allPostsData }) {
     return;
   }
 
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Determine whether pagination is needed, if not then show all
+  const isPaginated = postsPerPage != null;
+  const totalPages = isPaginated ? Math.ceil(allPostsData.length / postsPerPage) : 1;
+
+  // Calculate the current page's posts
+  const startIndex = isPaginated ? (currentPage - 1) * postsPerPage : 0;
+  const currentPosts = isPaginated ? allPostsData.slice(startIndex, startIndex + postsPerPage) : allPostsData;
+
   function getDate(date) {
-    const raw = formatRelative(date, new Date(), { addSuffix: true });
+    const raw = formatRelative(new Date(date), new Date(), { addSuffix: true });
 
     return raw.charAt(0).toUpperCase() + raw.slice(1);
   }
 
   return (
-    <div style={{marginTop: "3rem", marginBottom: "3rem"}}>
-      {allPostsData.map(({ id, date, title, excerpt, image }) => (
+    <div className={styles.wrapper}>
+      {currentPosts.map(({ id, date, title, excerpt, image }) => (
         <PostItem dir={dir} key={id} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
       ))}
+      {isPaginated && (
+        <div className={styles.paginatedWrapper}>
+          <button
+            onClick={() => setCurrentPage(currentPage - 1)}
+            disabled={currentPage <= 1}
+            className={[Shadow.class, styles.paginatedButton].join(" ")}
+          >
+            Previous
+          </button>
+          <button
+            onClick={() => setCurrentPage(currentPage + 1)}
+            disabled={currentPage >= totalPages}
+            className={[Shadow.class, styles.paginatedButton].join(" ")}
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
   );
 }

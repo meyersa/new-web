@@ -21,7 +21,7 @@ export default function Projects({ allPostsData }) {
           <h1 style={{ textAlign: "center" }}>Recent</h1>
           <SpacerDots />
         </TextWrap>
-        <RecentPosts dir={type} allPostsData={allPostsData} />
+        <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5} />
         <TextWrap>
           <p style={{ textAlign: "center" }}>
             If you are interested in more of what I have worked on, check out my{" "}
