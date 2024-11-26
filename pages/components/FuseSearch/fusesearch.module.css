@@ -1,0 +1,30 @@
+.searchWrapper {
+  padding-top: 6em;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.searchArea {
+  padding: 1rem;
+
+}
+
+.searchBox {
+  width: calc(100% - 2 * 1rem);
+  max-width: 1000px;
+  padding: 1rem;  
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  font-size: 1.5rem;
+} 
+
+.searchResult {
+  backdrop-filter: contrast(0.8);
+  border-radius: 1rem;
+  min-height: 20vh;
+  padding: 1rem;
+  width: 90%;
+  margin: 3rem auto;
+
+}
