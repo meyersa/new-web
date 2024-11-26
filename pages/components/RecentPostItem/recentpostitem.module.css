@@ -1,57 +1,53 @@
 .contents {
-    display: contents;
-
+  display: contents;
 }
 
 .wrapper {
-    display: flex; 
-    gap: 3rem; 
-    flex-direction: row;
-    width: 90%;
-    max-width: 1000px;
-    margin: 3rem auto; 
-    align-items: center;
-    backdrop-filter: contrast(0.8);
-    padding: 2rem; 
-    border-radius: 1rem;
-    overflow: hidden;
-
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  align-items: center;
+  backdrop-filter: contrast(0.8);
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 20rem;
 }
 
 .text {
-    width: 90%; 
-    max-width: 1000px;
-    margin: 0 auto;
-
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .target {
-    display: contents;
-
+  display: contents;
 }
 
 .target > div {
-    padding: 0;
-    width: fit-content;
-    max-width: 90%;
-    overflow: hidden;
-    margin: 0 auto; 
-    
+  padding: 0;
+  width: fit-content;
+  max-width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .target > div > a > img {
-    width: fit-content !important;
-    max-height: 50dvh !important;
-    object-fit: contain !important;
-    height: unset !important;
-    vertical-align: text-bottom;
+  width: fit-content !important;
+  max-height: 50dvh !important;
+  object-fit: contain !important;
+  height: unset !important;
+  vertical-align: text-bottom;
 }
 
 @media (max-width: 740px) {
-    .wrapper {
-      flex-direction: column;
-        width: calc(90% - 2rem); 
-        gap: 1rem; 
-
-    }
+  .wrapper {
+    flex-direction: column;
+    width: calc(90% - 2rem);
+    gap: 1rem;
+    height: 30rem;
   }
+}
