@@ -30,12 +30,6 @@ export default function Photography({ allPostsData }) {
           <p>No portraits though..</p>
         </TextWrap>
         <RecentPosts dir={type} allPostsData={allPostsData} />
-        <TextWrap>
-          <p style={{ textAlign: "center" }}>
-            There is currently no way to view <span style={{ fontStyle: "italic" }}>all</span> posts but that should be
-            a thing eventually
-          </p>
-        </TextWrap>
         <ColorBox>
           <h1>Equipment</h1>
           <h3>Main Camera - Canon EOS R</h3>
