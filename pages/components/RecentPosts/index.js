@@ -5,7 +5,7 @@ import styles from "./recentposts.module.css";
 import Shadow from "../../../styles/Shadow.module.css"
 import SpacerDots from "../SpacerDots";
 
-export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) {
+export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true}) {
   /*
    * Basic checks before processing
    *  - dir should not be invalid
@@ -18,7 +18,7 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) 
   const [currentPage, setCurrentPage] = useState(1);
 
   // Determine whether pagination is needed, if not then show all
-  const isPaginated = postsPerPage != null;
+  const isPaginated = (postsPerPage != null) && (postsPerPage < allPostsData.length);
   const totalPages = isPaginated ? Math.ceil(allPostsData.length / postsPerPage) : 1;
 
   // Calculate the current page's posts
@@ -31,19 +31,29 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) 
     return raw.charAt(0).toUpperCase() + raw.slice(1);
   }
 
+  function handlePageChange(newPage) {
+    setCurrentPage(newPage);
+
+    // Scroll to #c
+    if (scrollToTop) {
+      window.location.href = "#c";
+
+    }
+  }
+
   return (
     <div className={styles.wrapper}>
       {(isPaginated && allPostsData.length > 3) && (
         <div className={styles.paginatedWrapper}>
           <button
-            onClick={() => setCurrentPage(currentPage - 1)}
+            onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage <= 1}
             className={[Shadow.class, styles.paginatedButton].join(" ")}
           >
             Previous
           </button>
           <button
-            onClick={() => setCurrentPage(currentPage + 1)}
+            onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage >= totalPages}
             className={[Shadow.class, styles.paginatedButton].join(" ")}
           >
@@ -60,14 +70,14 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) 
       {isPaginated && (
         <div className={styles.paginatedWrapper}>
           <button
-            onClick={() => setCurrentPage(currentPage - 1)}
+            onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage <= 1}
             className={[Shadow.class, styles.paginatedButton].join(" ")}
           >
             Previous
           </button>
           <button
-            onClick={() => setCurrentPage(currentPage + 1)}
+            onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage >= totalPages}
             className={[Shadow.class, styles.paginatedButton].join(" ")}
           >
