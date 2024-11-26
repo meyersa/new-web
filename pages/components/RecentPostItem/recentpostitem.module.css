@@ -7,7 +7,7 @@
     display: flex; 
     gap: 3rem; 
     flex-direction: row;
-    width: calc(90% - 2 * 2rem - 2 * 6rem);
+    width: 90%;
     max-width: 1000px;
     margin: 6rem auto; 
     align-items: center;
