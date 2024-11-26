@@ -6,64 +6,51 @@ import { useState } from "react";
 import { formatRelative } from "date-fns";
 
 export default function FuseSearch({ data }) {
-  if (data == null) {
-    throw new Error("Data cannot be null");
-  }
+  if (!data) throw new Error("Data cannot be null");
 
   const [searchResults, setSearchResults] = useState([]);
 
-  const fuseOptions = {
+  const fuse = new Fuse(data, {
     keys: ["title", "date", "content"],
+  });
+
+  const handleSearch = () => {
+    const query = document.getElementById("searchBox")?.value.trim();
+    setSearchResults(query ? fuse.search(query).map(result => result.item) : []);
   };
 
-  const fuse = new Fuse(data, fuseOptions);
-
-  function getDate(date) {
-    const raw = formatRelative(new Date(date), new Date(), { addSuffix: true });
-    return raw.charAt(0).toUpperCase() + raw.slice(1);
-  }
-
-  function handleSearch() {
-    const searchBox = document.getElementById("searchBox");
-    if (!searchBox) return;
-
-    const searchQuery = searchBox.value.trim();
-    const results = searchQuery
-      ? fuse.search(searchQuery).map(result => result.item)
-      : [];
-
-    setSearchResults(results);
-  }
+  const formatDate = (date) =>
+    formatRelative(new Date(date), new Date(), { addSuffix: true });
 
   return (
     <div className={styles.searchWrapper}>
       <div className={styles.searchArea}>
-
-      <h1>Search</h1>
-      <p>All posts are indexed by title, date, and content. Powered by Fuse.js</p>
-      <form>
+        <h1>Search</h1>
+        <p>All posts are indexed by title, date, and content. Powered by Fuse.js</p>
         <input
           id="searchBox"
-          placeholder="..."
-          onInput={() => handleSearch()}
-          className={[Shadow.class, styles.searchBox].join(" ")}
-        ></input>
-      </form>
+          placeholder="Search..."
+          onInput={handleSearch}
+          className={`${Shadow.class} ${styles.searchBox}`}
+        />
       </div>
       <div id="searchResults">
-        {searchResults.length > 0 && (
+        {searchResults.length > 0 ? (
           searchResults.map(({ id, type, date, title, excerpt, image }) => (
-            <div key={id} style={{ display: "contents" }}>
-              <PostItem
-                dir={type}
-                id={id}
-                title={title}
-                date={getDate(date)}
-                excerpt={excerpt}
-                image={image}
-              />
-            </div>
+            <PostItem
+              key={id}
+              dir={type}
+              id={id}
+              title={title}
+              date={formatDate(date)}
+              excerpt={excerpt}
+              image={image}
+            />
           ))
+        ) : (
+          <div className={styles.noResults}>
+            <p>No results yet</p>
+          </div>
         )}
       </div>
     </div>
