@@ -1,0 +1,27 @@
+.wrapper {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+.paginatedWrapper {
+    display: flex; 
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    
+}
+
+.paginatedButton {
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--white);
+    background-color: var(--bright);
+    width: 7rem;
+}
+
+.paginatedButton:disabled {
+    filter: grayscale(1);
+}

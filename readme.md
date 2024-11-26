@@ -1,9 +1,10 @@
 # New Portfolio Website 
 
 ## Todo
-- Move posts to one directory and tag with type for parsing for individual area 
-- Add a recent page all section on main portfolio 
 - Make a python notebook or something for optimizing images in directory to webp
+- Add Winston for logging (inc in app.js)
+- Page for catch all in case of invalid types? (/other/[id].js)
+- Standardize more styling
 
 ## Prod Build 
 A Dockerfile has been provided for production building 

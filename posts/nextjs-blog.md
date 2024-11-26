@@ -1,8 +1,9 @@
 --- 
-title: 'Making a NextJS Blog Site' 
+title: 'NextJS Writeups' 
 excerpt: 'Creating a spot to post projects, such as making this website, using NextJS and other technologies'
 image: '/images/projects/nextjs-blog/initial-code.png'
 date: '2/20/2024'
+type: 'projects'
 --- 
 
 # Making a NextJS Blog Site

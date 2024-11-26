@@ -42,6 +42,12 @@
   gap: 1rem;
 }
 
+.inside > i {
+  color: var(--distract);
+  font-size: 1.5rem;
+
+}
+
 .menuButton {
   padding: 0.5rem;
   border-radius: 0.5rem;

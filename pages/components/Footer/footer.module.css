@@ -2,7 +2,14 @@
     display: flex; 
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
+    margin: 3rem;
+    gap: 3rem;
+
+}
+
+.outerWrapper * {
+    margin: 0 !important;
+
 }
 
 .innerWrapper {
@@ -13,11 +20,6 @@
     align-items: center;
     gap: 1rem;
     
-}
-
-.wrapper > * {
-    padding: 0; 
-
 }
 
 .divider { 
