@@ -3,6 +3,7 @@ title: "Deer Identification"
 excerpt: "Combining Metadata with Images to test CNN capabilities"
 image: "/images/projects/deer-identification/deer.jpg"
 date: "11/25/2024"
+type: 'project'
 ---
 
 # Deer Identification

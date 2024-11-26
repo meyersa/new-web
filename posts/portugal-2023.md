@@ -3,6 +3,7 @@ title: 'Portugal 2023'
 excerpt: 'Lisbon, Porto, Evora, Sintra, and more'
 image: '/images/photography/portugal-2023/portugal-2023-1.jpg'
 date: '3/5/2023'
+type: 'photography'
 --- 
 
 ## Day 1 
