@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
 import Footer from "./components/Footer";
-import SmallBox from "./components/SmallBox";
 import ColorBox from "./components/ColorBox";
 import TextWrap from "./components/TextWrap";
 import SpacerDots from "./components/SpacerDots";
