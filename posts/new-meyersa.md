@@ -3,7 +3,7 @@ title: 'New Meyersa'
 excerpt: 'Portfolio site reimaged'
 image: '/images/projects/new-meyersa/v3.png'
 date: '11/12/2024'
-type: 'project'
+type: 'projects'
 --- 
 
 # New Meyersa

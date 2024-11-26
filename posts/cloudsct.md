@@ -3,7 +3,7 @@ title: "CloudSCT"
 excerpt: "Disaggregating SmartCityTracker for the cloud"
 image: "/images/projects/cloudsct/ui.png"
 date: "11/15/2024"
-type: 'project'
+type: 'projects'
 ---
 
 # CloudSCT
