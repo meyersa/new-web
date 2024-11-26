@@ -33,6 +33,24 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null }) 
 
   return (
     <div className={styles.wrapper}>
+      {(isPaginated && allPostsData.length > 3) && (
+        <div className={styles.paginatedWrapper}>
+          <button
+            onClick={() => setCurrentPage(currentPage - 1)}
+            disabled={currentPage <= 1}
+            className={[Shadow.class, styles.paginatedButton].join(" ")}
+          >
+            Previous
+          </button>
+          <button
+            onClick={() => setCurrentPage(currentPage + 1)}
+            disabled={currentPage >= totalPages}
+            className={[Shadow.class, styles.paginatedButton].join(" ")}
+          >
+            Next
+          </button>
+        </div>
+      )}
       {currentPosts.map(({ id, date, title, excerpt, image }, index) => (
         <div key={id} style={{display: "contents"}}>
           <PostItem dir={dir} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
