@@ -71,6 +71,12 @@ export default function Header() {
           <Link className={styles.inside} href="/photography">
             Photography
           </Link>
+          <Link className={styles.inside} href="/search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </Link>
+          <button className={styles.menuButton} onClick={() => handleMobileRedirect("/search")}>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
           <button id="menuButton" className={styles.menuButton} onClick={() => handleButtonClick()}>
             {menuDisplayed ? (
               <i className={["fa-solid", "fa-minus", styles.iconGrow].join(" ")} />
