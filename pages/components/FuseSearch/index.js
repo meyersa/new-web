@@ -6,9 +6,9 @@ import { useState } from "react";
 import { formatRelative } from "date-fns";
 
 export default function FuseSearch({ data }) {
-  if (!data) throw new Error("Data cannot be null");
-
   const [searchResults, setSearchResults] = useState([]);
+
+  if (!data) return "";
 
   const fuse = new Fuse(data, {
     keys: ["title", "date", "content"],
