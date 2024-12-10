@@ -51,6 +51,7 @@ body {
   font-size: 1.15em;
   color: var(--primary);
   background-color: var(--secondary);
+  background-image: url("/svgs/background.svg");
 
 }
 
