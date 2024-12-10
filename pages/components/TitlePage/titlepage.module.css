@@ -25,27 +25,29 @@
 }
 
 .wrh1 {
-  font-size: 5rem;
-  padding: 1rem;
+  font-size: 7rem;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--primary);
-  background-color: var(--secondary);
+  color: var(--white);
   width: fit-content;
   margin: 1rem;
-  border: solid var(--dark);
+  border: none;
+  box-shadow: none;
+  text-shadow: 3px 3px var(--black)
 }
 
-.wrapper > p {
+.wrapper p {
   width: fit-content;
   margin: 0;
   padding: 1rem;
   z-index: 5;
+  color: var(--white)
+
 }
 
 @media (max-width: 740px) {
   .wrapper > h1 {
-    font-size: 2.75rem;
+    font-size: 4rem;
   }
 }
