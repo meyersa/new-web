@@ -10,6 +10,7 @@
   --bright: #0071CE;  
   --distract: #e6b14e;  
   
+  --hard-shadow: 0.15rem 0.15rem 0 0.015rem var(--dark);
 }
 
 @media (prefers-color-scheme: light) {
@@ -141,4 +142,20 @@ p > code {
   color: var(--bright);
   font-style: italic;
 
+}
+
+table {
+  border-collapse: collapse;
+  background: transparent;
+  backdrop-filter: contrast(0.8) blur(0.3rem);
+  border: 2px solid var(--bright);
+  border-radius: 1rem;
+  margin: 1rem;
+  overflow: hidden;
+  box-shadow: var(--hard-shadow);
+}
+
+table td, table th {
+  border: 1px solid var(--dark);
+  padding: 0.5rem;
 }
