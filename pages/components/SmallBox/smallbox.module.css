@@ -1,11 +1,14 @@
 .wrapper {
     display: flex; 
     flex-direction: column;
-    width: 80%;
-    margin: auto;
-    align-items: center;
     border-radius: 1rem;
     backdrop-filter: blur(1rem);
     padding: 1rem; 
     border-radius: .5rem;
+    align-items: center;
+
+}
+
+.wrapper > p {
+    margin: 1rem 0;
 }
