@@ -61,7 +61,13 @@ export default function Header() {
       <div className={[styles.headerbar, Shadow.class].join(" ")}>
         <div className={styles.leftheader}>
           <Link className={styles.inside} href={path}>
-            {path}
+            {
+              path == "/" ? (
+                "/home"
+              ) : (
+                path
+              )
+            }
           </Link>
         </div>
         <div className={styles.rightheader}>
