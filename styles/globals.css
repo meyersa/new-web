@@ -49,10 +49,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: monospace;
-  font-size: 1.15em;
+  font-size: 1.15rem;
   color: var(--primary);
   background-color: var(--secondary);
-  background-image: url("/svgs/background.svg");
+  /* background-image: url("/svgs/background.svg"); */
 
 }
 
