@@ -42,7 +42,7 @@
 }
 
 .wrh1 {
-  font-size: 6rem;
+  font-size: var(--jd-font);
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -67,6 +67,6 @@
 
 @media (max-width: 740px) {
   .wrapper > h1 {
-    font-size: 4rem;
+    font-size: var(--xl-font);
   }
 }

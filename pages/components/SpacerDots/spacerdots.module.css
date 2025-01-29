@@ -1,6 +1,6 @@
 .dots {
     color: var(--neutral);
-    font-size: 1.5rem;
+    font-size: var(--med-font);
     vertical-align: middle;
     width: fit-content;
     margin: auto; 

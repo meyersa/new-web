@@ -25,8 +25,12 @@
  
   --smooth-backdrop: contrast(0.8) blur(1rem);
 
-  /* Font-size too? */
-
+  --small-font: 1rem;
+  --med-font: 1.5rem;
+  --large-font: 2rem;
+  --xl-font: 4rem;
+  --jd-font: 7rem;
+  
 }
 
 /*
@@ -80,7 +84,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Outfit;
-  font-size: 1rem;
+  font-size: var(--small-font);
   color: var(--body);
   background-color: var(--background);
 
@@ -144,7 +148,7 @@ blockquote {
 
 i {
   color: var(--secondary);
-  font-size: 2.5rem;
+  font-size: calc(2.5 * var(--small-font));
 
 }
 

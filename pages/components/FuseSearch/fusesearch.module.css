@@ -22,7 +22,7 @@
   padding: var(--small-pad);
   background-color: var(--background);
   border-radius: var(--small-pad);
-  font-size: 1.5rem;
+  font-size: var(--med-font);
   outline: none;
   box-shadow: var(--shadow-soft);
   
