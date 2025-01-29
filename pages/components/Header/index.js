@@ -51,21 +51,23 @@ export default function Header() {
     const splitHomePaths = router.asPath.split("/");
 
     if (splitHomePaths.length > 2) {
-      setPath(`${splitHomePaths[1]}`);
+      setPath(`/${splitHomePaths[1]}`);
     }
+
   }, [router.asPath]);
 
   return (
     <div className={styles.headerOutside} id="headerOutside">
       <div className={[styles.headerbar].join(" ")}>
         <div className={styles.leftheader}>
-          <Link className={styles.inside} href={"/" + path}>
+          <Link className={styles.inside} href={path}>
             <span className={styles.contrast}>/</span>
             {
               path == "/" ? (
                 "home"
               ) : (
-                path
+                path.slice(1)
+
               )
             }
           </Link>
