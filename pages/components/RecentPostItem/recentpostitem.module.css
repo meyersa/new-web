@@ -11,7 +11,7 @@
   margin: 3rem auto;
   align-items: center;
   backdrop-filter: contrast(0.8);
-  padding: 2rem;
+  padding: var(--small-pad); 
   border-radius: 1rem;
   overflow: hidden;
   height: 20rem;
