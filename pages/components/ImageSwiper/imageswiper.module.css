@@ -1,8 +1,8 @@
 .swiperWrapper {
     height: 40dvh;
-    backdrop-filter: contrast(0.8);
-    padding: 1rem; 
-    margin: 1rem 0;
+    backdrop-filter: var(--smooth-backdrop);
+    padding: var(--small-pad); 
+    margin: var(--small-pad) 0;
     margin-top: 6rem;
     
 }

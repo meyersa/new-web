@@ -3,7 +3,6 @@ import styles from "./header.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Footer from "../Footer";
-import Shadow from "../../../styles/Shadow.module.css";
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
@@ -15,7 +14,7 @@ export default function Header() {
   function handleButtonClick() {
     // Display menu
     if (!menuDisplayed) {
-      document.getElementById("mobileMenu").style.transform = "translateY(calc(0% + 6em))";
+      document.getElementById("mobileMenu").style.transform = "translateY(calc(0%))";
       document.getElementById("mobileMenu").style.visibility = "visible";
       document.body.style.height = "100%";
       document.body.style.overflow = "hidden";
@@ -52,18 +51,19 @@ export default function Header() {
     const splitHomePaths = router.asPath.split("/");
 
     if (splitHomePaths.length > 2) {
-      setPath(`/${splitHomePaths[1]}`);
+      setPath(`${splitHomePaths[1]}`);
     }
   }, [router.asPath]);
 
   return (
     <div className={styles.headerOutside} id="headerOutside">
-      <div className={[styles.headerbar, Shadow.class].join(" ")}>
+      <div className={[styles.headerbar].join(" ")}>
         <div className={styles.leftheader}>
-          <Link className={styles.inside} href={path}>
+          <Link className={styles.inside} href={"/" + path}>
+            <span className={styles.contrast}>/</span>
             {
               path == "/" ? (
-                "/home"
+                "home"
               ) : (
                 path
               )

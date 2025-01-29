@@ -2,8 +2,8 @@
     display: flex; 
     flex-direction: column;
     align-items: center;
-    margin: 3rem;
-    gap: 3rem;
+    margin: var(--large-pad);
+    gap: var(--large-pad);
 
 }
 
@@ -13,16 +13,16 @@
 }
 
 .innerWrapper {
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 var(--small-pad) var(--small-pad) var(--small-pad);
     display: flex; 
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: var(--small-pad);
     
 }
 
 .divider { 
-    color: var(--contrast);
+    color: var(--neutral);
 
 }

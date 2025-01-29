@@ -1,9 +1,9 @@
 .wrapper {
-    backdrop-filter: contrast(0.8) blur(1rem);
-    padding: 1rem; 
-    border-radius: .5rem;
+    backdrop-filter: var(--smooth-backdrop);
+    padding: var(--small-pad); 
+    border-radius: var(--border-radius);
     width: 90%;
-    max-width: 1000px;
-    margin: 6rem auto; 
+    max-width: var(--max-width);
+    margin: var(--large-pad) auto; 
 
 }  

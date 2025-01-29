@@ -1,54 +1,51 @@
-.noResults {
-  margin: 3rem auto;
-  backdrop-filter: contrast(0.8);
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  width: 90%;
-  max-width: 1000px;
-
-}
-
 @media (max-width: 740px) {
   .noResults {
     width: calc(90% - 2rem);
-
   }
 }
 
 .searchWrapper {
   min-height: calc(100dvh - 6rem);
   padding-top: 6rem;
+  max-width: var(--large-width);
+  margin: var(--small-pad) auto;
+  width: calc(100% - 4 * var(--small-pad));
 }
 
 .searchArea {
-  max-width: 740px;
-  margin: auto;
-  padding: 1rem;
   transition: all 0.6s ease-in-out;
 }
 
 .searchBox {
-  width: calc(100% - 2 * 1rem);
-  max-width: 1000px;
-  padding: 1rem;
-  background-color: var(--secondary);
-  border-radius: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--small-pad);
+  background-color: var(--background);
+  border-radius: var(--small-pad);
   font-size: 1.5rem;
   outline: none;
-
-}
-
-.searchBox:focus {
-  background-color: var(--distract);
+  box-shadow: var(--shadow-soft);
   
 }
 
+.searchBox:focus {
+  background-color: var(--contrast);
+}
+
+.searchResult,
+.noResults {
+  box-sizing: border-box;
+  backdrop-filter: var(--smooth-backdrop);
+  margin: var(--large-pad) 0;
+  padding: var(--small-pad);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: var(--large-width);
+}
 .searchResult {
-  backdrop-filter: contrast(0.8);
-  border-radius: 1rem;
   min-height: 20vh;
-  padding: 1rem;
-  width: 90%;
-  margin: 3rem auto;
+}
+
+.noResults {
+  text-align: center;
 }

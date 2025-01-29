@@ -15,7 +15,7 @@ export default function AttentionButton({ text, loc, emphasize }) {
 
   return (
     <button
-      className={[styles.button, Shadow.class].join(" ")}
+      className={[styles.button, Shadow.hard].join(" ")}
       onClick={() => {
         redirect(`${loc}`);
       }}

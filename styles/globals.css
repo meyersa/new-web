@@ -3,61 +3,90 @@
 /* Colors */
 :root {
   color-scheme: light dark;
-  
-  --white: #f5f4f3;
-  --black: #111927;
-  --dark: #283D4F;
-  --bright: #0071CE;  
-  --distract: #e6b14e;  
-  
-  --hard-shadow: 0.15rem 0.15rem 0 0.015rem var(--dark);
+
+  --white: #F5F4F3;
+  --grey: #59515A;
+  --yellow: #efdd79;
+  --light-yellow: #F5EDC0;
+  --purple: #3c326e;
+  --light-purple: #27243A;
+  --black: #111118;
+
+  --large-width: 1000px;
+  --medium-width: 500px;
+  --small-width: 250px;
+
+  --large-pad: 3rem;
+  --med-pad: 2rem;
+  --small-pad: 1rem;
+
+  --border-radius: 1rem; 
+ 
+  --smooth-backdrop: contrast(0.8) blur(1rem);
+
+  /* Font-size too? */
+
 }
 
+/*
+ * Background: Base background
+ * Body: Paragraph text
+ * Primary: H1/H2
+ * Secondary: H3/H4
+ * Accent: Call-to-action/Buttons/Links/Highlight
+ * Neutral: Borders/Dividers
+ */
 @media (prefers-color-scheme: light) {
   :root {
-    /* Text */
-    --primary: var(--black);
-    /* Background */
-    --secondary: var(--white); 
-    /* Contrast: Headers, dots, special text */
-    --contrast: var(--dark); 
-    /* Accent: Not really used lol */
-    --accent: var(--bright);
+    --background: var(--white);
+    --body: var(--black);
+    --primary: var(--purple);
+    --secondary: var(--light-purple);
+    --contrast: var(--yellow);
+    --neutral: var(--grey);
+
+    --shadow-soft: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0px 6px 16px rgba(0, 0, 0, 0.15);
+    --shadow-hard: 0px 8px 20px rgba(0, 0, 0, 0.2);
 
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: var(--white);
-    --secondary: var(--black); 
-    --contrast: var(--bright);
-    --accent: var(--dark);
+    --background: var(--black);
+    --body: var(--white);
+    --primary: var(--yellow);
+    --secondary: var(--light-yellow);
+    --contrast: var(--purple);
+    --neutral: var(--grey);
 
+    --shadow-soft: 0px 4px 12px rgba(255, 255, 255, 0.05);
+    --shadow-medium: 0px 6px 16px rgba(255, 255, 255, 0.08);
+    --shadow-hard: 0px 8px 20px rgba(255, 255, 255, 0.12);
+    
   }
 }
+
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden; 
-  width: 100dvw;
   scroll-padding-top: 6rem;
-
 }
 
 body {
   padding: 0;
   margin: 0;
   font-family: monospace;
-  font-size: 1.15rem;
-  color: var(--primary);
-  background-color: var(--secondary);
-  /* background-image: url("/svgs/background.svg"); */
+  font-size: 1rem;
+  color: var(--body);
+  background-color: var(--background);
 
 }
 
 body * {
-  text-decoration-thickness: .15rem;
+  text-decoration-thickness: .2rem;
 
 }
 
@@ -65,24 +94,24 @@ h1 {
   color: var(--primary);
   font-family: "Paytone One", Impact;
   margin-bottom: 0;
+  margin-top: 0; 
 
 }
 
 h1:not(:has(a)) {
-  border-bottom: solid .25rem var(--contrast);
+  border-bottom: solid .25rem var(--primary);
 
 }
 
 h2 {
-  color: var(--primary);
+  color: var(--secondary);
   font-family: "Paytone One", Impact;
   margin: 0;
   
 }
 
 h3 {
-  color: var(--contrast);
-  filter: brightness(1.75);
+  color: var(--secondary);
   font-family: "Paytone One", Impact;
 
 }
@@ -94,14 +123,14 @@ img {
 }
 
 a {
-  text-decoration-color: var(--distract);
+  text-decoration-color: var(--contrast);
   color: inherit; 
 
 }
 
 p {
-  line-height: 1.15rem; 
-  
+  line-height: 1.25rem; 
+
 }
 
 blockquote {
@@ -113,7 +142,7 @@ blockquote {
 }
 
 i {
-  color: var(--contrast);
+  color: var(--secondary);
   font-size: 2.5rem;
 
 }

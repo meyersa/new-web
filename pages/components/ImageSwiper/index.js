@@ -1,14 +1,10 @@
 import { Scrollbar } from "swiper/modules";
 import { Mousewheel, Autoplay } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 import "swiper/css";
 import "swiper/css/scrollbar";
-
 import FullScreenImageButton from "../FullScreenImageButton";
 import FullScreenImageView from "../FullScreenImageView";
-
 import styles from "./imageswiper.module.css";
 
 export default function ImageSwiper({ imageList }) {

@@ -1,7 +1,7 @@
 .button {
-    color: var(--white);
+    color: var(--body);
     border: none; 
-    border-radius: 1rem; 
+    border-radius: var(--border-radius); 
     font-size: 1.5rem;
     z-index: 1;
     font-family: 'Paytone One', monospace;
@@ -9,10 +9,9 @@
     object-fit: cover;
     background-size: cover;
     flex: 40%; 
-    margin: 1rem; 
-    max-width: 40rem;
+    margin: var(--small-pad); 
     display: flex; 
-    gap: 1rem; 
+    gap: var(--small-pad); 
     justify-content: center;
     align-items: center;
 
@@ -24,16 +23,16 @@
 }
 
 .button:nth-child(1n) {
-    background-color: var(--bright);
+    background-color: var(--contrast);
 
 }
   
 .button:nth-child(2n) {
-    background-color: var(--black); 
+    background-color: var(--contrast); 
 
 }
 
 .button:nth-child(3n) {
-    background-color: var(--distract); 
+    background-color: var(--background); 
 
 }

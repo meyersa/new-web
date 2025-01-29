@@ -1,5 +1,4 @@
 import styles from "./fusesearch.module.css";
-import Shadow from "../../../styles/Shadow.module.css";
 import Fuse from "fuse.js";
 import PostItem from "../RecentPostItem";
 import { useState } from "react";
@@ -31,7 +30,7 @@ export default function FuseSearch({ data }) {
           id="searchBox"
           placeholder="Search..."
           onInput={handleSearch}
-          className={`${Shadow.class} ${styles.searchBox}`}
+          className={styles.searchBox}
         />
       </div>
       <div id="searchResults">

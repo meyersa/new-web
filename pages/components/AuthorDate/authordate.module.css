@@ -2,9 +2,9 @@
     display: flex; 
     flex-direction: row;
     height: 10vh;
-    gap: 1rem; 
+    gap: var(--small-pad); 
     align-items: center;
-    padding: 0 1rem; 
+    padding: 0 var(--small-pad); 
 
 }
 
@@ -12,7 +12,8 @@
     height: 100%;
     width: auto;
     aspect-ratio: 1/1;
-    border-radius: 50%;
-    border: solid .1rem var(--primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    border: solid .1rem var(--neutral);
     
 }

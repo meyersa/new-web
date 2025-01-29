@@ -49,14 +49,14 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage <= 1}
-            className={[Shadow.class, styles.paginatedButton].join(" ")}
+            className={[Shadow.soft, styles.paginatedButton].join(" ")}
           >
             Previous
           </button>
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage >= totalPages}
-            className={[Shadow.class, styles.paginatedButton].join(" ")}
+            className={[Shadow.soft, styles.paginatedButton].join(" ")}
           >
             Next
           </button>
@@ -73,14 +73,14 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage <= 1}
-            className={[Shadow.class, styles.paginatedButton].join(" ")}
+            className={[Shadow.soft, styles.paginatedButton].join(" ")}
           >
             Previous
           </button>
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage >= totalPages}
-            className={[Shadow.class, styles.paginatedButton].join(" ")}
+            className={[Shadow.soft, styles.paginatedButton].join(" ")}
           >
             Next
           </button>

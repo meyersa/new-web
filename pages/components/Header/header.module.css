@@ -1,50 +1,44 @@
 .headerbar {
   list-style-type: none;
   display: flex;
-  height: 6em;
+  height: 4em;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   top: 0;
-  width: calc(100dvw - 2 * 2.5dvw - 2 * 1rem);
-  padding: 0 calc(2.5dvw + 1rem);
+  width: calc(100% - 2 * 2.5% - 2 * 1rem);
+  padding: 0 calc(2.5% + 1rem);
   z-index: 20;
-  backdrop-filter: blur(1rem);
   
 }
 
-.headerbar::after {
-  content: "";
-  position: absolute;
-  top: 0; 
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  filter: opacity(0.8); 
-  background-color: var(--secondary);
-
-}
-
 .leftheader > a {
-  font-size: 2rem;
-  color: var(--contrast);
+  font-size: 1.6rem;
+  color: var(--body);
   padding: 0;
-  border-radius: 0.5rem;
   text-decoration: inherit;
   font-weight: bolder;
+
 }
 
 .rightheader {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-weight: bolder;
+  color: var(--body);
+
 }
 
-.inside > i {
-  color: var(--distract);
-  font-size: 1.5rem;
+.contrast {
+  color: var(--contrast); 
+
+}
+
+.inside > i, .menuButton > i {
+  color: var(--contrast);
+  font-size: 2rem;
 
 }
 
@@ -64,11 +58,11 @@
   transition: transform 0.7s cubic-bezier(0.84, -0.01, 0.59, 0.3), visibility 1s;
   flex-direction: column;
   transform: translateY(-100%);
-  height: calc(100dvh - 6em - 2rem);
-  padding-top: 2rem;
-  position: fixed;
+  height: 100dvh;
+  padding-top: 6rem;
+  position: absolute;
   z-index: 10;
-  background-color: var(--secondary);
+  background-color: var(--background);
   justify-content: space-between;
 }
 
@@ -93,7 +87,7 @@
 }
 
 .menuitem {
-  width: 60vw;
+  width: 60%;
   margin: auto;
   font-size: 1.5rem;
   text-align: center;

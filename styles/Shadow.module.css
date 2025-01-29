@@ -1,4 +1,8 @@
-.class {
-    box-shadow: 0.15rem 0.15rem 0 0.015rem var(--dark);
+.soft {
+  box-shadow: var(--shadow-soft);
+}
 
+.hard {
+  box-shadow: var(--shadow-hard);
+  border: solid var(--neutral);
 }

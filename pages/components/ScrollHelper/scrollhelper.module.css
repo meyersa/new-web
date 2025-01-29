@@ -1,9 +1,9 @@
 .wrapper {
     position: fixed; 
     padding: 1rem; 
-    bottom: calc(2.5dvw + 1rem); 
-    right: calc(2.5dvw + 1rem); 
-    background-color: var(--secondary);
+    bottom: calc(2.5% + 1rem); 
+    right: calc(2.5% + 1rem); 
+    background-color: var(--contrast);
     border-radius: 1rem;
     text-align: center;
     z-index: 15;

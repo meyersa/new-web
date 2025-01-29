@@ -30,7 +30,7 @@ export default function ScrollHelper() {
   return (
     <div style={{ display: "contents" }}>
       <div id="c" className={styles.content} />
-      <div className={[styles.wrapper, Shadow.class].join(" ")} onClick={() => scroll()}>
+      <div className={[styles.wrapper, Shadow.soft].join(" ")} onClick={() => scroll()}>
         <i
           className="fa-solid fa-caret-down"
           style={{ transform: `rotate(${pointDown ? 0 : 180}deg)`, transition: "transform 1s ease" }}
