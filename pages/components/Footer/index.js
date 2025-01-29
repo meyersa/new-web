@@ -12,7 +12,7 @@ export default function Header() {
         <p>copyright</p>
         <p className={styles.divider}>|</p>
         <p>
-          probably on <Link href="https://github.com/meyersa">github</Link>
+          <Link href="https://github.com/meyersa">github</Link>
         </p>
       </div>
     </div>
