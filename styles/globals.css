@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 /* Colors */
 :root {
@@ -78,7 +79,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: monospace;
+  font-family: Outfit;
   font-size: 1rem;
   color: var(--body);
   background-color: var(--background);
