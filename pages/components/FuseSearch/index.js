@@ -24,7 +24,7 @@ export default function FuseSearch({ data }) {
   return (
     <div className={styles.searchWrapper}>
       <div className={styles.searchArea}>
-        <h1>Search</h1>
+        <h2>Search</h2>
         <p>All posts are indexed by title, date, and content. Powered by Fuse.js</p>
         <input
           id="searchBox"

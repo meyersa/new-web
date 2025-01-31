@@ -13,9 +13,9 @@ export default function PostItem({ dir, id, title, date, excerpt, image }) {
     <div className={styles.contents}>
       <div className={styles.wrapper}>
         <div className={styles.text}>
-          <h1>
+          <h2>
             <Link href={`${dir}/${id}`}>{title}</Link>
-          </h1>
+          </h2>
           <p>{date}</p>
           <p>{excerpt}</p>
         </div>

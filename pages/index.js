@@ -29,7 +29,7 @@ export default function Home({ allPostsData }) {
           <AttentionButtons />
         </TitlePage>
         <TextWrap>
-          <h1>About me...</h1>
+          <h2>About me...</h2>
           <p>
             Dedicated and developing IT/CPS student. Currently in the process of building experience
             while working as a student technician and learning in classes towards an accelerated
@@ -38,7 +38,7 @@ export default function Home({ allPostsData }) {
           </p>
         </TextWrap>
         <ColorBox>
-          <h1>Education</h1>
+          <h2>Education</h2>
           <StyledList>
             <ImageSplit image="/images/home/cmu.png" alt="CMU Logo">
               <h3>Undergrad - Central Michigan University - May 2024</h3>
@@ -58,7 +58,7 @@ export default function Home({ allPostsData }) {
         </SmallBox>
         <ColorBox>
           <div>
-            <h1>Experience</h1>
+            <h2>Experience</h2>
             <StyledList>
               <ImageSplit image="/images/home/comerica.jpg" alt="Comerica bank logo">
                 <h3>
@@ -95,7 +95,7 @@ export default function Home({ allPostsData }) {
         </SmallBox>
         <ColorBox>
           <div>
-            <h1>Programming</h1>
+            <h2>Programming</h2>
             <StyledList>
               <ImageSplit image="/images/home/python.png" alt="Python logo">
                 <FlexSpaceBetween>
@@ -153,7 +153,7 @@ export default function Home({ allPostsData }) {
         </SmallBox>
         <ColorBox>
           <div>
-            <h1>Technology</h1>
+            <h2>Technology</h2>
             <StyledList>
               <ImageSplit image="/images/home/docker.webp" alt="Docker logo">
                 <FlexSpaceBetween>
@@ -220,7 +220,7 @@ export default function Home({ allPostsData }) {
           </div>
         </ColorBox>
         <TextWrap>
-          <h1>Recent Posts</h1>
+          <h2>Recent Posts</h2>
         </TextWrap>
         <RecentPosts
           allPostsData={allPostsData}

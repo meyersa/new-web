@@ -27,7 +27,7 @@ export default function Photography({ allPostsData }) {
         </p>
         <SpacerDots />
         <TextWrap>
-          <h1>Trips, Portraits, Sports, and more..</h1>
+          <h2>Trips, Portraits, Sports, and more..</h2>
           <p>
             On this page are my favorite collections of photos, mostly of trips I&apos;ve been on, but also including
             some sports photography.
@@ -36,7 +36,7 @@ export default function Photography({ allPostsData }) {
         </TextWrap>
         <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5}/>
         <ColorBox>
-          <h1>Equipment</h1>
+          <h2>Equipment</h2>
           <h3>Main Camera - Canon EOS R</h3>
           <p>- Normally paired with a Tamron 100-400 or a Sigma 24-105 f4 Art</p>
           <p>- Peak design quick release straps</p>

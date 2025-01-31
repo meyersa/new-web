@@ -23,7 +23,7 @@ export default function Projects({ allPostsData }) {
           <p>Things I&apos;ve tackled in computer science and information technology to improve my knowledge</p>
         </TitlePage>
         <TextWrap>
-          <h1 style={{ textAlign: "center" }}>Recent</h1>
+          <h2 style={{ textAlign: "center" }}>Recent</h2>
           <SpacerDots />
         </TextWrap>
         <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5} />
