@@ -6,12 +6,16 @@ import AuthorDate from "../components/AuthorDate";
 import TextWrap from "../components/TextWrap";
 import { getAllPhotos } from "../../lib/photos";
 import ImageSwiper from "../components/ImageSwiper";
+import Head from "next/head";
 
 const type = "photography";
 
 export default function Writeup({ postData, photos }) {
   return (
     <div>
+      <Head>
+        <title>{postData.title} - August Meyers</title>
+      </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>
         <AuthorDate author={postData.author} authorImage={postData.authorImage} date={postData.date} />

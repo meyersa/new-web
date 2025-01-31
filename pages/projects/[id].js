@@ -5,12 +5,16 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import AuthorDate from "../components/AuthorDate";
 import TextWrap from "../components/TextWrap";
 import "@wooorm/starry-night/style/both";
+import Head from "next/head";
 
 const type = "projects";
 
-export default function Writeup({ postData }) {
+export default function Projects({ postData }) {
   return (
     <div>
+      <Head>
+        <title>{postData.title} - August Meyers</title>
+      </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>
         <AuthorDate author={postData.author} authorImage={postData.authorImage} date={postData.date} />

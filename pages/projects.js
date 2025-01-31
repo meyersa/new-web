@@ -6,12 +6,16 @@ import RecentPosts from "./components/RecentPosts";
 import TextWrap from "./components/TextWrap";
 import SpacerDots from "./components/SpacerDots";
 import Link from "next/link";
+import Head from "next/head";
 
 const type = "projects";
 
 export default function Projects({ allPostsData }) {
   return (
     <div>
+      <Head>
+        <title>Projects - August Meyers</title>
+      </Head>
       <Header />
       <div>
         <TitlePage image={"/images/projects/background.webp"} header={"Projects"}>

@@ -1,13 +1,14 @@
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
-import Link from "next/link";
-import ColorBox from "./components/ColorBox";
 import Footer from "./components/Footer";
-import Image from "next/image";
+import Head from "next/head";
 
 export default function Custom404() {
   return (
     <div>
+      <Head>
+        <title>404 - August Meyers</title>
+      </Head>
       <Header />
       <TitlePage header="404">
         <p>Page was not found</p>

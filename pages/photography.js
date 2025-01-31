@@ -6,12 +6,16 @@ import TextWrap from "./components/TextWrap";
 import SpacerDots from "./components/SpacerDots";
 import { getRecentPosts } from "../lib/posts";
 import RecentPosts from "./components/RecentPosts";
+import Head from "next/head";
 
 const type = "photography";
 
 export default function Photography({ allPostsData }) {
   return (
     <div>
+      <Head>
+        <title>Photography - August Meyers</title>
+      </Head>
       <Header />
       <div>
         <TitlePage header="Photography" image="/images/photography/background.jpg">

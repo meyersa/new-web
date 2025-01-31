@@ -7,6 +7,9 @@ export default function Search({ allPostsData }) {
 
   return (
     <div>
+      <Head>
+        <title>Search - August Meyers</title>
+      </Head>
       <Header />
       <FuseSearch data={allPostsData} />
       <Footer />
