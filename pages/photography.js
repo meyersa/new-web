@@ -15,6 +15,7 @@ export default function Photography({ allPostsData }) {
     <div>
       <Head>
         <title>Photography - August Meyers</title>
+        <meta name="description" content="Showcase of one of my main hobbies - Photography" />
       </Head>
       <Header />
       <div>

@@ -15,6 +15,7 @@ export default function Writeup({ postData, photos }) {
     <div>
       <Head>
         <title>{postData.title} - August Meyers</title>
+        <meta name="description" content={postData.excerpt} />
       </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>

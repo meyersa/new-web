@@ -15,6 +15,7 @@ export default function Projects({ allPostsData }) {
     <div>
       <Head>
         <title>Projects - August Meyers</title>
+        <meta name="description" content="Things I've tackled in computer science and information technology to improve my knowledge" />
       </Head>
       <Header />
       <div>

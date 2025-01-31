@@ -9,6 +9,7 @@ export default function Search({ allPostsData }) {
     <div>
       <Head>
         <title>Search - August Meyers</title>
+        <meta name="description" content="Search for specific posts..." />
       </Head>
       <Header />
       <FuseSearch data={allPostsData} />

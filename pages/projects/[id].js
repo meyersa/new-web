@@ -14,6 +14,7 @@ export default function Projects({ postData }) {
     <div>
       <Head>
         <title>{postData.title} - August Meyers</title>
+        <meta name="description" content={postData.excerpt} />
       </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>

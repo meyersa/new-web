@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
     <div>
       <Head>
         <title>August Meyers</title>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <Script src="https://code.jquery.com/jquery-3.7.1.min.js" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
