@@ -2,18 +2,47 @@ import "../styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
 import ScrollHelper from "./components/ScrollHelper";
+import { Paytone_One, Outfit } from "next/font/google";
+
+// Primary Font
+export const paytone = Paytone_One({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-paytone",
+  weight: "400",
+  fallback: ['Impact'],
+  adjustFontFallback: false,
+
+});
+
+// Secondary font
+export const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+  fallback: ['system-ui'],
+  adjustFontFallback: false,
+
+});
 
 export default function App({ Component, pageProps }) {
   return (
-    <div>
+    <main className={`${paytone.variable} ${outfit.variable}`}>
       <Head>
         <title>August Meyers</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <Script src="https://code.jquery.com/jquery-3.7.1.min.js" />
+
+      {/* Load jQuery */}
+      <Script src="https://code.jquery.com/jquery-3.7.1.min.js" strategy="beforeInteractive" />
+
+      {/* Load FontAwesome */}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+      {/* Helper Component */}
       <ScrollHelper />
+
       <Component {...pageProps} />
-    </div>
+    </main>
   );
 }
