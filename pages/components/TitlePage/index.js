@@ -13,10 +13,10 @@ export default function TitlePage({ header, image, children, socialLinks = true 
       {header && <h1 className={styles.wrh1}>{header}</h1>}
       {typeof image === "string" ? (
         // Dynamic image
-        <Image src={image} alt="Background image" priority quality={50} width={500} height={500} />
+        <Image src={image} alt="Background image" priority quality={50} fill={true} />
       ) : (
         // Static imported image
-        <Image src={image || defaultImage} alt="Background image" priority quality={50} placeholder="blur" />
+        <Image src={image || defaultImage} alt="Background image" priority quality={50} fill={true} placeholder="blur" />
       )}{" "}
       {socialLinks && <SocialLinks />}
       {children}
