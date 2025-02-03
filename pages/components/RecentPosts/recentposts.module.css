@@ -18,10 +18,12 @@
     border-radius: 1rem;
     padding: 1rem;
     color: var(--body);
-    background-color: var(--contrast);
+    background-color: var(--accent);
     width: 7rem;
+
 }
 
 .paginatedButton:disabled {
-    filter: grayscale(1);
+    background-color: var(--neutral);
+
 }

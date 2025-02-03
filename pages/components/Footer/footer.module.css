@@ -19,10 +19,11 @@
     justify-content: center;
     align-items: center;
     gap: var(--small-pad);
-    
+    color: var(--neutral);
+
 }
 
 .divider { 
-    color: var(--neutral);
+    color: var(--contrast);
 
 }

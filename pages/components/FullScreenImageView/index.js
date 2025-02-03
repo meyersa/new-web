@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretLeft, faCaretRight, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faCaretLeft, faCaretRight, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function FullScreenImageView({ imageList }) {
   /*
@@ -72,7 +72,7 @@ export default function FullScreenImageView({ imageList }) {
       <div className={styles.header}>
         <p>{imageList[image]["alt"]}</p>
         <div style={{ display: "contents" }} onClick={() => closeView()}>
-          <FontAwesomeIcon icon={faThumbsUp} className="fa-solid" />
+          <FontAwesomeIcon icon={faRectangleXmark} className="fa-solid" />
         </div>
       </div>
       <div className={styles.imageWrapper}>

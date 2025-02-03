@@ -22,16 +22,11 @@
 }
 
 .button:nth-child(1n) {
-    background-color: var(--contrast);
+    background-color: var(--accent);
 
 }
   
 .button:nth-child(2n) {
-    background-color: var(--contrast); 
-
-}
-
-.button:nth-child(3n) {
     background-color: var(--background); 
 
 }
