@@ -4,7 +4,6 @@
     border-radius: var(--border-radius); 
     font-size: var(--med-font);
     z-index: 1;
-    font-family: 'Paytone One', monospace;
     font-weight: bold;
     object-fit: cover;
     background-size: cover;

@@ -36,9 +36,6 @@ export default function App({ Component, pageProps }) {
       {/* Load jQuery */}
       <Script src="https://code.jquery.com/jquery-3.7.1.min.js" strategy="beforeInteractive" />
 
-      {/* Load FontAwesome */}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-
       {/* Helper Component */}
       <ScrollHelper />
 

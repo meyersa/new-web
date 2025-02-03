@@ -14,6 +14,8 @@ import { getRecentPosts } from "../lib/posts";
 import RecentPosts from "./components/RecentPosts";
 import Head from "next/head";
 
+import titleImage from "../public/images/home/selfie.jpeg"
+
 export default function Home({ allPostsData }) {
   return (
     <div>
@@ -25,7 +27,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <Header />
       <div>
-        <TitlePage header={"August Meyers"} image={"/images/home/selfie.jpeg"}>
+        <TitlePage header={"August Meyers"} image={titleImage}>
           <AttentionButtons />
         </TitlePage>
         <TextWrap>
