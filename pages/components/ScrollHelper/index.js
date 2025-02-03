@@ -1,6 +1,8 @@
 import styles from "./scrollhelper.module.css";
 import { useState, useEffect, useRef } from "react";
 import Shadow from "../../../styles/Shadow.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function ScrollHelper() {
   const [pointDown, setDown] = useState(true);
@@ -31,10 +33,11 @@ export default function ScrollHelper() {
     <div style={{ display: "contents" }}>
       <div id="c" className={styles.content} />
       <div className={[styles.wrapper, Shadow.hard].join(" ")} onClick={() => scroll()}>
-        <i
-          className="fa-solid fa-caret-down"
+        <FontAwesomeIcon
+          icon={faCaretDown}
+          className="fa-solid"
           style={{ transform: `rotate(${pointDown ? 0 : 180}deg)`, transition: "transform 1s ease" }}
-        ></i>
+        />
       </div>
     </div>
   );

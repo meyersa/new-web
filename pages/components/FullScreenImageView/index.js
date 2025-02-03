@@ -3,6 +3,8 @@ import styles from "./fullscreenimageview.module.css";
 import { useEffect, useState } from "react";
 import { useSearchParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretLeft, faCaretRight, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function FullScreenImageView({ imageList }) {
   /*
@@ -41,8 +43,6 @@ export default function FullScreenImageView({ imageList }) {
 
   // Handle closing the view
   function closeView() {
-    // TODO: Disable scroll
-
     const params = new URLSearchParams(searchParams);
 
     params.delete("showImage");
@@ -72,7 +72,7 @@ export default function FullScreenImageView({ imageList }) {
       <div className={styles.header}>
         <p>{imageList[image]["alt"]}</p>
         <div style={{ display: "contents" }} onClick={() => closeView()}>
-          <i className={"fa-solid fa-square-xmark"}></i>
+          <FontAwesomeIcon icon={faThumbsUp} className="fa-solid" />
         </div>
       </div>
       <div className={styles.imageWrapper}>
@@ -88,10 +88,10 @@ export default function FullScreenImageView({ imageList }) {
         </div>
         <div className={styles.controls}>
           <div className={styles.arrow} onClick={() => incrementParam(-1)}>
-            <i className={"fa-solid fa-caret-left"}></i>
+            <FontAwesomeIcon icon={faCaretLeft} className="fa-solid" />
           </div>
           <div className={styles.arrow} onClick={() => incrementParam(1)}>
-            <i className={"fa-solid fa-caret-right"}></i>
+            <FontAwesomeIcon icon={faCaretRight} className="fa-solid" />
           </div>
         </div>
       </div>

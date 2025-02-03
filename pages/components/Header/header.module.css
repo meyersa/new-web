@@ -36,7 +36,7 @@
 
 }
 
-.inside > i, .menuButton > i {
+.inside > svg, .menuButton > svg {
   color: var(--contrast);
   font-size: var(--large-font);
 
@@ -72,7 +72,7 @@
   align-items: center;
 }
 
-.menuButton > i {
+.menuButton > svg {
   transition: transform 1s ease, opacity 1s ease;
 }
 

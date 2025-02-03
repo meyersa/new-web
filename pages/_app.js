@@ -3,6 +3,9 @@ import Head from "next/head";
 import Script from "next/script";
 import ScrollHelper from "./components/ScrollHelper";
 import { Paytone_One, Outfit } from "next/font/google";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 // Primary Font
 export const paytone = Paytone_One({
@@ -36,9 +39,6 @@ export default function App({ Component, pageProps }) {
       {/* Load jQuery */}
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"/>
       
-      {/* Load FontAwesome */}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossOrigin="anonymous" referrerPolicy="no-referrer"/>
-
       {/* Helper Component */}
       <ScrollHelper />
 

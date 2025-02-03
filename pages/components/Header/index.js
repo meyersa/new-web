@@ -3,6 +3,8 @@ import styles from "./header.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Footer from "../Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
@@ -53,7 +55,6 @@ export default function Header() {
     if (splitHomePaths.length > 2) {
       setPath(`/${splitHomePaths[1]}`);
     }
-
   }, [router.asPath]);
 
   return (
@@ -62,14 +63,7 @@ export default function Header() {
         <div className={styles.leftheader}>
           <Link className={styles.inside} href={path}>
             <span className={styles.contrast}>/</span>
-            {
-              path == "/" ? (
-                "home"
-              ) : (
-                path.slice(1)
-
-              )
-            }
+            {path == "/" ? "home" : path.slice(1)}
           </Link>
         </div>
         <div className={styles.rightheader}>
@@ -79,17 +73,22 @@ export default function Header() {
           <Link className={styles.inside} href="/photography">
             Photography
           </Link>
-          <Link className={styles.inside} href="/search">
-            <i className={["fa-solid", "fa-magnifying-glass"].join(" ")}></i>
+          <Link className={styles.inside} href="/search" aria-label="Search">
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-solid" />
           </Link>
-          <button className={styles.menuButton} onClick={() => handleMobileRedirect("/search")}>
-            <i className={["fa-solid", "fa-magnifying-glass"].join(" ")}></i>
+          <button className={styles.menuButton} onClick={() => handleMobileRedirect("/search")} aria-label="Search">
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-solid" />
           </button>
-          <button id="menuButton" className={styles.menuButton} onClick={() => handleButtonClick()}>
+          <button
+            id="menuButton"
+            className={styles.menuButton}
+            onClick={() => handleButtonClick()}
+            aria-label="Toggle Menu"
+          >
             {menuDisplayed ? (
-              <i className={["fa-solid", "fa-minus", styles.iconGrow].join(" ")} />
+              <FontAwesomeIcon icon={faBars} className="fa-solid" />
             ) : (
-              <i className={["fa-solid", "fa-bars", styles.iconShrink].join(" ")} />
+              <FontAwesomeIcon icon={faBars} className={["fa-solid", styles.iconShrink].join(" ")} />
             )}
           </button>
         </div>

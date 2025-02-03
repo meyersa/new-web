@@ -63,7 +63,7 @@
 
 }
 
-.arrow > i {
+.arrow > svg {
   font-size: var(--jd-font);
 
 }

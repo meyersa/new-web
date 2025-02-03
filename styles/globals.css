@@ -147,8 +147,8 @@ blockquote {
   
 }
 
-i {
-  color: var(--secondary);
+svg {
+  fill: var(--secondary);
   font-size: calc(2.5 * var(--small-font));
 
 }
