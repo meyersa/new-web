@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       {/* Load jQuery */}
-      <Script src="https://code.jquery.com/jquery-3.7.1.min.js" strategy="beforeInteractive" />
+      <Script src="https://code.jquery.com/jquery-3.7.1.min.js" />
 
       {/* Helper Component */}
       <ScrollHelper />
