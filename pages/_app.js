@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       {/* Load jQuery */}
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.js" crossorigin="anonymous" referrerpolicy="no-referrer"/>
       
       {/* Helper Component */}
       <ScrollHelper />
