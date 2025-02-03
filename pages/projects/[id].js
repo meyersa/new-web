@@ -13,12 +13,16 @@ export default function Projects({ postData }) {
   return (
     <div>
       <Head>
-        <title>{postData.title} - August Meyers</title>
+        <title>{`${postData.title} - August Meyers`}</title>
         <meta name="description" content={postData.excerpt} />
       </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>
-        <AuthorDate author={postData.author} authorImage={postData.authorImage} date={postData.date} />
+        <AuthorDate
+          author={postData.author}
+          authorImage={postData.authorImage}
+          date={postData.date}
+        />
       </TitlePage>
       <TextWrap>
         <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

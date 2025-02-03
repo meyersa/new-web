@@ -14,12 +14,16 @@ export default function Writeup({ postData, photos }) {
   return (
     <div>
       <Head>
-        <title>{postData.title} - August Meyers</title>
+        <title>{`${postData.title} - August Meyers`}</title>
         <meta name="description" content={postData.excerpt} />
       </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>
-        <AuthorDate author={postData.author} authorImage={postData.authorImage} date={postData.date} />
+        <AuthorDate
+          author={postData.author}
+          authorImage={postData.authorImage}
+          date={postData.date}
+        />
       </TitlePage>
       <ImageSwiper imageList={photos} />
       <TextWrap>
