@@ -18,6 +18,12 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
 
   }
 
+  // Remove unnecessary text
+  allPostsData.forEach(post => {
+    delete post.content
+
+  })
+
   // Determine whether pagination is needed, if not then show all
   const isPaginated = (postsPerPage != null) && (postsPerPage < allPostsData.length);
   const totalPages = isPaginated ? Math.ceil(allPostsData.length / postsPerPage) : 1;
