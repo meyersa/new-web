@@ -18,7 +18,7 @@ import titleImage from "../public/images/home/selfie.jpeg"
 
 export default function Home({ allPostsData }) {
   return (
-    <div>
+    <>
       <Head>
         <meta
           name="description"
@@ -238,7 +238,7 @@ export default function Home({ allPostsData }) {
         </TextWrap>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -15,7 +15,7 @@ export default function ImageSwiper({ imageList }) {
   }
 
   return (
-    <div>
+    <>
       <FullScreenImageView imageList={imageList}/>
       <Swiper
         scrollbar={{
@@ -43,6 +43,6 @@ export default function ImageSwiper({ imageList }) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </>
   );
 }

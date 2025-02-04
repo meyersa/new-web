@@ -12,7 +12,7 @@ const type = "photography";
 
 export default function Photography({ allPostsData }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Photography - August Meyers</title>
         <meta name="description" content="Showcase of one of my main hobbies - Photography" />
@@ -47,7 +47,7 @@ export default function Photography({ allPostsData }) {
         </ColorBox>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

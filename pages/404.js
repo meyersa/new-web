@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export default function Custom404() {
   return (
-    <div>
+    <>
       <Head>
         <title>404 - August Meyers</title>
       </Head>
@@ -14,6 +14,6 @@ export default function Custom404() {
         <p>Page was not found</p>
       </TitlePage>
       <Footer />
-    </div>
+    </>
   );
 }

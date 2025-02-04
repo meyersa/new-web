@@ -9,10 +9,9 @@ import ImageSwiper from "../components/ImageSwiper";
 import Head from "next/head";
 
 const type = "photography";
-
-export default function Writeup({ postData, photos }) {
+export default function Photography({ postData, photos }) {
   return (
-    <div>
+    <>
       <Head>
         <title>{`${postData.title} - August Meyers`}</title>
         <meta name="description" content={postData.excerpt} />
@@ -30,7 +29,7 @@ export default function Writeup({ postData, photos }) {
         <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </TextWrap>
       <Footer />
-    </div>
+    </>
   );
 }
 

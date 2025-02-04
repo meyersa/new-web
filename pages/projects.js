@@ -12,7 +12,7 @@ const type = "projects";
 
 export default function Projects({ allPostsData }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Projects - August Meyers</title>
         <meta name="description" content="Things I've tackled in computer science and information technology to improve my knowledge" />
@@ -36,7 +36,7 @@ export default function Projects({ allPostsData }) {
         </TextWrap>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

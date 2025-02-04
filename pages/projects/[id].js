@@ -8,10 +8,9 @@ import "@wooorm/starry-night/style/both";
 import Head from "next/head";
 
 const type = "projects";
-
 export default function Projects({ postData }) {
   return (
-    <div>
+    <>
       <Head>
         <title>{`${postData.title} - August Meyers`}</title>
         <meta name="description" content={postData.excerpt} />
@@ -28,7 +27,7 @@ export default function Projects({ postData }) {
         <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </TextWrap>
       <Footer />
-    </div>
+    </>
   );
 }
 

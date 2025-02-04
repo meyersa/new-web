@@ -7,7 +7,7 @@ import Head from "next/head";
 export default function Search({ allPostsData }) {
 
   return (
-    <div>
+    <>
       <Head>
         <title>Search - August Meyers</title>
         <meta name="description" content="Search for specific posts..." />
@@ -15,7 +15,7 @@ export default function Search({ allPostsData }) {
       <Header />
       <FuseSearch data={allPostsData} />
       <Footer />
-    </div>
+    </>
   );
 }
 

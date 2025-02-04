@@ -5,13 +5,11 @@ import TextWrap from "../TextWrap";
 export default function SmallBox({ children }) {
   return (
     <TextWrap>
-
-    <div className={styles.wrapper}>
+      <div className={styles.wrapper}>
         <SpacerDots />
         {children}
         <SpacerDots />
-    </div>
+      </div>
     </TextWrap>
-
   );
 }
