@@ -3,6 +3,8 @@
 ## Todo
 - Add Winston for logging (inc in app.js)
 - Page for catch all in case of invalid types? (/other/[id].js)
+- Transition social links to fontawesome for smaller ship size 
+- Add better links for project pages, change column design 
 
 ## Prod Build 
 A Dockerfile has been provided for production building 
