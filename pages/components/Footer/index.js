@@ -9,10 +9,10 @@ export default function Header() {
       <SpacerDots />
       <SocialLinks />
       <div className={styles.innerWrapper}>
-        <p>copyright</p>
+        <p>&copy; August Meyers {new Date().getFullYear()}</p>
         <p className={styles.divider}>|</p>
         <p>
-          <Link href="https://github.com/meyersa">github</Link>
+          <Link href="https://github.com/meyersa/new-web">Source</Link>
         </p>
       </div>
     </div>
