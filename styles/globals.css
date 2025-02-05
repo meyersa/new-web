@@ -2,11 +2,11 @@
 :root {
   color-scheme: light dark;
 
-  --white: #f5f4f3;
-  --grey: #a1a5b9;
-  --yellow: #efdd79;
-  --purple: #3c326e;
-  --black: #111118;
+  --white: #F0F6F6;
+  --grey: #828f9a;
+  --yellow: #F9A03F;
+  --purple: #5497A7;
+  --black: #13212A;
 
   --large-width: 1000px;
   --medium-width: 500px;
@@ -41,7 +41,7 @@
     --body: var(--black);
     --accent: var(--yellow);
     --contrast: var(--purple);
-    --neutral: var(--grey);
+    --neutral: #335970;
 
     --shadow-soft: 0px 4px 12px rgba(0, 0, 0, 0.1);
     --shadow-medium: 0px 6px 16px rgba(0, 0, 0, 0.15);
@@ -55,7 +55,7 @@
     --body: var(--white);
     --accent: var(--purple);
     --contrast: var(--yellow);
-    --neutral: var(--grey);
+    --neutral: #D9E8E8;
 
     --shadow-soft: 0px 4px 12px rgba(255, 255, 255, 0.05);
     --shadow-medium: 0px 6px 16px rgba(255, 255, 255, 0.08);
@@ -118,6 +118,10 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: var(--contrast); 
+
+}
 p {
   line-height: 1.25rem;
 }

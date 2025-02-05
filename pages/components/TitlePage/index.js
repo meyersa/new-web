@@ -18,7 +18,6 @@ export default function TitlePage({ header, image, children, socialLinks = true 
         // Static imported image
         <Image src={image || defaultImage} alt="Background image" priority={true} quality={25} height={"500"} width={"500"} placeholder="blur" />
       )}{" "}
-      {socialLinks && <SocialLinks />}
       {children}
     </div>
   );

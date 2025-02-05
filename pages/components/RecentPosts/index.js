@@ -71,7 +71,6 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
       {currentPosts.map(({ id, type, date, title, excerpt, image }, index) => (
         <div key={id} style={{display: "contents"}}>
           <PostItem dir={type} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
-          {index !== currentPosts.length - 1 && <SpacerDots />}
         </div>
       ))}
       {isPaginated && (
