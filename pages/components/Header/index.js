@@ -74,7 +74,7 @@ export default function Header() {
             <Link className={styles.inside} href="/photography">
               Photography
             </Link>
-            <Link className={styles.inside} href="/photography">
+            <Link className={styles.inside} href="/search">
               Search
             </Link>
             <p className={`${styles.inside} ${styles.contrast}`}>{"/>"}</p>
