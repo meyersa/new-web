@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import TitlePage from "../components/TitlePage";
 import Footer from "../components/Footer";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import AuthorDate from "../components/AuthorDate";
 import TextWrap from "../components/TextWrap";
 import { getAllPhotos } from "../../lib/photos";
 import ImageSwiper from "../components/ImageSwiper";
@@ -18,11 +17,6 @@ export default function Photography({ postData, photos }) {
       </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>
-        <AuthorDate
-          author={postData.author}
-          authorImage={postData.authorImage}
-          date={postData.date}
-        />
       </TitlePage>
       <ImageSwiper imageList={photos} />
       <TextWrap>
