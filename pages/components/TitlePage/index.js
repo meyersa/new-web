@@ -1,15 +1,16 @@
 import styles from "./titlepage.module.css";
-import SocialLinks from "../SocialLinks";
 import Image from "next/image";
-import defaultImage from "../../../public/images/components/TitlePage/default.svg";
+import defaultImage from "../../../public/images/components/TitlePage/default.svg"
+import Width from "../../../styles/Width.module.css"
+import SocialLinks from "../SocialLinks"
 
-export default function TitlePage({ header, image, children, socialLinks = true }) {
+export default function TitlePage({ header, image, children }) {
   if (image == null) {
     image = defaultImage;
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${Width.default}`}>
       {header && <h1 className={styles.wrh1}>{header}</h1>}
       {typeof image === "string" ? (
         // Dynamic image
@@ -19,6 +20,7 @@ export default function TitlePage({ header, image, children, socialLinks = true 
         <Image src={image || defaultImage} alt="Background image" priority={true} quality={25} height={"500"} width={"500"} placeholder="blur" />
       )}{" "}
       {children}
+      <SocialLinks />
     </div>
   );
 }
