@@ -9,24 +9,13 @@ export default function PostItem({ dir, id, title, date, excerpt, image }) {
   }
 
   return (
-      <div key={id} className={styles.wrapper}>
-        <div className={styles.text}>
-          <h2>
-            <Link href={`${dir}/${id}`}>{title}</Link>
-          </h2>
-          <p>{date}</p>
-          <p>{excerpt}</p>
-        </div>
-        <div className={styles.img}>
-          <Link href={`${dir}/${id}`}>
-            <Image
-              src={image}
-              alt="Cover image"
-              width={250}
-              height={250}
-            />
-          </Link>
-        </div>
+    <div key={id} className={styles.wrapper} onClick={() => (window.location.href = `${dir}/${id}`)}>
+      <div className={styles.text}>
+        <h3>{title}</h3>
+        <p>{date}</p>
+        <p>{excerpt}</p>
       </div>
+        <Image src={image} alt="Cover image" width={250} height={250} />
+    </div>
   );
 }

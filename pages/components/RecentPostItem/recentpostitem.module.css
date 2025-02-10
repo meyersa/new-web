@@ -11,15 +11,20 @@
   justify-content: space-between;
 }
 
+.wrapper:hover {
+  cursor: pointer;
+  backdrop-filter: contrast(0.6);
+  
+}
+
 .wrapper * {
   flex-basis: 50%;
 }
 
-.img img {
+.wrapper img {
   object-fit: contain;
   width: 100%;
   aspect-ratio: 16/9;
-  
 }
 
 @media (max-width: 740px) {
