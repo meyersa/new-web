@@ -14,7 +14,7 @@
 
 .leftheader > a {
   font-size: var(--med-font);
-  /* color: var(--neutral); */
+  color: var(--neutral);
   padding: 0;
   text-decoration: inherit;
   font-weight: bolder;
@@ -27,7 +27,7 @@
   align-items: center;
   gap: 1rem;
   font-weight: bolder;
-  /* color: var(--neutral); */
+  color: var(--neutral);
   
 }
 
@@ -41,7 +41,7 @@
 
 }
 
-.inside > svg, .menuButton > svg {
+.headerbar svg {
   color: var(--contrast);
   font-size: var(--large-font);
 

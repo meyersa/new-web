@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Footer from "../Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMagnifyingGlass, faTerminal } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
@@ -67,15 +67,17 @@ export default function Header() {
           </Link>
         </div>
         <div className={styles.rightheader}>
-          <Link className={styles.inside} href="/projects">
-            Projects
-          </Link>
-          <Link className={styles.inside} href="/photography">
-            Photography
-          </Link>
-          <Link className={styles.inside} href="/search" aria-label="Search">
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-solid" />
-          </Link>
+            <p className={`${styles.inside} ${styles.contrast}`}>{"<"}</p>
+            <Link className={styles.inside} href="/projects">
+              Projects
+            </Link>
+            <Link className={styles.inside} href="/photography">
+              Photography
+            </Link>
+            <Link className={styles.inside} href="/photography">
+              Search
+            </Link>
+            <p className={`${styles.inside} ${styles.contrast}`}>{"/>"}</p>
           <button className={styles.menuButton} onClick={() => handleMobileRedirect("/search")} aria-label="Search">
             <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-solid" />
           </button>
