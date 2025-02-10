@@ -1,0 +1,27 @@
+.showcaseWrapper {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: contrast(0.8);
+    padding: var(--small-pad);
+    margin: var(--small-pad) 0;
+    overflow: scroll;
+    border-radius: var(--small-pad);
+    max-height: var(--medium-width);    
+    height: fit-content;
+    
+}
+
+.showcaseWrapper h3 {
+    margin: 0;
+
+}
+
+.showcaseWrapper h4 {
+    margin-bottom: 0;
+
+}
+
+.showcaseWrapper p {
+    margin: 0; 
+
+}
