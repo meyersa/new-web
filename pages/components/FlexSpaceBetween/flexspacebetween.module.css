@@ -13,15 +13,18 @@
 }
 
 @media (max-width: 740px) {
-    .wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-
-    }
-
-    .wrapper > * {
+    .wrapper > div {
         max-width: none;
-        
+
     }
 
+    .wrapper > div {
+        flex-basis: 100%;
+
+    }
+
+    .wrapper > div:last-child {
+        flex-basis: 40%;
+
+    }
 }

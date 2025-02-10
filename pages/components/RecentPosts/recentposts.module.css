@@ -1,14 +1,7 @@
-.wrapper {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
-}
-
 .paginatedWrapper {
     display: flex; 
     justify-content: center;
     gap: 3rem;
-    margin-bottom: 3rem;
     
 }
 

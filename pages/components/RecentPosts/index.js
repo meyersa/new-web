@@ -91,7 +91,6 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
           </button>
         </div>
       )}
-      <SpacerDots />
     </div>
   );
 }
