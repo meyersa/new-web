@@ -1,3 +1,15 @@
+.wrapper {
+    display: flex; 
+    flex-direction: column;
+    gap: var(--small-pad)
+    
+}
+.recentPostsWrapper {
+    display: flex; 
+    flex-direction: column;
+    gap: 3rem; 
+    
+}
 .paginatedWrapper {
     display: flex; 
     justify-content: center;

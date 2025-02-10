@@ -2,10 +2,9 @@ import PostItem from "../RecentPostItem";
 import { formatRelative } from "date-fns";
 import { useState } from "react";
 import styles from "./recentposts.module.css";
-import Shadow from "../../../styles/Shadow.module.css"
-import SpacerDots from "../SpacerDots";
+import Shadow from "../../../styles/Shadow.module.css";
 
-export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true, topButtons = true}) {
+export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true, topButtons = true }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   /*
@@ -15,17 +14,15 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
   if (allPostsData == null) {
     console.error("allPostsData cannot be null");
     return;
-
   }
 
   // Remove unnecessary text
-  allPostsData.forEach(post => {
-    delete post.content
-
-  })
+  allPostsData.forEach((post) => {
+    delete post.content;
+  });
 
   // Determine whether pagination is needed, if not then show all
-  const isPaginated = (postsPerPage != null) && (postsPerPage < allPostsData.length);
+  const isPaginated = postsPerPage != null && postsPerPage < allPostsData.length;
   const totalPages = isPaginated ? Math.ceil(allPostsData.length / postsPerPage) : 1;
 
   // Calculate the current page's posts
@@ -44,13 +41,12 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
     // Scroll to #c
     if (scrollToTop) {
       window.location.href = "#c";
-
     }
   }
 
   return (
     <div className={styles.wrapper}>
-      {(isPaginated && allPostsData.length > 3 && topButtons) && (
+      {isPaginated && allPostsData.length > 3 && topButtons && (
         <div className={styles.paginatedWrapper}>
           <button
             onClick={() => handlePageChange(currentPage - 1)}
@@ -68,11 +64,11 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
           </button>
         </div>
       )}
-      {currentPosts.map(({ id, type, date, title, excerpt, image }, index) => (
-        <div key={id} style={{display: "contents"}}>
-          <PostItem dir={type} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
-        </div>
-      ))}
+      <div className={styles.recentPostsWrapper}>
+        {currentPosts.map(({ id, type, date, title, excerpt, image }, index) => (
+            <PostItem dir={type} id={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
+        ))}
+      </div>
       {isPaginated && (
         <div className={styles.paginatedWrapper}>
           <button

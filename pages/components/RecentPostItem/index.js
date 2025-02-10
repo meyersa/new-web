@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import ColorBox from "../ColorBox";
 import styles from "./recentpostitem.module.css";
 
 export default function PostItem({ dir, id, title, date, excerpt, image }) {
@@ -10,8 +9,7 @@ export default function PostItem({ dir, id, title, date, excerpt, image }) {
   }
 
   return (
-    <div className={styles.contents}>
-      <div className={styles.wrapper}>
+      <div key={id} className={styles.wrapper}>
         <div className={styles.text}>
           <h2>
             <Link href={`${dir}/${id}`}>{title}</Link>
@@ -19,21 +17,16 @@ export default function PostItem({ dir, id, title, date, excerpt, image }) {
           <p>{date}</p>
           <p>{excerpt}</p>
         </div>
-        <div className={styles.target}>
-          <ColorBox>
-            <Link href={`${dir}/${id}`}>
-              <Image
-                src={image}
-                alt="Cover image"
-                width={500}
-                height={500}
-                priority={true}
-                style={{ width: "100%", height: "30vh", objectFit: "cover" }}
-              />
-            </Link>
-          </ColorBox>
+        <div className={styles.img}>
+          <Link href={`${dir}/${id}`}>
+            <Image
+              src={image}
+              alt="Cover image"
+              width={250}
+              height={250}
+            />
+          </Link>
         </div>
       </div>
-    </div>
   );
 }
