@@ -13,9 +13,8 @@
   --contrast: #e9724c;
   --neutral: #cccccc;
 
-  --shadow-soft: 0px 4px 12px rgba(255, 255, 255, 0.05);
-  --shadow-medium: 0px 6px 16px rgba(255, 255, 255, 0.08);
-  --shadow-hard: 0px 8px 20px rgba(255, 255, 255, 0.12);
+  --shadow-soft: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-hard: 0px 8px 20px rgba(0, 0, 0, 0.4);
 
   --large-width: 1000px;
   --medium-width: 500px;
