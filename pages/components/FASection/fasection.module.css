@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex; 
+    flex-direction: row;
+    gap: var(--small-pad);
+    margin: var(--med-pad) 0; 
+
+}  
+
+.wrapper > svg {
+    color: var(--contrast); 
+
+}

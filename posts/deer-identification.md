@@ -4,13 +4,8 @@ excerpt: "Combining Metadata with Images to test CNN capabilities"
 image: "/images/projects/deer-identification/deer.jpg"
 date: "11/25/2024"
 type: 'projects'
+github: 'https://github.com/meyersa/deer-identification'
 ---
-
-# Deer Identification
-Combining Metadata with Images to test CNN capabilities
-
-[Github](https://github.com/meyersa/deer-identification)
-
 ## Contents 
 
 # Vision

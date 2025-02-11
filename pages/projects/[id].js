@@ -2,10 +2,16 @@ import Header from "../components/Header";
 import TitlePage from "../components/TitlePage";
 import Footer from "../components/Footer";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import AuthorDate from "../components/AuthorDate";
 import TextWrap from "../components/TextWrap";
-import "@wooorm/starry-night/style/both";
+import "@wooorm/starry-night/style/dark";
 import Head from "next/head";
+import TextBlock from "../components/TextBlock";
+import ShowcaseItem from "../components/ShowcaseItem";
+import FASection from "../components/FASection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const type = "projects";
 export default function Projects({ postData }) {
@@ -17,15 +23,35 @@ export default function Projects({ postData }) {
       </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>
-        <AuthorDate
-          author={postData.author}
-          authorImage={postData.authorImage}
-          date={postData.date}
-        />
+        <p>{postData.excerpt}</p>
+        <p>{postData.date}</p>
       </TitlePage>
-      <TextWrap>
-        <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </TextWrap>
+      <TextBlock>
+        {postData.github || postData.demo ? (
+          <ShowcaseItem>
+            <h3>Links</h3>
+            {postData.github ? (
+              <FASection>
+                <FontAwesomeIcon icon={faGithubAlt} />
+                <p>
+                  Check out the source code on <Link href={postData.github}>Github</Link>
+                </p>
+              </FASection>
+            ) : null}
+            {postData.demo ? (
+              <FASection>
+                <FontAwesomeIcon icon={faLink} />
+                <p>
+                  Check out the <Link href={postData.demo}>Demo</Link>
+                </p>
+              </FASection>
+            ) : null}
+          </ShowcaseItem>
+        ) : null}
+        <TextWrap>
+          <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </TextWrap>
+      </TextBlock>
       <Footer />
     </>
   );

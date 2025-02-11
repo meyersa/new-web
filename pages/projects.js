@@ -3,10 +3,11 @@ import TitlePage from "./components/TitlePage";
 import { getRecentPosts } from "../lib/posts";
 import Footer from "./components/Footer";
 import RecentPosts from "./components/RecentPosts";
-import TextWrap from "./components/TextWrap";
-import SpacerDots from "./components/SpacerDots";
+import TextBlock from "./components/TextBlock";
 import Link from "next/link";
 import Head from "next/head";
+import SmallBox from "./components/SmallBox";
+import PageBlock from "./components/PageBlock";
 
 const type = "projects";
 
@@ -15,26 +16,28 @@ export default function Projects({ allPostsData }) {
     <>
       <Head>
         <title>Projects - August Meyers</title>
-        <meta name="description" content="Things I've tackled in computer science and information technology to improve my knowledge" />
+        <meta
+          name="description"
+          content="Things I've tackled in computer science and information technology to improve my knowledge"
+        />
       </Head>
       <Header />
-      <div>
-        <TitlePage image={"/images/projects/background.webp"} header={"Projects"}>
-          <p>Things I&apos;ve tackled in computer science and information technology to improve my knowledge</p>
-        </TitlePage>
-        <TextWrap>
-          <h2 style={{ textAlign: "center" }}>Recent</h2>
-          <SpacerDots />
-        </TextWrap>
-        <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5} />
-        <TextWrap>
-          <p style={{ textAlign: "center" }}>
-            If you are interested in more of what I have worked on, check out my{" "}
-            <Link href="https://github.com/meyersa">github</Link>. There are a lot of other things I haven&apos;t taken
-            the time to write about on there
-          </p>
-        </TextWrap>
-      </div>
+      <TitlePage image={"/images/projects/background.webp"} header={"Projects"}>
+        <p>Things I&apos;ve tackled in computer science and information technology to improve my knowledge</p>
+      </TitlePage>
+      <TextBlock>
+        <PageBlock>
+          <h2>Recent Posts</h2>
+          <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5} topButtons={false} />
+          <SmallBox>
+            <p>
+              If you are interested in more of what I have worked on, check out my{" "}
+              <Link href="https://github.com/meyersa">github</Link>. There are a lot of other things I haven&apos;t
+              taken the time to write about on there
+            </p>
+          </SmallBox>
+        </PageBlock>
+      </TextBlock>
       <Footer />
     </>
   );

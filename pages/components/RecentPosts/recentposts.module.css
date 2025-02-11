@@ -1,29 +1,37 @@
 .wrapper {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
+  display: flex;
+  flex-direction: column;
+  gap: var(--med-pad);
 }
-
+.recentPostsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--med-pad);
+}
 .paginatedWrapper {
-    display: flex; 
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    
+  display: flex;
+  justify-content: center;
+  gap: var(--med-pad);
 }
 
 .paginatedButton {
-    cursor: pointer;
-    border: none;
-    border-radius: 1rem;
-    padding: 1rem;
-    color: var(--body);
-    background-color: var(--accent);
-    width: 7rem;
-
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: var(--body);
+  background-color: var(--contrast);
+  width: 7rem;
 }
 
 .paginatedButton:disabled {
-    background-color: var(--neutral);
+  background-color: var(--accent);
+  color: var(--background); 
+  
+}
 
+@media (max-width: 740px) {
+  .recentPostsWrapper {
+    min-height: 32rem;
+  }
 }

@@ -1,9 +1,0 @@
-.wrapper {
-    backdrop-filter: var(--smooth-backdrop);
-    padding: var(--small-pad); 
-    border-radius: var(--border-radius);
-    width: 90%;
-    max-width: var(--large-width);
-    margin: var(--large-pad) auto; 
-
-}  

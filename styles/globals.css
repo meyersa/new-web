@@ -1,12 +1,20 @@
 /* Colors */
 :root {
-  color-scheme: light dark;
+  /*
+ * Background: Base background
+ * Body: Paragraph text
+ * Accent: Call-to-action/Buttons/Links/Highlight (Similar to theme)
+ * Contrast: Other things (Very different than theme)
+ * Neutral: Borders/Dividers
+ */
+  --background: #191F24;
+  --body: #f5f5f5;
+  --accent: #5c7285;
+  --contrast: #e9724c;
+  --neutral: #cccccc;
 
-  --white: #F0F6F6;
-  --grey: #828f9a;
-  --yellow: #F9A03F;
-  --purple: #5497A7;
-  --black: #13212A;
+  --shadow-soft: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-hard: 0px 8px 20px rgba(0, 0, 0, 0.4);
 
   --large-width: 1000px;
   --medium-width: 500px;
@@ -25,41 +33,11 @@
   --large-font: 2rem;
   --xl-font: 4rem;
   --jd-font: 7rem;
-  
 }
 
-/*
- * Background: Base background
- * Body: Paragraph text
- * Accent: Call-to-action/Buttons/Links/Highlight (Similar to theme)
- * Contrast: Other things (Very different than theme)
- * Neutral: Borders/Dividers
- */
-@media (prefers-color-scheme: light) {
+@media (max-width: 740px) {
   :root {
-    --background: var(--white);
-    --body: var(--black);
-    --accent: var(--yellow);
-    --contrast: var(--purple);
-    --neutral: #335970;
-
-    --shadow-soft: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0px 6px 16px rgba(0, 0, 0, 0.15);
-    --shadow-hard: 0px 8px 20px rgba(0, 0, 0, 0.2);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--black);
-    --body: var(--white);
-    --accent: var(--purple);
-    --contrast: var(--yellow);
-    --neutral: #D9E8E8;
-
-    --shadow-soft: 0px 4px 12px rgba(255, 255, 255, 0.05);
-    --shadow-medium: 0px 6px 16px rgba(255, 255, 255, 0.08);
-    --shadow-hard: 0px 8px 20px rgba(255, 255, 255, 0.12);
+    --xl-font: 3rem;
   }
 }
 
@@ -73,7 +51,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: var(--small-font);
-  color: var(--body);
+  color: var(--neutral);
   background-color: var(--background);
 }
 
@@ -81,26 +59,47 @@ body * {
   text-decoration-thickness: 0.2rem;
 }
 
+/* Remove padding/marg for easier formatting */
+h1, h2, h3, h4, h5, h6, a, p {
+  margin: 0;
+  padding: 0;
+
+}
+
 h1,
-h2 {
-  font-family: var(--font-paytone);
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h2:not(:has(a)) {
-  border-bottom: solid 0.25rem var(--neutral);
-
-}
-
 h3 {
   font-family: var(--font-paytone);
-  color: var(--neutral);
+  color: var(--body);
+  background-color: var(--contrast);
+  padding: 0 var(--small-pad);
+}
 
+h1 {
+  font-size: var(--xl-font);
+  font-weight: bold;
+}
+h2 {
+  font-size: var(--large-font);
+  font-weight: bolder;
+  color: var(--body);
+}
+
+h2::before {
+  content: "# ";
+  color: var(--contrast);
+}
+h3 {
+  font-family: var(--font-paytone);
+  font-size: var(--large-font);
+  width: fit-content;
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--font-paytone);
+  color: var(--neutral);
+  font-size: var(--med-font);
 }
 
 img {
@@ -119,8 +118,7 @@ a {
 }
 
 a:hover {
-  color: var(--contrast); 
-
+  color: var(--contrast);
 }
 p {
   line-height: 1.25rem;
@@ -168,13 +166,11 @@ table {
   margin: 3rem auto;
   overflow: hidden;
   box-shadow: var(--shadow-hard);
-
 }
 
 table td,
 table th {
   border: 1px solid var(--neutral);
-  padding:1rem;
+  padding: 1rem;
   text-align: center;
-
 }

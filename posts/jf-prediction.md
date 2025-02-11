@@ -4,15 +4,9 @@ excerpt: 'Predicting movie recommendations with Random Forest'
 image: '/images/projects/jf-prediction/background.jpg'
 date: '1/10/2025'
 type: 'projects'
+github: 'https://github.com/meyersa/jf-prediction'
 ---
-
-# Jellyfin Predictions
-Predicting movie recommendations with Random Forest
-
-[Github](https://github.com/meyersa/jf-prediction)
-
 ## Contents 
-
 
 # Goal 
 

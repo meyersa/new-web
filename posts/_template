@@ -4,10 +4,9 @@ excerpt:
 image: 
 date: 
 type:
+demo: # Optional for projects
+github: # Optional for projects
 ---
-
-# Title
-Except
 
 ## Contents 
 

@@ -1,0 +1,13 @@
+.splitWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--med-pad);
+
+}
+
+@media (max-width: 740px) {
+  .splitWrapper {
+    grid-template-columns: 1fr;
+    max-height: none;
+  }
+}

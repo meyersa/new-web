@@ -1,7 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
-import ColorBox from "../ColorBox";
 import styles from "./recentpostitem.module.css";
+import Link from "next/link";
 
 export default function PostItem({ dir, id, title, date, excerpt, image }) {
   if (dir == null) {
@@ -10,30 +9,15 @@ export default function PostItem({ dir, id, title, date, excerpt, image }) {
   }
 
   return (
-    <div className={styles.contents}>
-      <div className={styles.wrapper}>
+    <Link href={`${dir}/${id}`} passHref style={{textDecoration: "none", color: "inherit"}}>
+      <div className={styles.wrapper} onClick={() => (window.location.href = `${dir}/${id}`)}>
         <div className={styles.text}>
-          <h2>
-            <Link href={`${dir}/${id}`}>{title}</Link>
-          </h2>
+          <h3>{title}</h3>
           <p>{date}</p>
           <p>{excerpt}</p>
         </div>
-        <div className={styles.target}>
-          <ColorBox>
-            <Link href={`${dir}/${id}`}>
-              <Image
-                src={image}
-                alt="Cover image"
-                width={500}
-                height={500}
-                priority={true}
-                style={{ width: "100%", height: "30vh", objectFit: "cover" }}
-              />
-            </Link>
-          </ColorBox>
-        </div>
+        <Image src={image} alt="Cover image" width={250} height={250} />
       </div>
-    </div>
+    </Link>
   );
 }

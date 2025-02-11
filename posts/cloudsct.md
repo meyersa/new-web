@@ -4,14 +4,9 @@ excerpt: "Disaggregating SmartCityTracker for the cloud"
 image: "/images/projects/cloudsct/ui.png"
 date: "11/15/2024"
 type: 'projects'
+demo: 'https://cloudsct.meyersa.com'
+github: 'https://github.com/meyersa/CloudSCT'
 ---
-
-# CloudSCT
-Disaggregating SmartCityTracker for the cloud
-
-[Github](https://github.com/meyersa/CloudSCT)
-[Live](https://cloudsct.meyersa.com)
-
 ## Contents 
 
 # Intro/Inspo

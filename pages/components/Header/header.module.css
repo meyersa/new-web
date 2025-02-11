@@ -9,13 +9,12 @@
   width: calc(100% - 2 * 2.5% - 2 * 1rem);
   padding: 0 calc(2.5% + 1rem);
   z-index: 20;
-  
+
 }
 
 .leftheader > a {
   font-size: var(--med-font);
-  /* color: var(--neutral); */
-  padding: 0;
+  color: var(--neutral);
   text-decoration: inherit;
   font-weight: bolder;
 
@@ -27,7 +26,7 @@
   align-items: center;
   gap: 1rem;
   font-weight: bolder;
-  /* color: var(--neutral); */
+  color: var(--neutral);
   
 }
 
@@ -41,7 +40,7 @@
 
 }
 
-.inside > svg, .menuButton > svg {
+.headerbar svg {
   color: var(--contrast);
   font-size: var(--large-font);
 
@@ -69,6 +68,8 @@
   z-index: 10;
   background-color: var(--background);
   justify-content: space-between;
+  box-sizing: border-box;
+
 }
 
 .mobileTop {

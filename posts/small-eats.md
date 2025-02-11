@@ -4,16 +4,9 @@ excerpt: 'A flask website used to showcase templating and dynamic deployment ont
 image: '/images/projects/small-eats/background.png'
 date: '4/25/2024'
 type: 'projects'
+github: 'https://github.com/meyersa/aws-flask'
+demo: 'https://awsflask.meyersa.com'
 --- 
-
-# AWS Flask: Small Eats 
-A flask website used to showcase templating and dynamic deployment onto ec2 for ITC466
-
-[Github](https://github.com/meyersa/aws-flask)
-[Live](https://awsflask.meyersa.com)
-
-![What it ended up looking like](/images/projects/small-eats/background.png)
-
 ## Contents 
 
 # Intro/Inspo
@@ -23,6 +16,8 @@ One undergraduate class, ITC466 Cloud Automation, had a final project to deploy 
 # Conclusion 
 
 Despite all this work, somehow we were the only group who actually deployed something to AWS.. but oh well. 
+
+![What it ended up looking like](/images/projects/small-eats/background.png)
 
 # Technologies 
 

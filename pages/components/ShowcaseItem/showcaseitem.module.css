@@ -1,0 +1,16 @@
+.showcaseWrapper {
+    backdrop-filter: contrast(0.8);
+    padding: var(--small-pad);
+    margin: var(--small-pad) 0;
+    overflow: scroll;
+    border-radius: var(--small-pad);
+    max-height: var(--medium-width);    
+    height: fit-content;
+    
+}
+
+@media (max-width: 740px) {
+    .showcaseWrapper {
+        max-height: unset;
+    }
+  }
