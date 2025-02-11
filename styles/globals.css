@@ -60,6 +60,13 @@ body * {
   text-decoration-thickness: 0.2rem;
 }
 
+/* Remove padding/marg for easier formatting */
+h1, h2, h3, h4, h5, h6, a, p {
+  margin: 0;
+  padding: 0;
+
+}
+
 h1,
 h3 {
   font-family: var(--font-paytone);
@@ -71,8 +78,6 @@ h3 {
 h1 {
   font-size: var(--xl-font);
   font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 h2 {
   font-size: var(--large-font);
@@ -96,8 +101,6 @@ h6 {
   font-family: var(--font-paytone);
   color: var(--neutral);
   font-size: var(--med-font);
-  margin-bottom: 0;
-
 }
 
 img {
