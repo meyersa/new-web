@@ -4,13 +4,8 @@ excerpt: "Training a 3D CNN on MIT's TorNet Dataset"
 image: "/images/projects/tornado-prediction/tornado.png"
 date: "12/9/2024"
 type: 'projects'
+github: 'https://github.com/meyersa/tornado-prediction'
 ---
-
-# Predicting Tornados
-Training a 3D CNN on MIT's TorNet Dataset
-
-[Github](https://github.com/meyersa/tornado-prediction)
-
 ## Contents 
 
 # Intro

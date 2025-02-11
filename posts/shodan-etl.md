@@ -4,16 +4,9 @@ excerpt: 'My first attempt at an ETL pipeline using Shodan.io APIs to gather inf
 image: '/images/projects/shodan-etl/background.png'
 date: '9/13/2023'
 type: 'projects'
+demo: 'https://shodanetl.meyersa.com'
+github: 'https://github.com/meyersa/shodan-etl'
 --- 
-
-# Shodan ETL Pipeline
-My first attempt at an ETL pipeline using Shodan.io APIs to gather information about previous scrapes to build a dashboard on ExpressJS to display the information
-
-[Github](https://github.com/meyersa/shodan-etl)
-[Live](https://shodanetl.meyersa.com)
-
-![What it ended up looking like](/images/projects/shodan-etl/background.png)
-
 ## Contents 
 
 # Intro/Inspo
@@ -45,6 +38,8 @@ Finally, incoming IPs are enriched with Data from Maxmind as well as Crowdsec to
 ## Loading
 
 Surprisingly, also another complicated step. We are regularly querying the same information and trying to store it, so a mechanism to only update the relevant information had to be implemented. Basically, if we have seen the IP before, we grab the current document in Mongo and compare it to the update. Generally, one piece of "data" changes and we can just modify the single field in the document. However, sometimes even the enrich data changes and in these instances it's easier to replace the whole document. 
+
+![What it ended up looking like](/images/projects/shodan-etl/background.png)
 
 # Technologies 
 

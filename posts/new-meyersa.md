@@ -4,14 +4,9 @@ excerpt: 'Portfolio site reimaged'
 image: '/images/projects/new-meyersa/v3.png'
 date: '11/12/2024'
 type: 'projects'
+demo: 'https://meyersa.com'
+github: 'https://github.com/meyersa/new-web'
 --- 
-
-# New Meyersa
-Portfolio site reimaged
-
-[Github](https://github.com/meyersa/new-web)
-[Live (This website)](https://meyersa.com)
-
 ## Contents 
 
 # Why does there need to be a V3

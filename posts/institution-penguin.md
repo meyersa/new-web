@@ -4,14 +4,9 @@ excerpt: 'Senior design project involving agile programming, React native web di
 image: '/images/projects/institution-penguin/background.png'
 date: '4/26/2024'
 type: 'projects'
+github: 'https://github.com/meyersa/institution-penguin'
+demo: 'https://institutionpenguin.com'
 --- 
-
-# InstitutionPenguin
-Senior design project involving agile programming, React native web display, API ready development, backend on NoSQL, and a full CI/CD pipeline with automated testing and deployment.
-
-[Github](https://github.com/meyersa/institution-penguin)
-[Live](https://institutionpenguin.com)
-
 ## Contents 
 
 # Intro/Inspo

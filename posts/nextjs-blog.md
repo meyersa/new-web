@@ -4,13 +4,8 @@ excerpt: 'Creating a spot to post projects, such as making this website, using N
 image: '/images/projects/nextjs-blog/initial-code.png'
 date: '2/20/2024'
 type: 'projects'
+github: 'https://github.com/meyersa/writeups'
 --- 
-
-# Making a NextJS Blog Site
-Creating a spot to post projects using NextJS and other technologies
-
-[Github](https://github.com/meyersa/writeups)
-
 ## Contents
 
 # Intro/Inspo

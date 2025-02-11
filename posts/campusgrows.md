@@ -4,16 +4,9 @@ excerpt: 'Website to show awareness for sustainability/gardens on campus'
 image: '/images/projects/campusgrows/background.png'
 date: '9/22/2024'
 type: 'projects'
+demo: 'https://campusgrows.com'
+github: 'https://github.com/meyersa/campusgrows'
 --- 
-
-# CampusGrows.CMU 
-Website to show awareness for sustainability/gardens on campus
-
-[Github](https://github.com/meyersa/campusgrows)
-[Live](https://campusgrows.com)
-
-![What it ended up looking like](/images/projects/campusgrows/background.png)
-
 ## Contents 
 
 # Intro/Inspo
@@ -25,6 +18,12 @@ Another one of my hobbies is photography, so the idea of making a website with a
 # Automation 
 
 This project outlined a lot of cool parts (at least I think) of my infrastructure that made this more than possible. To start, having Github actions build a docker image automatically means that when I deploy (manually in this case) all I have to do is specify an image instead of building one. With the existing Traefik router on the main hosts, this also means that Cloudflare was pointing at the right place to begin with, making it possible to build this website and deploy it all within a single day. 
+
+# Final Result 
+
+While it wasn't the most crazy design project - it turned out pretty good, especially for a fast job.
+
+[What it ended up looking like](/images/projects/campusgrows/background.png)
 
 # Technologies 
 
