@@ -1,21 +1,13 @@
-/* TODO: Does this need to exist? */
-.wrapper {
-    width: calc(100% - 2 * 1rem); 
-    max-width: 1000px;
-    padding: 1rem; 
-    margin: 0 auto;
-
-}
-
 .wrapper > div > * {
-    padding: .25rem; 
+    margin: var(--small-pad); 
 
 }
 
-/* TODO: Target this somehow */
 .wrapper img {
     max-height: 50vh;
     width: auto;
+    display: block;
+    max-width: 100%;
 
 }
 
@@ -25,20 +17,28 @@
 }
 
 .wrapper > div > div:has(img, div) {
-    margin: auto;
-    margin-top: 3rem; 
-    margin-bottom: 3rem;
-    padding: 0 0 2rem 0;
-    border-radius: 1rem;
+    display: flex; 
+    gap: var(--small-pad);
     backdrop-filter: contrast(0.8);
+    border-radius: var(--small-pad);
     width: fit-content;
-    box-shadow: var(--shadow-soft);
-    border: solid var(--neutral);
+    margin: var(--large-pad) auto;
     overflow: hidden;
+    box-shadow: var(--shadow-hard);
     
 }
 
 .wrapper > div > div:has(img, div) > div {
     margin: 1rem;
+
+}
+
+.wrapper h2 {
+    margin-top: var(--large-pad);
+
+}
+
+.wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
+    margin-top: var(--med-pad);
 
 }

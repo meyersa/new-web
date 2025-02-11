@@ -1,18 +1,20 @@
+.swiperOuterWrapper {
+  margin: var(--large-pad) 0;
+}
 .swiperWrapper {
-    height: 40dvh;
-    backdrop-filter: var(--smooth-backdrop);
-    padding: var(--small-pad); 
-    margin: var(--small-pad) 0;
-    margin-top: 6rem;
-    
+  height: 40dvh;
+  backdrop-filter: var(--smooth-backdrop);
+  padding: var(--small-pad);
 }
 
 .swiperSlide {
-    width: fit-content;
-    
+  width: fit-content;
 }
 
 .swiperSlide img {
-    width: auto;
+  width: auto;
+}
 
+.swiperSlide img:hover {
+  box-shadow: var(--shadow-hard);
 }

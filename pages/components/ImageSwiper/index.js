@@ -6,6 +6,7 @@ import "swiper/css/scrollbar";
 import FullScreenImageButton from "../FullScreenImageButton";
 import FullScreenImageView from "../FullScreenImageView";
 import styles from "./imageswiper.module.css";
+import SmallBox from "../SmallBox";
 
 export default function ImageSwiper({ imageList }) {
   if (!imageList) {
@@ -15,7 +16,7 @@ export default function ImageSwiper({ imageList }) {
   }
 
   return (
-    <>
+    <div className={styles.swiperOuterWrapper}>
       <FullScreenImageView imageList={imageList}/>
       <Swiper
         scrollbar={{
@@ -43,6 +44,9 @@ export default function ImageSwiper({ imageList }) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+      <SmallBox>
+        <p>Click the images to view fullscreen</p>
+      </SmallBox>
+    </div>
   );
 }

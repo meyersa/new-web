@@ -6,6 +6,7 @@ import TextWrap from "../components/TextWrap";
 import { getAllPhotos } from "../../lib/photos";
 import ImageSwiper from "../components/ImageSwiper";
 import Head from "next/head";
+import TextBlock from "../components/TextBlock";
 
 const type = "photography";
 export default function Photography({ postData, photos }) {
@@ -17,11 +18,15 @@ export default function Photography({ postData, photos }) {
       </Head>
       <Header />
       <TitlePage header={postData.title} image={postData.image}>
+        <p>{postData.excerpt}</p>
+        <p>{postData.date}</p>
       </TitlePage>
       <ImageSwiper imageList={photos} />
-      <TextWrap>
-        <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </TextWrap>
+      <TextBlock>
+        <TextWrap>
+          <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </TextWrap>
+      </TextBlock>
       <Footer />
     </>
   );
