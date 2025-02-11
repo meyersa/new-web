@@ -66,7 +66,7 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
       )}
       <div className={styles.recentPostsWrapper}>
         {currentPosts.map(({ id, type, date, title, excerpt, image }, index) => (
-            <PostItem dir={type} key={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
+            <PostItem dir={type} id={id} key={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
         ))}
       </div>
       {isPaginated && (
