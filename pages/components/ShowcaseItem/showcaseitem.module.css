@@ -8,3 +8,9 @@
     height: fit-content;
     
 }
+
+@media (max-width: 740px) {
+    .showcaseWrapper {
+        max-height: unset;
+    }
+  }
