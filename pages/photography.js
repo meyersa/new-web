@@ -41,7 +41,7 @@ export default function Photography({ allPostsData }) {
               <div>
                 <h4>Canon EOS R  (Primary)</h4>
                 <p>
-                  Canon's original full frame mirrorless that started the R lineup, it never disappoints. I picked this
+                  Canon&apos;s original full frame mirrorless that started the R lineup, it never disappoints. I picked this
                   up off the Canon refurb store and have been shooting with it as my primary since
                 </p>
               </div>
@@ -70,13 +70,13 @@ export default function Photography({ allPostsData }) {
               <div>
                 <h4>Sigma 24-105 Art</h4>
                 <p>
-                  The companion to my zoom, for everything else, this lens performs pretty well. It's not quite as sharp as I would hope though, and in the future this would probably be the first thing to get upgraded
+                  The companion to my zoom, for everything else, this lens performs pretty well. It&apos;s not quite as sharp as I would hope though, and in the future this would probably be the first thing to get upgraded
                 </p>
               </div>
             </FASection>
           </ShowcaseItem>
           <SmallBox>
-            <p>As for software, everything is done on Lightroom Classic as I'm pretty simple</p>
+            <p>As for software, everything is done on Lightroom Classic as I&apos;m pretty simple</p>
           </SmallBox>
         </PageBlock>
         <PageBlock>
