@@ -4,7 +4,8 @@
     gap: 1rem; 
     align-items: center;
     justify-content: flex-start;
-    
+    margin: var(--med-pad) 0; 
+
 }
 
 .imgWrapper {
