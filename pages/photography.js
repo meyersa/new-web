@@ -1,12 +1,16 @@
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
 import Footer from "./components/Footer";
-import ColorBox from "./components/ColorBox";
-import TextWrap from "./components/TextWrap";
-import SpacerDots from "./components/SpacerDots";
 import { getRecentPosts } from "../lib/posts";
 import RecentPosts from "./components/RecentPosts";
 import Head from "next/head";
+import TextBlock from "./components/TextBlock";
+import PageBlock from "./components/PageBlock";
+import ShowcaseItem from "./components/ShowcaseItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCamera, faCameraRetro, faMagnifyingGlass, faSignOut } from "@fortawesome/free-solid-svg-icons";
+import FASection from "./components/FASection";
+import SmallBox from "./components/SmallBox";
 
 const type = "photography";
 
@@ -18,34 +22,68 @@ export default function Photography({ allPostsData }) {
         <meta name="description" content="Showcase of one of my main hobbies - Photography" />
       </Head>
       <Header />
-      <div>
-        <TitlePage header="Photography" image="/images/photography/background.jpg">
-          <p>Showcase of one of my main hobbies - Photography</p>
-        </TitlePage>
-        <p style={{ margin: "0 auto", padding: "1rem", width: "fit-content" }}>
-          Above image was taken in Georgia with an EOS R and a Sigma 24-105 f4 Art
-        </p>
-        <SpacerDots />
-        <TextWrap>
-          <h2>Trips, Portraits, Sports, and more..</h2>
-          <p>
-            On this page are my favorite collections of photos, mostly of trips I&apos;ve been on, but also including
-            some sports photography.
-          </p>
-          <p>No portraits though..</p>
-        </TextWrap>
-        <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5}/>
-        <ColorBox>
-          <h2>Equipment</h2>
-          <h3>Main Camera - Canon EOS R</h3>
-          <p>- Normally paired with a Tamron 100-400 or a Sigma 24-105 f4 Art</p>
-          <p>- Peak design quick release straps</p>
-          <h3>Backup Camera - Canon 6D</h3>
-          <p>
-            For when both a telephoto and a wide angle are needed, this carries whatever&apos;s not on the main camera
-          </p>
-        </ColorBox>
-      </div>
+      <TitlePage header="Photography" image="/images/photography/background.jpg">
+        <p>Showcase of one of my main hobbies - Photography</p>
+      </TitlePage>
+      <TextBlock>
+        <PageBlock>
+          <div>
+            <h2>Trips, Portraits, Sports, and more</h2>
+            <p>
+              On this page are my favorite collections of photos, mostly of trips I&apos;ve been on, but also including
+              some sports photography.
+            </p>
+          </div>
+          <ShowcaseItem>
+            <h3>Equipment</h3>
+            <FASection>
+              <FontAwesomeIcon icon={faCamera} />
+              <div>
+                <h4>Canon EOS R  (Primary)</h4>
+                <p>
+                  Canon's original full frame mirrorless that started the R lineup, it never disappoints. I picked this
+                  up off the Canon refurb store and have been shooting with it as my primary since
+                </p>
+              </div>
+            </FASection>
+            <FASection>
+              <FontAwesomeIcon icon={faCameraRetro} />
+              <div>
+                <h4>Canon 6D  (Backup)</h4>
+                <p>
+                  While not as advanced as the primary R, the 6D serves as a reliable backup with better
+                  battery life and solid performance. However it generally serves as a convenient lens storage system for when I need to have multiple without a backpack
+                </p>
+              </div>
+            </FASection>
+            <FASection>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <div>
+                <h4>Tamron 100-400</h4>
+                <p>
+                  My trusted zoom lens for sports and wildlife photography. Occasionally this can turn into a portrait lens or landscape lens in a pinch, but the minimum zoom makes it a little tricky
+                </p>
+              </div>
+            </FASection>
+            <FASection>
+              <FontAwesomeIcon icon={faSignOut} />
+              <div>
+                <h4>Sigma 24-105 Art</h4>
+                <p>
+                  The companion to my zoom, for everything else, this lens performs pretty well. It's not quite as sharp as I would hope though, and in the future this would probably be the first thing to get upgraded
+                </p>
+              </div>
+            </FASection>
+          </ShowcaseItem>
+          <SmallBox>
+            <p>As for software, everything is done on Lightroom Classic as I'm pretty simple</p>
+          </SmallBox>
+        </PageBlock>
+        <PageBlock>
+          <h2>Recent Posts</h2>
+          <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5} />
+        </PageBlock>
+      </TextBlock>
       <Footer />
     </>
   );
