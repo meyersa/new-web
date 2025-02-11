@@ -6,7 +6,7 @@ import SocialLinks from "../SocialLinks"
 
 export default function TitlePage({ header, image, children }) {
   if (image == null) {
-    image = defaultImage;
+    image = defaultImage.src;
   }
 
   return (
