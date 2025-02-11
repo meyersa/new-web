@@ -33,7 +33,7 @@ export default function FuseSearch({ data }) {
           className={styles.searchBox}
         />
       </div>
-      <div id="searchResults">
+      <div id="searchResults" className={styles.searchResults}>
         {searchResults.length > 0 ? (
           searchResults.map(({ id, type, date, title, excerpt, image }) => (
             <PostItem
