@@ -36,13 +36,13 @@ export default function Home({ allPostsData }) {
         <TextBlock>
           <PageBlock>
             <h2>About Me</h2>
-            <Split>
               <ShowcaseItem>
                 <h3>Education</h3>
                 <ImageSplit image="/images/home/cmu.png" alt="CMU Logo">
                   <h4>Undergrad - Central Michigan University - May 2024</h4>
                   <p>Double major in Information Technology and Computer Science with minor in Math</p>
                   <p>Summa Cum Laude</p>
+                  <br />
                   <h4>Graduate - Central Michigan University - Expected May 2025</h4>
                   <p>Accelerated Masters Degree in Computer Science</p>
                 </ImageSplit>
@@ -67,7 +67,6 @@ export default function Home({ allPostsData }) {
                   </p>
                 </ImageSplit>
               </ShowcaseItem>
-            </Split>
             <SmallBox>
               <p>
                 See <Link href="/projects">/projects</Link> for work I have done outside of enterprise environments. One
