@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 3rem);
+  height: calc(100dvh - 3rem);
   justify-content: flex-end;
   position: relative;
   align-items: flex-start;
@@ -12,7 +12,7 @@
 .wrapper > img {
   position: absolute;
   width: calc(100% - 2px);
-  height: calc(100vh - 2px);
+  height: calc(100dvh - 2px);
   max-height: unset;
   top: 0;
   bottom: 0;
