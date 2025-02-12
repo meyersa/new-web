@@ -40,6 +40,7 @@ export default function ImageSwiper({ imageList }) {
               alt={`Image ${index + 1}`}
               width={500}
               height={500}
+              quality={50}
             />
           </SwiperSlide>
         ))}

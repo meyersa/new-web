@@ -24,7 +24,7 @@ export default function FullScreenImageButton({ src, alt, index }) {
 
   return (
     <div onClick={() => openView()} style={{display: "contents"}}>
-      <Image src={src} height="500" width="500" alt={alt}/>
+      <Image src={src} height="500" width="500" quality={50} alt={alt}/>
     </div>
   )
 }
