@@ -58,26 +58,26 @@ export default function Header() {
   }, [router.asPath]);
 
   return (
-    <div className={styles.headerOutside} id="headerOutside">
-      <div className={[styles.headerbar].join(" ")}>
-        <div className={styles.leftheader}>
+    <>
+      <div className={[styles.wrapper].join(" ")}>
+        <div className={styles.left}>
           <Link className={styles.inside} href={path}>
             <span className={styles.contrast}>/</span>
             {path == "/" ? "home" : path.slice(1)}
           </Link>
         </div>
-        <div className={styles.rightheader}>
-            <p className={`${styles.inside} ${styles.contrast}`}>{"<"}</p>
-            <Link className={styles.inside} href="/projects">
-              Projects
-            </Link>
-            <Link className={styles.inside} href="/photography">
-              Photography
-            </Link>
-            <Link className={styles.inside} href="/search">
-              Search
-            </Link>
-            <p className={`${styles.inside} ${styles.contrast}`}>{"/>"}</p>
+        <div className={styles.right}>
+          <p className={`${styles.inside} ${styles.contrast}`}>{"<"}</p>
+          <Link className={styles.inside} href="/projects">
+            Projects
+          </Link>
+          <Link className={styles.inside} href="/photography">
+            Photography
+          </Link>
+          <Link className={styles.inside} href="/search">
+            Search
+          </Link>
+          <p className={`${styles.inside} ${styles.contrast}`}>{"/>"}</p>
           <button className={styles.menuButton} onClick={() => handleMobileRedirect("/search")} aria-label="Search">
             <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-solid" />
           </button>
@@ -95,7 +95,7 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <div id="mobileMenu" className={styles.mobileMenu}>
+      <div className={styles.mobileMenu}>
         <div className={styles.mobileTop}>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/projects")}>
             <h3>Projects</h3>
@@ -106,6 +106,6 @@ export default function Header() {
         </div>
         <Footer />
       </div>
-    </div>
+    </>
   );
 }

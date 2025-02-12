@@ -3,9 +3,9 @@ import styles from "./footer.module.css";
 import SpacerDots from "../SpacerDots";
 import SocialLinks from "../SocialLinks";
 
-export default function Header() {
+export default function Footer() {
   return (
-    <div className={styles.outerWrapper}>
+    <div className={styles.wrapper}>
       <SpacerDots />
       <SocialLinks />
       <div className={styles.innerWrapper}>
