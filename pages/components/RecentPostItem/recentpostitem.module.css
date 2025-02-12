@@ -10,6 +10,7 @@
   height: fit-content;
   max-height: 30rem;
   justify-content: space-between;
+
 }
 
 .wrapper:hover {
@@ -36,10 +37,9 @@
 }
 
 .wrapper img {
-  object-fit: contain;
-  width: 100%;
-  height: auto;
-  max-width: fit-content;
+  object-fit: cover;
+  width: auto;
+  height: 12rem; 
   border-radius: calc(1rem / 2);
   box-shadow: var(--shadow-soft);
 
