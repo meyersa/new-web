@@ -1,44 +1,46 @@
 .wrapper > div > * {
-    margin: var(--small-pad); 
-
+  margin: var(--small-pad);
 }
 
 .wrapper img {
-    max-height: 50vh;
-    width: auto;
-    display: block;
-    max-width: 100%;
-
+  max-height: 50vh;
+  width: auto;
+  display: block;
+  max-width: 100%;
 }
 
 .wrapper ul {
-    margin: 1rem;
-
+  margin: 1rem;
 }
 
 .wrapper > div > div:has(img, div) {
-    display: flex; 
-    gap: var(--small-pad);
-    backdrop-filter: contrast(0.8);
-    border-radius: var(--small-pad);
-    width: fit-content;
-    margin: var(--large-pad) auto;
-    overflow: hidden;
-    box-shadow: var(--shadow-hard);
-    
+  display: flex;
+  gap: var(--small-pad);
+  backdrop-filter: contrast(0.8);
+  border-radius: var(--small-pad);
+  width: fit-content;
+  margin: var(--large-pad) auto;
+  overflow: hidden;
+  box-shadow: var(--shadow-hard);
+}
+
+@media (max-width: 740px) {
+  .wrapper > div > div:has(img, div) {
+    flex-direction: column;
+  }
 }
 
 .wrapper > div > div:has(img, div) > div {
-    margin: 1rem;
-
+  margin: 1rem;
 }
 
 .wrapper h2 {
-    margin-top: var(--large-pad);
-
+  margin-top: var(--large-pad);
 }
 
-.wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
-    margin-top: var(--med-pad);
-
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h6 {
+  margin-top: var(--med-pad);
 }
