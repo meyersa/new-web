@@ -35,10 +35,7 @@ export default function App({ Component, pageProps }) {
         <title>August Meyers</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-
-      {/* Load jQuery */}
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.js" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-      
+ 
       {/* Helper Component */}
       <ScrollHelper />
 
