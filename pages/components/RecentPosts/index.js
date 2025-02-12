@@ -1,11 +1,12 @@
 import PostItem from "../RecentPostItem";
 import { formatRelative } from "date-fns";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./recentposts.module.css";
 import Shadow from "../../../styles/Shadow.module.css";
 
 export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true, topButtons = true }) {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isPageUpdated, setIsPageUpdated] = useState(false);
 
   /*
    * Basic checks before processing
@@ -37,15 +38,23 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
 
   function handlePageChange(newPage) {
     setCurrentPage(newPage);
-
-    // Scroll to #c
-    if (scrollToTop) {
-      window.location.href = "#c";
-    }
+    setIsPageUpdated(false); // Track page updates for reload
   }
 
+  // Only scroll on page reload
+  useEffect(() => {
+    if (isPageUpdated) return;
+
+    setIsPageUpdated(true);
+    if (scrollToTop) {
+      setTimeout(() => {
+        document.getElementById("c")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 0);
+    }
+  }, [currentPosts]);
+
   return (
-    <div className={styles.wrapper}>
+    <div id="c" className={styles.wrapper}>
       {isPaginated && allPostsData.length > 3 && topButtons && (
         <div className={styles.paginatedWrapper}>
           <button
@@ -66,7 +75,7 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
       )}
       <div className={styles.recentPostsWrapper}>
         {currentPosts.map(({ id, type, date, title, excerpt, image }, index) => (
-            <PostItem dir={type} id={id} key={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
+          <PostItem dir={type} id={id} key={id} title={title} date={getDate(date)} excerpt={excerpt} image={image} />
         ))}
       </div>
       {isPaginated && (
