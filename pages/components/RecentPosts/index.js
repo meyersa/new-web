@@ -48,7 +48,7 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
     setIsPageUpdated(true);
     if (scrollToTop) {
       setTimeout(() => {
-        document.getElementById("c")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        document.getElementById("c")?.scrollIntoView({ behavior: "smooth" });
       }, 0);
     }
   }, [currentPosts]);
