@@ -32,6 +32,8 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>August Meyers</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta property="og:site_name" content="meyersa.com" />
+        <meta name="theme-color" content="#191f24" />
       </Head>
       <Component {...pageProps} />
     </>
