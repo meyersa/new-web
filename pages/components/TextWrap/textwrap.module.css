@@ -1,5 +1,5 @@
 .wrapper > div > * {
-  margin: var(--small-pad);
+  margin: var(--small-pad) 0;
 }
 
 .wrapper img {
