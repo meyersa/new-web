@@ -12,9 +12,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { getBlurData } from "../../lib/getBlurData";
 
 const type = "projects";
-export default function Projects({ postData }) {
+
+export default function Projects({ postData, blurDataURL }) {
   return (
     <>
       <Head>
@@ -22,7 +24,7 @@ export default function Projects({ postData }) {
         <meta name="description" content={postData.excerpt} />
       </Head>
       <Header />
-      <TitlePage header={postData.title} image={postData.image}>
+      <TitlePage header={postData.title} image={postData.image} blurDataURL={blurDataURL}>
         <p>{postData.excerpt}</p>
         <p>{postData.date}</p>
       </TitlePage>
@@ -65,9 +67,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const postData =  await getPostData(params.id); 
+
   return {
     props: {
-      postData: await getPostData(params.id),
+      postData: postData,
+      blurDataURL: await getBlurData(postData.image)
     },
   };
 }

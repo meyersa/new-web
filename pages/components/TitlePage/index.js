@@ -4,8 +4,9 @@ import defaultImage from "../../../public/images/components/TitlePage/default.sv
 import Width from "../../../styles/Width.module.css";
 import SocialLinks from "../SocialLinks";
 import Head from "next/head";
+import ScrollHelper from "../ScrollHelper";
 
-export default function TitlePage({ header, image, children }) {
+export default function TitlePage({ header, image, blurDataURL, children }) {
   if (image == null) {
     image = defaultImage.src;
   }
@@ -17,23 +18,27 @@ export default function TitlePage({ header, image, children }) {
       </Head>
       <div className={`${styles.wrapper} ${Width.default}`}>
         {header && <h1 className={styles.wrh1}>{header}</h1>}
-        {typeof image === "string" ? (
-          // Dynamic image
-          <Image src={image} alt="Background image" priority={true} quality={25} height={"500"} width={"500"} />
-        ) : (
-          // Static imported image
+        {blurDataURL ? (
+          // If there is a blurDataURL
           <Image
             src={image || defaultImage}
-            alt="Background image"
+            alt="Background image with blur"
             priority={true}
-            quality={25}
+            quality={50}
             height={"500"}
             width={"500"}
             placeholder="blur"
+            blurDataURL={blurDataURL}
           />
-        )}{" "}
+        ) : (
+          // If there is not a blurDataURL
+          <Image src={image} alt="Background image" priority={true} quality={25} height={"500"} width={"500"} />
+        )}
         {children}
-        <SocialLinks />
+        <div className={styles.bottom}>
+          <SocialLinks />
+          <ScrollHelper />
+        </div>
       </div>
     </>
   );

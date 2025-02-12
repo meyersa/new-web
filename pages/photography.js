@@ -11,10 +11,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faCameraRetro, faMagnifyingGlass, faSignOut } from "@fortawesome/free-solid-svg-icons";
 import FASection from "./components/FASection";
 import SmallBox from "./components/SmallBox";
+import { getBlurData } from "../lib/getBlurData";
 
 const type = "photography";
+const titleImage = "/images/photography/background.jpg";
 
-export default function Photography({ allPostsData }) {
+export default function Photography({ allPostsData, blurDataURL }) {
   return (
     <>
       <Head>
@@ -22,7 +24,7 @@ export default function Photography({ allPostsData }) {
         <meta name="description" content="Showcase of one of my main hobbies - Photography" />
       </Head>
       <Header />
-      <TitlePage header="Photography" image="/images/photography/background.jpg">
+      <TitlePage header="Photography" image={titleImage} blurDataURL={blurDataURL}>
         <p>Showcase of one of my main hobbies - Photography</p>
       </TitlePage>
       <TextBlock>
@@ -39,20 +41,21 @@ export default function Photography({ allPostsData }) {
             <FASection>
               <FontAwesomeIcon icon={faCamera} />
               <div>
-                <h4>Canon EOS R  (Primary)</h4>
+                <h4>Canon EOS R (Primary)</h4>
                 <p>
-                  Canon&apos;s original full frame mirrorless that started the R lineup, it never disappoints. I picked this
-                  up off the Canon refurb store and have been shooting with it as my primary since
+                  Canon&apos;s original full frame mirrorless that started the R lineup, it never disappoints. I picked
+                  this up off the Canon refurb store and have been shooting with it as my primary since
                 </p>
               </div>
             </FASection>
             <FASection>
               <FontAwesomeIcon icon={faCameraRetro} />
               <div>
-                <h4>Canon 6D  (Backup)</h4>
+                <h4>Canon 6D (Backup)</h4>
                 <p>
-                  While not as advanced as the primary R, the 6D serves as a reliable backup with better
-                  battery life and solid performance. However it generally serves as a convenient lens storage system for when I need to have multiple without a backpack
+                  While not as advanced as the primary R, the 6D serves as a reliable backup with better battery life
+                  and solid performance. However it generally serves as a convenient lens storage system for when I need
+                  to have multiple without a backpack
                 </p>
               </div>
             </FASection>
@@ -61,7 +64,8 @@ export default function Photography({ allPostsData }) {
               <div>
                 <h4>Tamron 100-400</h4>
                 <p>
-                  My trusted zoom lens for sports and wildlife photography. Occasionally this can turn into a portrait lens or landscape lens in a pinch, but the minimum zoom makes it a little tricky
+                  My trusted zoom lens for sports and wildlife photography. Occasionally this can turn into a portrait
+                  lens or landscape lens in a pinch, but the minimum zoom makes it a little tricky
                 </p>
               </div>
             </FASection>
@@ -70,7 +74,8 @@ export default function Photography({ allPostsData }) {
               <div>
                 <h4>Sigma 24-105 Art</h4>
                 <p>
-                  The companion to my zoom, for everything else, this lens performs pretty well. It&apos;s not quite as sharp as I would hope though, and in the future this would probably be the first thing to get upgraded
+                  The companion to my zoom, for everything else, this lens performs pretty well. It&apos;s not quite as
+                  sharp as I would hope though, and in the future this would probably be the first thing to get upgraded
                 </p>
               </div>
             </FASection>
@@ -93,6 +98,7 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData: getRecentPosts({ type }),
+      blurDataURL: await getBlurData(titleImage),
     },
   };
 }

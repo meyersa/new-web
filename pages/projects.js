@@ -8,10 +8,12 @@ import Link from "next/link";
 import Head from "next/head";
 import SmallBox from "./components/SmallBox";
 import PageBlock from "./components/PageBlock";
+import { getBlurData } from "../lib/getBlurData";
 
 const type = "projects";
+const titleImage = "/images/projects/background.webp"
 
-export default function Projects({ allPostsData }) {
+export default function Projects({ allPostsData, blurDataURL }) {
   return (
     <>
       <Head>
@@ -22,7 +24,7 @@ export default function Projects({ allPostsData }) {
         />
       </Head>
       <Header />
-      <TitlePage image={"/images/projects/background.webp"} header={"Projects"}>
+      <TitlePage image={titleImage} header={"Projects"} blurDataURL={blurDataURL}>
         <p>Things I&apos;ve tackled in computer science and information technology to improve my knowledge</p>
       </TitlePage>
       <TextBlock>
@@ -47,6 +49,8 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData: getRecentPosts({ type }),
+      blurDataURL: await getBlurData(titleImage)
+
     },
   };
 }

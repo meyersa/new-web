@@ -14,17 +14,17 @@ import TitlePage from "./components/TitlePage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
-import titleImage from "../public/images/home/selfie.jpeg";
-
 // Dynamic import images that aren't rendered as fast
 import dynamic from 'next/dynamic'
+import { getBlurData } from "../lib/getBlurData";
 const DynamicImageSplit = dynamic(() => import("./components/ImageSplit") , {
   loading: () => <FontAwesomeIcon icon={faSpinner} className="fa-spinner" spinPulse />
 
 })
 
+const titleImage = "/images/home/selfie.jpeg"
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, blurDataURL }) {
   return (
     <>
       <Head>
@@ -34,7 +34,7 @@ export default function Home({ allPostsData }) {
         />
       </Head>
       <Header />
-      <TitlePage header={"August Meyers"} image={titleImage}>
+      <TitlePage header={"August Meyers"} image={titleImage} blurDataURL={blurDataURL}>
         <p>
           Dedicated and developing IT/CPS student. Currently in the process of building experience while working as a
           student technician and learning in classes towards an accelerated masters in CPS. In my free time, I am always
@@ -218,6 +218,7 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData: getRecentPosts(),
+      blurDataURL: await getBlurData(titleImage)
     },
   };
 }
