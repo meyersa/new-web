@@ -6,7 +6,7 @@ import Shadow from "../../../styles/Shadow.module.css";
 
 export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true, topButtons = true }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [isPageUpdated, setIsPageUpdated] = useState(false);
+  const [isPageUpdated, setIsPageUpdated] = useState(true);
 
   // Only scroll on page reload
   useEffect(() => {
