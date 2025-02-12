@@ -6,9 +6,6 @@
     padding: 1rem; 
     border-radius: .5rem;
     align-items: center;
+    gap: var(--large-pad);
 
-}
-
-.wrapper > p {
-    margin: 1rem 0;
 }
