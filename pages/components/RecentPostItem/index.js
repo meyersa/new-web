@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./recentpostitem.module.css";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar, faComment } from "@fortawesome/free-solid-svg-icons";
 
 export default function PostItem({ dir, id, title, date, excerpt, image }) {
   if (dir == null) {
@@ -13,8 +15,8 @@ export default function PostItem({ dir, id, title, date, excerpt, image }) {
       <div className={styles.wrapper} onClick={() => (window.location.href = `${dir}/${id}`)}>
         <div className={styles.text}>
           <h3>{title}</h3>
-          <p>{date}</p>
-          <p>{excerpt}</p>
+          <p><FontAwesomeIcon icon={faCalendar} className="fa-solid" /> {date}</p>
+          <p><FontAwesomeIcon icon={faComment} className="fa-solid" /> {excerpt}</p>
         </div>
         <Image src={image} alt="Cover image" width={250} height={250} />
       </div>
