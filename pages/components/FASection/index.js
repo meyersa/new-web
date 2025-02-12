@@ -1,5 +1,5 @@
 import styles from "./fasection.module.css";
 
-export default function FATitle({ children }) {
+export default function FASection({ children }) {
   return <div className={styles.wrapper}>{children}</div>;
 }
