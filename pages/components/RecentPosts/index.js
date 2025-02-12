@@ -8,6 +8,27 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
   const [currentPage, setCurrentPage] = useState(1);
   const [isPageUpdated, setIsPageUpdated] = useState(false);
 
+  // Only scroll on page reload
+  useEffect(() => {
+    if (isPageUpdated) return;
+
+    setIsPageUpdated(true);
+    if (scrollToTop) {
+      setTimeout(() => {
+        document.getElementById("c")?.scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    }
+  }, [isPageUpdated, scrollToTop]);
+
+  /*
+   * Basic checks before processing
+   *  - dir should not be invalid
+   */
+  if (allPostsData == null) {
+    console.error("allPostsData cannot be null");
+    return;
+  }
+
   // Remove unnecessary text
   allPostsData.forEach((post) => {
     delete post.content;
@@ -31,18 +52,6 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
     setCurrentPage(newPage);
     setIsPageUpdated(false); // Track page updates for reload
   }
-
-  // Only scroll on page reload
-  useEffect(() => {
-    if (isPageUpdated) return;
-
-    setIsPageUpdated(true);
-    if (scrollToTop) {
-      setTimeout(() => {
-        document.getElementById("c")?.scrollIntoView({ behavior: "smooth" });
-      }, 0);
-    }
-  }, [currentPosts, isPageUpdated, scrollToTop]);
 
   return (
     <div id="c" className={styles.wrapper}>
