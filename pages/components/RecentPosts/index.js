@@ -8,6 +8,18 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
   const [currentPage, setCurrentPage] = useState(1);
   const [isPageUpdated, setIsPageUpdated] = useState(false);
 
+  // Only scroll on page reload
+  useEffect(() => {
+    if (isPageUpdated) return;
+
+    setIsPageUpdated(true);
+    if (scrollToTop) {
+      setTimeout(() => {
+        document.getElementById("c")?.scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    }
+  }, [currentPosts, isPageUpdated, scrollToTop]);
+
   /*
    * Basic checks before processing
    *  - dir should not be invalid
@@ -40,18 +52,6 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
     setCurrentPage(newPage);
     setIsPageUpdated(false); // Track page updates for reload
   }
-
-  // Only scroll on page reload
-  useEffect(() => {
-    if (isPageUpdated) return;
-
-    setIsPageUpdated(true);
-    if (scrollToTop) {
-      setTimeout(() => {
-        document.getElementById("c")?.scrollIntoView({ behavior: "smooth" });
-      }, 0);
-    }
-  }, [currentPosts]);
 
   return (
     <div id="c" className={styles.wrapper}>
