@@ -1,25 +1,19 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./sociallinks.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { faGithub, faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function SocialLinks() {
   return (
     <div className={styles.wrapper}>
       <Link href="https://github.com/meyersa">
-        <Image
-          src="/images/components/SocialLinks/github.webp"
-          height="100"
-          width="100"
-          alt="Github"
-        />
+      <FontAwesomeIcon icon={faSquareGithub} className="fa-solid"/>
+
       </Link>
       <Link href="https://www.linkedin.com/in/august-meyers/">
-        <Image
-          src="/images/components/SocialLinks/linkedin.webp"
-          height="100"
-          width="100"
-          alt="LinkedIn"
-        />
+      <FontAwesomeIcon icon={faLinkedin} className="fa-solid"/>
+
       </Link>
     </div>
   );

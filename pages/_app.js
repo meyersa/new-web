@@ -33,9 +33,6 @@ export default function App({ Component, pageProps }) {
         <title>August Meyers</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      {/* Helper Component */}
-      <ScrollHelper />
-
       <Component {...pageProps} />
     </>
   );
