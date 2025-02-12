@@ -9,6 +9,11 @@
     
 }
 
+.showcaseWrapper > h3 {
+    font-size: var(--large-font);
+
+}
+
 @media (max-width: 740px) {
     .showcaseWrapper {
         max-height: unset;

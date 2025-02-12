@@ -19,15 +19,16 @@
   border: none;
   border-radius: 1rem;
   padding: 1rem;
-  color: var(--body);
+  color: var(--background);
   background-color: var(--contrast);
   width: 7rem;
+  
 }
 
 .paginatedButton:disabled {
   background-color: var(--accent);
-  color: var(--background); 
-  
+  color: var(--body);
+
 }
 
 @media (max-width: 740px) {

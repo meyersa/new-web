@@ -87,7 +87,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/python.png" alt="Python logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>Python</h4>
+                  <h3>Python</h3>
                   <p>
                     Used extensively with data projects and ML. For example my Paranoia project on GitHub or one of the
                     other ETL pipelines.
@@ -99,7 +99,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/js.png" alt="JavaScript logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>JS/TS</h4>
+                  <h3>JS/TS</h3>
                   <p>Powering this website as well as many others,</p>
                 </div>
                 <SkillLevel amount={9}></SkillLevel>
@@ -108,7 +108,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/react.png" alt="React Logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>React</h4>
+                  <h3>React</h3>
                   <p>
                     Most websites I make now are React native to utilize page generation as well as component
                     reusability.
@@ -120,7 +120,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/c.png" alt="C Found. Logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>C</h4>
+                  <h3>C</h3>
                   <p>
                     I&apos;ve worked on a couple projects that utilize Arduino/Pis that have to run lightweight code
                     where C comes in
@@ -142,7 +142,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/docker.webp" alt="Docker logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>Docker</h4>
+                  <h3>Docker</h3>
                   <p>
                     Almost every project I work on ends up being deployed and tested in Docker containers for their
                     reproducibility
@@ -154,7 +154,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/dynatrace.png" alt="Dynatrace logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>Dynatrace</h4>
+                  <h3>Dynatrace</h3>
                   <p>
                     While at Comerica, I worked extensively on Dynatrace deployments with their API and become a sort of
                     Subject Matter Expert
@@ -166,7 +166,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/debian.png" alt="Debian logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>Linux (Debian)</h4>
+                  <h3>Linux (Debian)</h3>
                   <p>My server deployments are exclusively on linux now, with Debian based being the primary distro</p>
                 </div>
                 <SkillLevel amount={9}></SkillLevel>
@@ -175,7 +175,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/ansible.png" alt="Ansible logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>Ansible</h4>
+                  <h3>Ansible</h3>
                   <p>
                     Management platform for all cloud and local servers, which I am tempted to manage my own computers
                     with as well
@@ -187,7 +187,7 @@ export default function Home({ allPostsData }) {
             <DynamicImageSplit image="/images/home/adobe.png" alt="Adobe logo">
               <FlexSpaceBetween>
                 <div>
-                  <h4>Adobe LR/PS</h4>
+                  <h3>Adobe LR/PS</h3>
                   <p>
                     Sort of out of place here, but I have worked a lot on media design in my free time and especially
                     LightRoom to become the goto photographer for friends and family
