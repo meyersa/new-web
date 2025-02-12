@@ -95,7 +95,7 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <div className={styles.mobileMenu}>
+      <div className={styles.mobileMenu} id="mobileMenu">
         <div className={styles.mobileTop}>
           <button className={styles.menuitem} onClick={() => handleMobileRedirect("/projects")}>
             <h3>Projects</h3>
