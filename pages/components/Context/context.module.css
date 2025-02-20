@@ -1,0 +1,10 @@
+.wrapper {
+    box-sizing: border-box;
+    padding: var(--small-pad);
+    width: 100%;
+    backdrop-filter: var(--smooth-backdrop);
+    border-radius: var(--small-pad);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    gap: var(--small-pad)
+}

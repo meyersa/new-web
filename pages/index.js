@@ -17,6 +17,7 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 // Dynamic import images that aren't rendered as fast
 import dynamic from 'next/dynamic'
 import { getBlurData } from "../lib/getBlurData";
+import Context from "./components/Context";
 const DynamicImageSplit = dynamic(() => import("./components/ImageSplit") , {
   loading: () => <FontAwesomeIcon icon={faSpinner} className="fa-spinner" spinPulse />
 
@@ -35,14 +36,17 @@ export default function Home({ allPostsData, blurDataURL }) {
       </Head>
       <Header />
       <TitlePage header={"August Meyers"} image={titleImage} blurDataURL={blurDataURL}>
+        <p>Building cool things, breaking things, and automating the rest.</p>
+      </TitlePage>
+      <TextBlock>
+        <PageBlock>
+          <Context>
         <p>
           Dedicated and developing IT/CPS student. Currently in the process of building experience while working as a
           student technician and learning in classes towards an accelerated masters in CPS. In my free time, I am always
           looking for new projects and experiences to further my knowledge in the technical field.
         </p>
-      </TitlePage>
-      <TextBlock>
-        <PageBlock>
+          </Context>
           <h2>About Me</h2>
           <ShowcaseItem>
             <h3>Education</h3>
