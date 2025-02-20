@@ -155,6 +155,17 @@ export default function Home({ allPostsData, blurDataURL }) {
                 <SkillLevel amount={9}></SkillLevel>
               </FlexSpaceBetween>
             </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/kubernetes.png" alt="Kubernetes logo">
+              <FlexSpaceBetween>
+                <div>
+                  <h3>Kubernetes</h3>
+                  <p>
+                    Once built with Docker, projects can easily be deployed onto Kubernetes with ArgoCD on my production instances
+                  </p>
+                </div>
+                <SkillLevel amount={4}></SkillLevel>
+              </FlexSpaceBetween>
+            </DynamicImageSplit>
             <DynamicImageSplit image="/images/home/dynatrace.png" alt="Dynatrace logo">
               <FlexSpaceBetween>
                 <div>
