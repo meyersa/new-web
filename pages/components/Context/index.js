@@ -6,7 +6,8 @@ export default function Context({ children }) {
   return (
     <div className={styles.wrapper}>
       <FontAwesomeIcon icon={faComment} className="fa-solid" />
-      {children}
+      <div className={styles.divider} />
+      <div className={styles.wrapperInner}>{children}</div>
     </div>
   );
 }

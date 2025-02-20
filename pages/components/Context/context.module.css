@@ -6,5 +6,26 @@
     border-radius: var(--small-pad);
     box-shadow: var(--shadow-soft);
     display: flex;
+
+}
+
+.wrapperInner * {
+    margin: 0;
+
+}
+
+.wrapperInner {
+    display: flex;
+    flex-direction: column;
     gap: var(--small-pad)
+}
+
+.divider {
+    margin-bottom: var(--small-pad);
+    margin-left: calc(var(--small-pad) / 2);
+    margin-right: var(--small-pad);
+    width: 2px;
+    border-radius: var(--small-pad);
+    background-color: var(--accent);
+    
 }
