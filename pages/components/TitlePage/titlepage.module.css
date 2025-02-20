@@ -5,7 +5,7 @@
   justify-content: flex-end;
   position: relative;
   align-items: flex-start;
-  gap: 1rem; 
+  gap: 1rem;
   padding-bottom: 3rem !important;
 }
 
@@ -21,15 +21,14 @@
   object-fit: cover;
   z-index: -2;
   margin: 0 auto;
-
 }
 
 .wrapper::after {
   content: "";
   position: absolute;
-  top: 0; 
+  top: 0;
   bottom: 0;
-  left: 0; 
+  left: 0;
   right: 0;
   height: 100vh;
   width: 100%;
@@ -37,7 +36,6 @@
   background-color: var(--background);
   filter: opacity(0.7);
   backdrop-filter: blur(1rem);
-
 }
 
 .wrh1 {
@@ -45,7 +43,6 @@
   text-overflow: ellipsis;
   width: fit-content;
   max-width: calc(100% - 2 * 1rem);
-
 }
 
 .wrapper p {
@@ -53,8 +50,7 @@
   margin: 0;
   z-index: 5;
   color: var(--neutral);
-  max-width: var(--large-width); 
-
+  max-width: var(--large-width);
 }
 
 .bottom {
@@ -62,5 +58,15 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  
+}
+
+@media (max-width: 740px) {
+  .wrapper {
+    justify-content: center;
+
+  }
+  .wrh1 {
+    font-size: 250%;
+
+  }
 }

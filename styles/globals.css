@@ -80,7 +80,7 @@ h1 {
   font-family: var(--font-paytone);
   color: var(--body);
   padding: 0 var(--small-pad);
-  font-size: var(--xl-font);
+  font-size: var(--jd-font);
   font-weight: bold;
   background-color: var(--contrast);
 
@@ -128,9 +128,6 @@ a {
 
 a:hover {
   color: var(--contrast);
-}
-p {
-  line-height: 1.25rem;
 }
 
 blockquote {
