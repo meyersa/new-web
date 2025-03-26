@@ -13,6 +13,11 @@
 }
 
 @media (max-width: 740px) {
+    .wrapper {
+        align-items: flex-start;
+        flex-direction: column;
+        
+    }
     .wrapper > div {
         max-width: none;
 
@@ -27,4 +32,6 @@
         flex-basis: 40%;
 
     }
+
+
 }
