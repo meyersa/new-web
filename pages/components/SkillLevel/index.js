@@ -33,11 +33,14 @@ export default function SkillLevel({ amount, threshold }) {
      * Render the progress bar with dynamic width based on fillAmount
      */
     return (
+        <div className={styles.Wrapper}>
         <div className={styles.progressBarContainer}>
             <div 
                 className={styles.progressBar} 
                 style={{ width: `${fillAmount}%`}}
             />
+        </div>
+        <p>Experience: {amount} / {threshold}</p>
         </div>
     );
 }

@@ -13,3 +13,8 @@
     background-color: var(--contrast);
 
 }
+
+.Wrapper > p {
+    filter: brightness(0.8)
+
+}
