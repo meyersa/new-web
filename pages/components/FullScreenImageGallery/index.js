@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./fullscreenimageview.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +13,9 @@ export default function FullScreenGallery() {
   const router = useRouter();
   const showImage = searchParams.get("showImage");
 
-  // Build imageList by querying the DOM for images with class "fullscreen"
+  /**
+   * Get list of images from figures as well as their metadata
+   */
   useEffect(() => {
     if (typeof window !== "undefined") {
       const figures = document.querySelectorAll("figure.fullscreen");
@@ -35,6 +37,9 @@ export default function FullScreenGallery() {
     }
   }, []);
 
+  /**
+   * Get the active image from the index
+   */
   useEffect(() => {
     let curIndex = Number.parseInt(showImage);
     if (isNaN(curIndex) || curIndex < 0 || curIndex >= imageList.length) {
@@ -43,29 +48,50 @@ export default function FullScreenGallery() {
     setActiveImage(curIndex);
   }, [showImage, imageList.length]);
 
-  const openView = (index) => {
-    const params = new URLSearchParams(searchParams);
-    params.set("showImage", index);
-    router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
-  };
+  /**
+   * Open the viewer
+   *
+   * @param {Number} index to open to
+   */
+  const openView = useCallback(
+    (index) => {
+      const params = new URLSearchParams(searchParams);
+      params.set("showImage", index);
+      router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
+    },
+    [searchParams, pathname, router]
+  );
 
-  const closeView = () => {
+  /**
+   * Close the viewer
+   */
+  const closeView = useCallback(() => {
     const params = new URLSearchParams(searchParams);
     params.delete("showImage");
     router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
-  };
+  }, [searchParams, pathname, router]);
 
-  const incrementParam = (amount) => {
-    const curImage = Number.parseInt(showImage);
-    let newImage = curImage + amount;
-    if (newImage < 0) newImage = imageList.length - 1;
-    if (newImage >= imageList.length) newImage = 0;
-    const params = new URLSearchParams(searchParams);
-    params.set("showImage", newImage);
-    router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
-  };
+  /**
+   * Increment image for switching
+   *
+   * @param {Number} amount to increment by
+   */
+  const incrementParam = useCallback(
+    (amount) => {
+      const curImage = Number.parseInt(showImage);
+      let newImage = curImage + amount;
+      if (newImage < 0) newImage = imageList.length - 1;
+      if (newImage >= imageList.length) newImage = 0;
+      const params = new URLSearchParams(searchParams);
+      params.set("showImage", newImage);
+      router.replace(`${pathname}?${params.toString()}`, undefined, { shallow: true });
+    },
+    [showImage, imageList.length, searchParams, pathname, router]
+  );
 
-  // Attach click handlers to images with class "fullscreen"
+  /**
+   * Attach to figures marked as "fullscreen"
+   */
   useEffect(() => {
     if (typeof window === "undefined") return;
     const imgs = document.querySelectorAll("figure.fullscreen");
@@ -76,6 +102,21 @@ export default function FullScreenGallery() {
       return () => img.removeEventListener("click", handleClick);
     });
   }, [imageList, openView]);
+
+  /**
+   * Allow keyboard controls
+   */
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (activeImage === null) return;
+      if (e.key === "ArrowLeft") incrementParam(-1);
+      if (e.key === "ArrowRight") incrementParam(1);
+      if (e.key === "Escape") closeView();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeImage, incrementParam, closeView]);
 
   return (
     <>
@@ -97,6 +138,7 @@ export default function FullScreenGallery() {
               width="500"
               height="500"
               alt={imageList[activeImage].alt}
+              priority={true}
             />
           </div>
           <div className={styles.bottom}>
