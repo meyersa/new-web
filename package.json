@@ -19,6 +19,7 @@
     "fuse.js": "^7.0.0",
     "gray-matter": "^4.0.3",
     "next": "^15.2.3",
+    "pino": "^9.6.0",
     "plaiceholder": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

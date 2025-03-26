@@ -1,11 +1,20 @@
-import { getRecentPosts } from "../../lib/posts"; // Adjust the import path accordingly
+import { getRecentPosts } from "../../lib/posts";
+import pino from "pino";
 
+const logger = pino();
+
+/**
+ * API handler to generate a dynamic sitemap for SEO
+ *
+ * Fetches recent posts, generates URLs for each post type,
+ * and returns a complete sitemap in XML format.
+ */
 export default async function handler(req, res) {
   try {
-    // Fetch recent posts
+    logger.info("Generating sitemap");
+
     const posts = getRecentPosts();
 
-    // Generate URLs for photography and projects
     const photographyUrls = posts
       .filter((post) => post.type === "photography")
       .map(
@@ -32,22 +41,23 @@ export default async function handler(req, res) {
       )
       .join("");
 
-    // Generate the complete sitemap XML
+    const now = new Date().toISOString();
+
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://meyersa.com/</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
+        <lastmod>${now}</lastmod>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://meyersa.com/photography</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
+        <lastmod>${now}</lastmod>
         <priority>0.8</priority>
       </url>
       <url>
         <loc>https://meyersa.com/projects</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
+        <lastmod>${now}</lastmod>
         <priority>0.8</priority>
       </url>
       ${photographyUrls}
@@ -55,10 +65,11 @@ export default async function handler(req, res) {
     </urlset>
     `;
 
-    // Set the response header and send the sitemap
     res.setHeader("Content-Type", "application/xml");
     res.status(200).send(sitemap);
+    logger.info("Sitemap generated successfully");
   } catch (error) {
+    logger.error({ err: error }, "Failed to generate sitemap");
     res.status(500).json({ error: "Failed to generate sitemap" });
   }
 }
