@@ -1,31 +1,20 @@
-.wrapper {
-    box-sizing: border-box;
-    padding: var(--small-pad);
-    width: 100%;
-    backdrop-filter: var(--smooth-backdrop);
-    border-radius: var(--small-pad);
-    box-shadow: var(--shadow-soft);
-    display: flex;
-
-}
-
-.wrapperInner * {
-    margin: 0;
-
-}
-
-.wrapperInner {
-    display: flex;
-    flex-direction: column;
-    gap: var(--small-pad)
-}
-
 .divider {
-    margin-bottom: var(--small-pad);
-    margin-left: calc(var(--small-pad) / 2);
-    margin-right: var(--small-pad);
-    width: 2px;
+    margin-left: var(--small-pad);
+    margin-right: calc(var(--med-pad) / 2);
+    width: 5%;
+    max-width: 5px;
     border-radius: var(--small-pad);
     background-color: var(--accent);
-    
+
+} 
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.wrapper > svg {
+    color: var(--contrast);
+
 }
