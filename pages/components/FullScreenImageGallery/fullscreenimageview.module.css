@@ -65,5 +65,6 @@
 
 .arrow > svg {
   font-size: var(--jd-font);
+  color: var(--contrast); 
 
 }

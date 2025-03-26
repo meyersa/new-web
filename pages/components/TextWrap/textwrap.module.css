@@ -13,7 +13,7 @@
   margin: 1rem;
 }
 
-.wrapper > div > div:has(img, div) {
+.wrapper > div > figure {
   display: flex;
   gap: var(--small-pad);
   backdrop-filter: contrast(0.8);
@@ -25,12 +25,12 @@
 }
 
 @media (max-width: 740px) {
-  .wrapper > div > div:has(img, div) {
+  .wrapper > div > figure {
     flex-direction: column;
   }
 }
 
-.wrapper > div > div:has(img, div) > div {
+.wrapper > div > figure > figcaption {
   margin: 1rem;
 }
 

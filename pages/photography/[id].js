@@ -3,14 +3,13 @@ import TitlePage from "../components/TitlePage";
 import Footer from "../components/Footer";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import TextWrap from "../components/TextWrap";
-import { getFilteredPhotos } from "../../lib/photos";
 import Head from "next/head";
 import TextBlock from "../components/TextBlock";
 import { getBlurData } from "../../lib/getBlurData";
 import FullScreenGallery from "../components/FullScreenImageGallery";
 
 const type = "photography";
-export default function Photography({ postData, photos, blurDataURL }) {
+export default function Photography({ postData, blurDataURL }) {
   return (
     <>
       <Head>
@@ -27,8 +26,7 @@ export default function Photography({ postData, photos, blurDataURL }) {
           <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </TextWrap>
       </TextBlock>
-      {/* Pass the list of images as the imageList prop */}
-      <FullScreenGallery imageList={photos} />
+      <FullScreenGallery />
       <Footer />
     </>
   );
@@ -43,13 +41,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
-  const allowedFilenames = postData.allowedPhotos || [];
-  const photos = await getFilteredPhotos(params.id, type, allowedFilenames);
-  
   return {
     props: {
       postData,
-      photos,
       blurDataURL: await getBlurData(postData.image)
     },
   };
