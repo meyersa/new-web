@@ -4,19 +4,11 @@ import Footer from "../components/Footer";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import TextWrap from "../components/TextWrap";
 import { getAllPhotos } from "../../lib/photos";
-import ImageSwiper from "../components/ImageSwiper";
 import Head from "next/head";
 import TextBlock from "../components/TextBlock";
 import { getBlurData } from "../../lib/getBlurData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-
-// Dynamic import slide
-import dynamic from 'next/dynamic'
-const DynamicImageSwiper = dynamic(() => import("../components/ImageSwiper") , {
-  loading: () => <FontAwesomeIcon icon={faSpinner} className="fa-spinner" spinPulse />
-
-})
 
 const type = "photography";
 export default function Photography({ postData, photos, blurDataURL }) {
@@ -31,7 +23,6 @@ export default function Photography({ postData, photos, blurDataURL }) {
         <p>{postData.excerpt}</p>
         <p>{postData.date}</p>
       </TitlePage>
-      <DynamicImageSwiper imageList={photos} />
       <TextBlock>
         <TextWrap>
           <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
