@@ -75,7 +75,7 @@ export default function FullScreenGallery() {
       img.addEventListener("click", handleClick);
       return () => img.removeEventListener("click", handleClick);
     });
-  }, [imageList]);
+  }, [imageList, openView]);
 
   return (
     <>
