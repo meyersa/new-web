@@ -1,7 +1,7 @@
 --- 
 title: 'Ireland 2024' 
 excerpt: 'The land of guinness and Game of Thrones'
-image: '/images/photography/ireland-2024/giants-causeway-up-close.jpg'
+image: '/images/photography/ireland-2024/kylemore-abbey.jpg'
 date: '8/11/2024'
 type: 'photography'
 --- 
