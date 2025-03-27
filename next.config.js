@@ -1,3 +1,5 @@
+const isDev = process.env.NODE_ENV === 'development';
+
 module.exports = {
   output: "standalone",
   images: {
@@ -5,6 +7,9 @@ module.exports = {
       {
         hostname: 'github.com',
       },
+      {
+        hostname: 'cdn.meyersa.com',
+      }
     ],
   },
   async redirects() {
@@ -20,4 +25,5 @@ module.exports = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  assetPrefix: isDev ? '' : 'https://cdn.meyersa.com',
 };

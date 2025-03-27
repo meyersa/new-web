@@ -1,0 +1,33 @@
+name: Upload Cache to R2
+
+on:
+  push:
+    branches:
+      - main # This triggers the workflow when changes are pushed to the main branch
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  populate_cache:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Build Next.js app
+      - name: Build Next.js app
+        run: npm run build
+
+      - name: Sync static files to Cloudflare R2
+        run: |
+          aws s3 sync .next/static/ s3://${{ secrets.R2_BUCKET_NAME }}/_next/static \
+            --endpoint-url ${{ secrets.R2_ENDPOINT }} \
+            --checksum-algorithm CRC32
+
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
