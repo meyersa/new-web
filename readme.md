@@ -1,22 +1,42 @@
 # New Portfolio Website 
 
-## Todo
-- Add Winston for logging (inc in app.js)
-- Page for catch all in case of invalid types? (/other/[id].js)
-- Transition social links to fontawesome for smaller ship size 
-- Add better links for project pages, change column design 
-- Add tag for tech on posts? Group that at the top 
-- Move the image to the side? 
+React website to showcase my skills, projects, and hobbies 😊
+
+## Features 
+- React (Next.js) framework for reusability and featureset 
+- CI/CD to build to Docker for deployments 
+- Logging via Pino 
+- Cloudflare CDN for static files 
+- Cloudflare Transformations for images 
+- Full Screen Image galleries 
+- Markdown parsing with Remark/Rehype 
+
+## ENVs
+
+`NODE_ENV` = Environment to run (production/development)
+
+When running development, images will be served locally, whereas on production Cloudflare will be leveraged. 
 
 ## Prod Build 
-A Dockerfile has been provided for production building 
+
+1. Install NPM Packages 
+
+> npm install 
+
+2. Build the production server 
+
+> npm run build 
+
+3. Start the standalone server 
+
+> node run .next/standalone/server.js 
 
 ## Dev Build 
-First install NPM packages 
+1. Install NPM packages 
 
 > npm install
 
-Then run the Next Dev command 
+2. Run the Next Dev environment
 
 > npm run dev
 
