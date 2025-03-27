@@ -1,10 +1,10 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import Script from "next/script";
-import ScrollHelper from "./components/ScrollHelper";
 import { Paytone_One, Outfit } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 config.autoAddCss = false;
 
 // Primary Font
@@ -27,6 +27,22 @@ export const outfit = Outfit({
 });
 
 export default function App({ Component, pageProps }) {
+  
+  /**
+   * Fix for Scrolling to top 
+   * Supposedly disables all scrolling for route changes as it can be buggy
+   */
+  const router = useRouter();
+  useEffect(() => {
+      const handleRouteChange = () => {
+          window.scrollTo(0, 0);
+      };
+      router.events.on('routeChangeComplete', handleRouteChange);
+      return () => {
+          router.events.off('routeChangeComplete', handleRouteChange);
+      };
+  }, [router]);
+
   return (
     <>
       <Head>
