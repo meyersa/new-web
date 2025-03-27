@@ -3,14 +3,22 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   output: "standalone",
   images: {
-    remotePatterns: [
+    remotePatterns: isDev ? 
+    [
+      {
+        hostname: 'github.com',
+      },
+      {
+        hostname: 'localhost',
+      },
+    ] : [
       {
         hostname: 'github.com',
       },
       {
         hostname: 'cdn.meyersa.com',
-      }
-    ],
+      },
+    ]
   },
   async redirects() {
     return [
