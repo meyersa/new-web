@@ -1,5 +1,5 @@
+import ImageLoader from "../ImageLoader";
 import styles from "./imagesplit.module.css";
-import Image from "next/image";
 
 export default function ImageSplit({ image, alt, children }) {
   if (image == null) {
@@ -13,7 +13,7 @@ export default function ImageSplit({ image, alt, children }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.imgWrapper}>
-        <Image src={image} height="100" width="100" alt={alt} />
+        <ImageLoader src={image} height={"100"} width={"100"} quality={50} alt={alt} />
       </div>
       <div className={styles.childrenWrapper}>{children}</div>
     </div>

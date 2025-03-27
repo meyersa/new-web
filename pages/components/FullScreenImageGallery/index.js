@@ -1,9 +1,9 @@
-import Image from "next/image";
 import styles from "./fullscreenimageview.module.css";
 import { useEffect, useState, useCallback } from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
+import ImageLoader from "../ImageLoader";
 
 export default function FullScreenGallery() {
   const [imageList, setImageList] = useState([]);
@@ -131,13 +131,11 @@ export default function FullScreenGallery() {
             </div>
           </div>
           <div className={styles.imageWrapper}>
-            <Image
-              loader={({ src }) => src}
-              unoptimized
+            <ImageLoader
               src={imageList[activeImage].img}
-              width="500"
-              height="500"
               alt={imageList[activeImage].alt}
+              width={"500"}
+              height={"500"}
               priority={true}
             />
           </div>
