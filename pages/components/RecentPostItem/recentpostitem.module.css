@@ -38,7 +38,7 @@
 
 .wrapper img {
   object-fit: cover;
-  width: auto;
+  width: 100%;
   height: 12rem; 
   border-radius: calc(1rem / 2);
   box-shadow: var(--shadow-soft);

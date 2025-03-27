@@ -4,6 +4,7 @@
 
 .wrapper img {
   max-height: 50vh;
+  height: auto;
   width: auto;
   display: block;
   max-width: 100%;
