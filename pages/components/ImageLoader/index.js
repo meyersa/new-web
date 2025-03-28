@@ -28,8 +28,8 @@ export default function ImageLoader({
   ...props
 }) {
   if (!src) {
-    logger.warn({ src }, "Image src is empty, returning null");
     return null;
+    
   }
 
   const isDev = process.env.NODE_ENV === "development";
