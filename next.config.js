@@ -33,5 +33,5 @@ module.exports = {
     locales: ["en"],
     defaultLocale: "en",
   },
-  assetPrefix: isDev ? '' : 'https://cdn.meyersa.com',
+  // assetPrefix: isDev ? '' : 'https://cdn.meyersa.com',
 };
