@@ -25,6 +25,7 @@ export default function ImageLoader({
   priority = false,
   quality = 100,
   blurUrl,
+  ...props
 }) {
   if (!src) {
     logger.warn({ src }, "Image src is empty, returning null");
@@ -53,6 +54,7 @@ export default function ImageLoader({
       placeholder={blurUrl ? "blur" : undefined}
       blurDataURL={blurUrl}
       loader={loader}
+      {...props}
     />
   );
 }
