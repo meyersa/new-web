@@ -1,7 +1,4 @@
 import Image from "next/image";
-import pino from "pino";
-
-const logger = pino({ name: "ImageLoader" });
 
 const DEFAULT_ALT = "No alt text provided";
 const DEFAULT_HEIGHT = 500;
@@ -45,22 +42,6 @@ export default function ImageLoader({
   const loader = useCDN
     ? ({ src }) => `${cdnBase}cdn-cgi/image/format=auto,quality=${quality}/${src.replace(/^\//, "")}`
     : undefined;
-
-  logger.info(
-    {
-      originalSrc: src,
-      finalSrc: loader ? loader({ src }) : src,
-      alt,
-      height,
-      width,
-      priority,
-      quality,
-      isDev,
-      isLocal,
-      useCDN,
-    },
-    "Rendering image"
-  );
 
   return (
     <Image
