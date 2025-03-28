@@ -21,9 +21,11 @@ export default function TitlePage({ header, image, blurDataURL, children }) {
         <ImageLoader
           src={image || defaultImage}
           alt="Background image with blur"
+          height={2000}
+          width={2000}
           priority={true}
           blurUrl={blurDataURL}
-          quality={75}
+          quality={50}
         />
         {children}
         <div className={styles.bottom}>

@@ -13,7 +13,7 @@ export default function ImageSplit({ image, alt, children }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.imgWrapper}>
-        <ImageLoader src={image} height={"100"} width={"100"} quality={50} alt={alt} />
+        <ImageLoader src={image} height={100} width={100} quality={50} alt={alt} />
       </div>
       <div className={styles.childrenWrapper}>{children}</div>
     </div>
