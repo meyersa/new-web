@@ -4,7 +4,7 @@ import Width from "../../../styles/Width.module.css";
 import SocialLinks from "../SocialLinks";
 import Head from "next/head";
 import ScrollHelper from "../ScrollHelper";
-import ImageLoader from "../ImageLoader";
+import Image from "next/image";
 
 export default function TitlePage({ header, image, blurDataURL, children }) {
   if (image == null) {
@@ -18,15 +18,27 @@ export default function TitlePage({ header, image, blurDataURL, children }) {
       </Head>
       <div className={`${styles.wrapper} ${Width.default}`}>
         {header && <h1 className={styles.wrh1}>{header}</h1>}
-        <ImageLoader
-          src={image || defaultImage}
-          alt="Background image with blur"
-          height={2000}
-          width={2000}
-          priority={true}
-          blurUrl={blurDataURL}
-          quality={50}
-        />
+        {blurDataURL ? (
+          <Image
+            src={image || defaultImage}
+            alt="Background image with blur"
+            height={2000}
+            width={2000}
+            priority={true}
+            placeholder="blur"
+            blurDataURL={blurDataURL}
+            quality={50}
+          />
+        ) : (
+          <Image
+            src={image || defaultImage}
+            alt="Background image with blur"
+            height={2000}
+            width={2000}
+            priority={true}
+            quality={50}
+          />
+        )}
         {children}
         <div className={styles.bottom}>
           <SocialLinks />

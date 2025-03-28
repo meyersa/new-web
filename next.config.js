@@ -3,6 +3,8 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   output: "standalone",
   images: {
+    loader: 'custom',
+    loaderFile: './lib/cfLoader.js',
     remotePatterns: isDev ? 
     [
       {

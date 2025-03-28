@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
-import ImageLoader from "../ImageLoader";
+import Image from "next/image";
 
 export default function FullScreenGallery() {
   const [imageList, setImageList] = useState([]);
@@ -131,13 +131,23 @@ export default function FullScreenGallery() {
             </div>
           </div>
           <div className={styles.imageWrapper}>
-            <ImageLoader
+            <Image
               src={imageList[activeImage].img}
-              alt={imageList[activeImage].alt}
-              width={"1000"}
-              height={"1000"}
-              priority={true}
+              alt="Image Glow"
+              height={2000}
+              width={2000}
               quality={75}
+              className={styles.glow}
+              priority
+            />
+            <Image
+              src={imageList[activeImage].img}
+              alt="Image Glow"
+              height={2000}
+              width={2000}
+              quality={75}
+              className={styles.cover}
+              priority
             />
           </div>
           <div className={styles.bottom}>
