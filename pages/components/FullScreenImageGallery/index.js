@@ -134,9 +134,10 @@ export default function FullScreenGallery() {
             <ImageLoader
               src={imageList[activeImage].img}
               alt={imageList[activeImage].alt}
-              width={"500"}
-              height={"500"}
+              width={"1000"}
+              height={"1000"}
               priority={true}
+              quality={75}
             />
           </div>
           <div className={styles.bottom}>

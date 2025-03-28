@@ -18,10 +18,9 @@
 }
 
 .imageWrapper img {
-  margin: var(--small-pad); 
-  width: calc(100% - 2 * var(--small-pad));
-  max-height: calc(60dvh - 2 * var(--small-pad));
-  height: inherit;
+  width: 100%;
+  max-height: calc(60dvh);
+  height: auto;
   box-shadow: var(--shadow-hard);
   
 }
