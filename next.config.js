@@ -4,6 +4,7 @@ module.exports = {
   output: "standalone",
   images: isDev
     ? {
+        qualities: [50, 75],
         remotePatterns: [
           {
             hostname: "github.com",
@@ -14,6 +15,7 @@ module.exports = {
         ],
       }
     : {
+        qualities: [50, 75],
         loader: "custom",
         loaderFile: "./lib/cfLoader.js",
         remotePatterns: [
