@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./header.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Footer from "../Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,9 +8,10 @@ import { faBars, faMagnifyingGlass, faTerminal } from "@fortawesome/free-solid-s
 
 export default function Header() {
   const [menuDisplayed, setDisplayed] = useState(false);
-  const [path, setPath] = useState("/");
 
   const router = useRouter();
+  const splitHomePaths = router.asPath.split("/");
+  const path = splitHomePaths.length > 2 ? `/${splitHomePaths[1]}` : "/";
 
   // Push /login on desktop and open menu on mobile
   function handleButtonClick() {
@@ -45,17 +46,6 @@ export default function Header() {
     setDisplayed(false);
     return;
   }
-
-  /*
-   * Dynamically get home path
-   */
-  useEffect(() => {
-    const splitHomePaths = router.asPath.split("/");
-
-    if (splitHomePaths.length > 2) {
-      setPath(`/${splitHomePaths[1]}`);
-    }
-  }, [router.asPath]);
 
   return (
     <>

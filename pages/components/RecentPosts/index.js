@@ -1,24 +1,11 @@
 import PostItem from "./RecentPostItem";
 import { formatRelative } from "date-fns";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./recentposts.module.css";
 import Shadow from "../../../styles/Shadow.module.css";
 
 export default function RecentPosts({ dir, allPostsData, postsPerPage = null, scrollToTop = true, topButtons = true }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [isPageUpdated, setIsPageUpdated] = useState(true);
-
-  // Only scroll on page reload
-  useEffect(() => {
-    if (isPageUpdated) return;
-
-    setIsPageUpdated(true);
-    if (scrollToTop) {
-      setTimeout(() => {
-        document.getElementById("c")?.scrollIntoView({ behavior: "smooth" });
-      }, 0);
-    }
-  }, [isPageUpdated, scrollToTop]);
 
   /*
    * Basic checks before processing
@@ -50,7 +37,12 @@ export default function RecentPosts({ dir, allPostsData, postsPerPage = null, sc
 
   function handlePageChange(newPage) {
     setCurrentPage(newPage);
-    setIsPageUpdated(false); // Track page updates for reload
+
+    if (scrollToTop) {
+      requestAnimationFrame(() => {
+        document.getElementById("c")?.scrollIntoView({ behavior: "smooth" });
+      });
+    }
   }
 
   return (

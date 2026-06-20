@@ -41,7 +41,7 @@ export default function Home({ allPostsData, blurDataURL }) {
             <p>
               I have always been interested in understanding how things work, challenging assumptions, and finding
               better ways to solve problems. That mindset has taken me from running a server rack in my dorm room while
-              completing my master's degree to working on infrastructure, automation, observability, platform
+              completing my master&apos;s degree to working on infrastructure, automation, observability, platform
               engineering, and architecture initiatives in enterprise environments. I am particularly interested in
               reliability, standardization, and building scalable solutions that make technology easier to operate and
               support. Outside of work, I spend my time on personal technology projects, horticulture, cycling, and
@@ -54,7 +54,7 @@ export default function Home({ allPostsData, blurDataURL }) {
             <h2>Education</h2>
             <DynamicImageSplit image="/images/home/cmu.png" alt="CMU Logo">
               <h3>Master of Science, Central Michigan University</h3>
-              <p>3.91 GPA, Accelerated Master's Program</p>
+              <p>3.91 GPA, Accelerated Master&apos;s Program</p>
             </DynamicImageSplit>
             <DynamicImageSplit image="/images/home/cmu-masters.png" alt="CMU Logo">
               <h3>Bachelor of Science, Central Michigan University</h3>
