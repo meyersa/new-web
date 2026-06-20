@@ -6,7 +6,6 @@ import RecentPosts from "./components/RecentPosts";
 import TextBlock from "./components/TextBlock";
 import Link from "next/link";
 import Head from "next/head";
-import SmallBox from "./components/SmallBox";
 import PageBlock from "./components/PageBlock";
 import { getBlurData } from "../lib/getBlurData";
 
@@ -31,13 +30,6 @@ export default function Projects({ allPostsData, blurDataURL }) {
         <PageBlock>
           <h2>Recent Posts</h2>
           <RecentPosts dir={type} allPostsData={allPostsData} postsPerPage={5} topButtons={false} />
-          <SmallBox>
-            <p>
-              If you are interested in more of what I have worked on, check out my{" "}
-              <Link href="https://github.com/meyersa">github</Link>. There are a lot of other things I haven&apos;t
-              taken the time to write about on there
-            </p>
-          </SmallBox>
         </PageBlock>
       </TextBlock>
       <Footer />

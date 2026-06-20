@@ -1,6 +1,6 @@
 import styles from "./fusesearch.module.css";
 import Fuse from "fuse.js";
-import PostItem from "../RecentPostItem";
+import PostItem from "../RecentPosts/RecentPostItem";
 import { useState } from "react";
 import { formatRelative } from "date-fns";
 

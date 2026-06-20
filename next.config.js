@@ -4,7 +4,8 @@ module.exports = {
   output: "standalone",
   images: isDev
     ? {
-        qualities: [50, 75],
+      dangerouslyAllowLocalIP: true,  
+      qualities: [50, 75],
         remotePatterns: [
           {
             hostname: "github.com",

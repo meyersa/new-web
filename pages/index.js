@@ -2,28 +2,24 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SkillLevel from "./components/SkillLevel";
 import FlexSpaceBetween from "./components/FlexSpaceBetween";
-import SmallBox from "./components/SmallBox";
 import Link from "next/link";
 import { getRecentPosts } from "../lib/posts";
 import RecentPosts from "./components/RecentPosts";
 import Head from "next/head";
 import PageBlock from "./components/PageBlock";
 import TextBlock from "./components/TextBlock";
-import ShowcaseItem from "./components/ShowcaseItem";
 import TitlePage from "./components/TitlePage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 // Dynamic import images that aren't rendered as fast
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 import { getBlurData } from "../lib/getBlurData";
-import Context from "./components/Context";
-const DynamicImageSplit = dynamic(() => import("./components/ImageSplit") , {
-  loading: () => <FontAwesomeIcon icon={faSpinner} className="fa-spinner" spinPulse />
+const DynamicImageSplit = dynamic(() => import("./components/ImageSplit"), {
+  loading: () => <FontAwesomeIcon icon={faSpinner} className="fa-spinner" spinPulse />,
+});
 
-})
-
-const titleImage = "/images/home/selfie.jpeg"
+const titleImage = "/images/home/selfie.jpeg";
 
 export default function Home({ allPostsData, blurDataURL }) {
   return (
@@ -40,151 +36,114 @@ export default function Home({ allPostsData, blurDataURL }) {
       </TitlePage>
       <TextBlock>
         <PageBlock>
-          <Context>
-        <p>
-          Dedicated and developing IT/CPS student. Currently in the process of building experience while working as a
-          student technician and learning in classes towards an accelerated masters in CPS. In my free time, I am always
-          looking for new projects and experiences to further my knowledge in the technical field.
-        </p>
-          </Context>
-          <h2>About Me</h2>
-          <ShowcaseItem>
-            <h3>Education</h3>
-            <DynamicImageSplit image="/images/home/cmu.png" alt="CMU Logo">
-              <h4>Undergrad - Central Michigan University - May 2024</h4>
-              <p>Double major in Information Technology and Computer Science with minor in Math</p>
-              <p>Summa Cum Laude</p>
-              <br />
-              <h4>Graduate - Central Michigan University - Expected May 2025</h4>
-              <p>Accelerated Masters Degree in Computer Science</p>
-            </DynamicImageSplit>
-          </ShowcaseItem>
-          <ShowcaseItem>
-            <h3>Experience</h3>
-            <DynamicImageSplit image="/images/home/comerica.jpg" alt="Comerica bank logo">
-              <h4>Site Reliability Engineer Intern - Comerica Bank - Summer/Fall 2023 and 2024</h4>
-              <p>Standardizing monitoring, transitioning to deployment as code and further automation</p>
-            </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/cmu.png" alt="Central Michigan University logo">
-              <h4>Student Technician - Central Michigan - October 2020 to Present</h4>
-              <p>Supporting faculty and staff on day to day operations as well as helping maintain infrastructure</p>
-            </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/seds.jpg" alt="SEDS USA Logo">
-              <h4>Vice President - SEDS RSO</h4>
-              <p>
-                Creating and leading a student organization to coordinate students across various fields to use applied
-                science to design, fabricate, and test rockets
-              </p>
-            </DynamicImageSplit>
-          </ShowcaseItem>
-          <SmallBox>
+          <div>
+            <h2>TL;DR</h2>
             <p>
-              See <Link href="/projects">/projects</Link> for work I have done outside of enterprise environments. One
-              largescale project was InstitutionPenguin which combined a react native website with CI/CD, API Ready
-              Development, and agile programming.
+              I have always been interested in understanding how things work, challenging assumptions, and finding
+              better ways to solve problems. That mindset has taken me from running a server rack in my dorm room while
+              completing my master's degree to working on infrastructure, automation, observability, platform
+              engineering, and architecture initiatives in enterprise environments. I am particularly interested in
+              reliability, standardization, and building scalable solutions that make technology easier to operate and
+              support. Outside of work, I spend my time on personal technology projects, horticulture, cycling, and
+              reading.
             </p>
-          </SmallBox>
+          </div>
         </PageBlock>
         <PageBlock>
-          <h2>Programming</h2>
           <div>
-            <DynamicImageSplit image="/images/home/python.png" alt="Python logo">
-              <FlexSpaceBetween>
-                <div>
-                  <h3>Python</h3>
-                  <p>
-                    Used extensively with data projects and ML. For example my Paranoia project on GitHub or one of the
-                    other ETL pipelines.
-                  </p>
-                </div>
-                <SkillLevel amount={9}></SkillLevel>
-              </FlexSpaceBetween>
+            <h2>Education</h2>
+            <DynamicImageSplit image="/images/home/cmu.png" alt="CMU Logo">
+              <h3>Master of Science, Central Michigan University</h3>
+              <p>3.91 GPA, Accelerated Master's Program</p>
             </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/js.png" alt="JavaScript logo">
-              <FlexSpaceBetween>
-                <div>
-                  <h3>JS/TS</h3>
-                  <p>Powering this website as well as many others,</p>
-                </div>
-                <SkillLevel amount={9}></SkillLevel>
-              </FlexSpaceBetween>
+            <DynamicImageSplit image="/images/home/cmu-masters.png" alt="CMU Logo">
+              <h3>Bachelor of Science, Central Michigan University</h3>
+              <p>
+                3.98 GPA, Summa Cum Laude, Double major in Information Technology and Computer Science with minor in
+                Math
+              </p>
             </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/react.png" alt="React Logo">
+          </div>
+        </PageBlock>
+        <PageBlock>
+          <div>
+            <h2>Experience</h2>
+            <DynamicImageSplit image="/images/home/auto-owners.jpg" alt="Auto-Owners logo">
+              <h3>Infrastructure Developer, Auto-Owners</h3>
+              <p>
+                Served as a key contributor to enterprise OpenShift platform operations, architecture, and production
+                support, leading the migration of 170+ applications across 10+ engineering teams to a GitOps-based CI/CD
+                platform while driving standardization, governance, and engineering best practices across the
+                organization.
+              </p>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/comerica.jpg" alt="Comerica bank logo">
+              <h3>Site Reliability Engineer Intern, Comerica Bank</h3>
+              <p>
+                Led observability and automation initiatives across 5,000+ servers, standardizing monitoring, logging,
+                and alerting practices while developing API-driven workflows supporting 25,000+ deployment records to
+                improve consistency, reduce operational overhead, and advance enterprise observability modernization.
+              </p>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/cmu.png" alt="Central Michigan University logo">
+              <h3>Student Technician, Central Michigan</h3>
+              <p>
+                Provided technical support for 1,000+ devices and 300+ faculty members, troubleshooting hardware,
+                software, and infrastructure issues while maintaining reliable technology services across campus.
+              </p>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/seds.jpg" alt="SEDS USA Logo">
+              <h3>Vice President, SEDS RSO</h3>
+              <p>
+                Co-founded and led a 20+ member aerospace engineering organization, coordinating multidisciplinary teams
+                to design, build, and test rocket systems while fostering hands-on engineering experience and technical
+                leadership.
+              </p>
+            </DynamicImageSplit>
+          </div>
+        </PageBlock>
+        <PageBlock>
+          <div>
+            <h2>Technology</h2>
+            <DynamicImageSplit image="/images/home/openshift.png" alt="OpenShift logo">
               <FlexSpaceBetween>
                 <div>
-                  <h3>React</h3>
+                  <h3>OpenShift</h3>
                   <p>
-                    Most websites I make now are React native to utilize page generation as well as component
-                    reusability.
+                    Built and operated applications on enterprise OpenShift platforms, supporting production workloads,
+                    application migrations, platform governance, and architecture initiatives. Through participation in
+                    platform steering groups and day-to-day operations, I have developed expertise in Kubernetes-based
+                    platforms, container orchestration, and large-scale application modernization.
                   </p>
                 </div>
                 <SkillLevel amount={7}></SkillLevel>
               </FlexSpaceBetween>
             </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/c.png" alt="C Found. Logo">
-              <FlexSpaceBetween>
-                <div>
-                  <h3>C</h3>
-                  <p>
-                    I&apos;ve worked on a couple projects that utilize Arduino/Pis that have to run lightweight code
-                    where C comes in
-                  </p>
-                </div>
-                <SkillLevel amount={4}></SkillLevel>
-              </FlexSpaceBetween>
-            </DynamicImageSplit>
-          </div>
-          <SmallBox>
-            <p>
-              I have a lot of examples of my coding on my <Link href="https://github.com/meyersa">github</Link>
-            </p>
-          </SmallBox>
-        </PageBlock>
-        <PageBlock>
-          <h2>Technology</h2>
-          <div>
             <DynamicImageSplit image="/images/home/docker.webp" alt="Docker logo">
               <FlexSpaceBetween>
                 <div>
-                  <h3>Docker</h3>
+                  <h3>Containers; Docker, CRI-O, containerd</h3>
                   <p>
-                    Almost every project I work on ends up being deployed and tested in Docker containers for their
-                    reproducibility
+                    Containers fundamentally changed how software is delivered and operated. From running Docker in my
+                    home lab to supporting CRI-O on OpenShift and experimenting with containerd across different
+                    environments, I have worked extensively with containerized workloads, image lifecycle management,
+                    and the technologies that power modern cloud-native platforms.
                   </p>
                 </div>
-                <SkillLevel amount={9}></SkillLevel>
+                <SkillLevel amount={7}></SkillLevel>
               </FlexSpaceBetween>
             </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/kubernetes.png" alt="Kubernetes logo">
+            <DynamicImageSplit image="/images/home/argo.png" alt="Argo logo">
               <FlexSpaceBetween>
                 <div>
-                  <h3>Kubernetes</h3>
+                  <h3>Argo</h3>
                   <p>
-                    Once built with Docker, projects can easily be deployed onto Kubernetes with ArgoCD on my production instances
+                    GitOps quickly became one of my favorite approaches to platform engineering. I have used Argo CD to
+                    manage application deployments, improve configuration consistency, and enable reproducible
+                    infrastructure and application management through declarative workflows.
                   </p>
                 </div>
-                <SkillLevel amount={4}></SkillLevel>
-              </FlexSpaceBetween>
-            </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/dynatrace.png" alt="Dynatrace logo">
-              <FlexSpaceBetween>
-                <div>
-                  <h3>Dynatrace</h3>
-                  <p>
-                    While at Comerica, I worked extensively on Dynatrace deployments with their API and become a sort of
-                    Subject Matter Expert
-                  </p>
-                </div>
-                <SkillLevel amount={9}></SkillLevel>
-              </FlexSpaceBetween>
-            </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/debian.png" alt="Debian logo">
-              <FlexSpaceBetween>
-                <div>
-                  <h3>Linux (Debian)</h3>
-                  <p>My server deployments are exclusively on linux now, with Debian based being the primary distro</p>
-                </div>
-                <SkillLevel amount={9}></SkillLevel>
+                <SkillLevel amount={5}></SkillLevel>
               </FlexSpaceBetween>
             </DynamicImageSplit>
             <DynamicImageSplit image="/images/home/ansible.png" alt="Ansible logo">
@@ -192,20 +151,63 @@ export default function Home({ allPostsData, blurDataURL }) {
                 <div>
                   <h3>Ansible</h3>
                   <p>
-                    Management platform for all cloud and local servers, which I am tempted to manage my own computers
-                    with as well
+                    Ansible has been a core component of both my professional work and personal projects. I use it to
+                    automate server provisioning, configuration management, application deployment, and infrastructure
+                    standardization across Linux and Windows environments.
+                  </p>
+                </div>
+                <SkillLevel amount={9}></SkillLevel>
+              </FlexSpaceBetween>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/terraform.jpg" alt="Terraform logo">
+              <FlexSpaceBetween>
+                <div>
+                  <h3>Terraform</h3>
+                  <p>
+                    Terraform introduced me to managing infrastructure through APIs and code. I have used it to
+                    provision and manage cloud resources, SaaS integrations, and supporting infrastructure while
+                    applying software engineering practices to infrastructure management.
+                  </p>
+                </div>
+                <SkillLevel amount={4}></SkillLevel>
+              </FlexSpaceBetween>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/ubuntu.png" alt="ubuntu logo">
+              <FlexSpaceBetween>
+                <div>
+                  <h3>Linux; RHEL and Ubuntu</h3>
+                  <p>
+                    Linux has been the foundation of nearly every platform I have worked with. Whether supporting
+                    enterprise Red Hat environments, managing Ubuntu systems in my home lab, or deploying containerized
+                    workloads, I am comfortable administering, troubleshooting, and automating Linux-based systems.
+                  </p>
+                </div>
+                <SkillLevel amount={9}></SkillLevel>
+              </FlexSpaceBetween>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/splunk.png" alt="Splunk logo">
+              <FlexSpaceBetween>
+                <div>
+                  <h3>Observability; Splunk, Dynatrace, Instana, Grafana</h3>
+                  <p>
+                    Observability has been a major focus throughout my career. I have designed monitoring and logging
+                    solutions, led observability standardization efforts, and used tools such as Splunk, Dynatrace,
+                    Instana, Grafana, Prometheus, and Loki to improve platform reliability, troubleshooting, and
+                    operational visibility.
                   </p>
                 </div>
                 <SkillLevel amount={8}></SkillLevel>
               </FlexSpaceBetween>
             </DynamicImageSplit>
-            <DynamicImageSplit image="/images/home/adobe.png" alt="Adobe logo">
+            <DynamicImageSplit image="/images/home/tekton.png" alt="Tekton Logo">
               <FlexSpaceBetween>
                 <div>
-                  <h3>Adobe LR/PS</h3>
+                  <h3>CI/CD</h3>
                   <p>
-                    Sort of out of place here, but I have worked a lot on media design in my free time and especially
-                    LightRoom to become the goto photographer for friends and family
+                    Building reliable software delivery platforms has become a major focus of my career. I have worked
+                    extensively with GitOps, Tekton, Argo CD, GitHub Actions, and enterprise OpenShift platforms to
+                    automate application delivery, standardize deployment practices, and enable engineering teams to
+                    move software from development to production efficiently and consistently.
                   </p>
                 </div>
                 <SkillLevel amount={8}></SkillLevel>
@@ -214,14 +216,71 @@ export default function Home({ allPostsData, blurDataURL }) {
           </div>
         </PageBlock>
         <PageBlock>
-          <h2>Recent Posts</h2>
-          <RecentPosts allPostsData={allPostsData} postsPerPage={1} scrollToTop={false} topButtons={false} />
-          <SmallBox>
-            <p>
-              More posts can be found in the respect <Link href="/projects">Projects</Link> and{" "}
-              <Link href="/photography">Photography</Link> directories.
-            </p>
-          </SmallBox>
+          <div>
+            <h2>Programming</h2>
+            <DynamicImageSplit image="/images/home/python.png" alt="Python logo">
+              <FlexSpaceBetween>
+                <div>
+                  <h3>Python</h3>
+                  <p>
+                    Python has been my primary programming language for automation, data engineering, machine learning,
+                    and infrastructure tooling. I have used it to build API integrations, observability workflows, ETL
+                    pipelines, automation utilities, and machine learning systems ranging from personal projects to
+                    enterprise-scale initiatives.
+                  </p>
+                </div>
+                <SkillLevel amount={9}></SkillLevel>
+              </FlexSpaceBetween>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/tensorflow.png" alt="Tensorflow logo">
+              <FlexSpaceBetween>
+                <div>
+                  <h3>Machine Learning; TensorFlow, Keras, Pandas</h3>
+                  <p>
+                    My graduate studies introduced me to large-scale machine learning workflows using TensorFlow, Keras,
+                    and Python. Through projects involving weather prediction and MLOps pipelines, I gained experience
+                    in model training, hyperparameter tuning, data processing, experiment tracking, and
+                    production-oriented machine learning workflows.
+                  </p>
+                </div>
+                <SkillLevel amount={6}></SkillLevel>
+              </FlexSpaceBetween>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/react.png" alt="React Logo">
+              <FlexSpaceBetween>
+                <div>
+                  <h3>React</h3>
+                  <p>
+                    React enables the development of responsive, data-driven web applications with reusable components
+                    and modern development practices. I have used React and Next.js to build personal projects,
+                    dashboards, and web applications while gaining experience with frontend architecture, APIs,
+                    authentication, and state management.
+                  </p>
+                </div>
+                <SkillLevel amount={7}></SkillLevel>
+              </FlexSpaceBetween>
+            </DynamicImageSplit>
+            <DynamicImageSplit image="/images/home/js.png" alt="JavaScript Logo">
+              <FlexSpaceBetween>
+                <div>
+                  <h3>JavaScript and TypeScript</h3>
+                  <p>
+                    While much of my professional work centers on infrastructure and platform engineering, JavaScript
+                    and TypeScript have allowed me to build the applications and tooling that sit on top of those
+                    platforms. From React and Next.js applications to APIs, dashboards, and automation utilities, I have
+                    used them to bridge software development and platform operations.
+                  </p>
+                </div>
+                <SkillLevel amount={8}></SkillLevel>
+              </FlexSpaceBetween>
+            </DynamicImageSplit>
+          </div>
+        </PageBlock>
+        <PageBlock>
+          <div>
+            <h2>Recent Posts</h2>
+            <RecentPosts allPostsData={allPostsData} postsPerPage={1} scrollToTop={false} topButtons={false} />
+          </div>
         </PageBlock>
       </TextBlock>
       <Footer />
@@ -233,7 +292,7 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData: getRecentPosts(),
-      blurDataURL: await getBlurData(titleImage)
+      blurDataURL: await getBlurData(titleImage),
     },
   };
 }

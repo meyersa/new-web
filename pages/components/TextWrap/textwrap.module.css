@@ -36,12 +36,12 @@
 }
 
 .wrapper h2 {
-  margin-top: var(--large-pad);
+  margin-top: var(--med-pad);
 }
 
 .wrapper h3,
 .wrapper h4,
 .wrapper h5,
 .wrapper h6 {
-  margin-top: var(--med-pad);
+  margin-top: var(--small-pad);
 }

@@ -1,4 +1,4 @@
-import PostItem from "../RecentPostItem";
+import PostItem from "./RecentPostItem";
 import { formatRelative } from "date-fns";
 import { useState, useEffect } from "react";
 import styles from "./recentposts.module.css";

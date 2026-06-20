@@ -11,7 +11,7 @@
   --body: #f5f5f5;
   --accent: #5c7285;
   --contrast: #e9724c;
-  --neutral: #cccccc;
+  --neutral: #e4e4e4;
 
   --shadow-soft: 4px 4px 10px rgba(0, 0, 0, 0.1);
   --shadow-hard: 0px 8px 20px rgba(0, 0, 0, 0.4);
@@ -54,7 +54,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-size: var(--small-font);
+  font-size: 120%;
   color: var(--neutral);
   background-color: var(--background);
 }
@@ -86,9 +86,11 @@ h1 {
 
 }
 h2 {
+  font-family: var(--font-paytone);
   font-size: var(--large-font);
   font-weight: bolder;
   color: var(--body);
+  margin: var(--small-pad) 0;
 }
 
 h2::before {
@@ -96,7 +98,6 @@ h2::before {
   color: var(--contrast);
 }
 h3 {
-  font-family: var(--font-paytone);
   font-size: var(--med-font);
   width: fit-content;
   color: var(--body);
@@ -106,9 +107,8 @@ h3 {
 h4,
 h5,
 h6 {
-  font-family: var(--font-paytone);
   color: var(--neutral);
-  font-size: var(--med-font);
+  font-size: var(--small-font);
 }
 
 img {
@@ -133,7 +133,7 @@ a:hover {
 blockquote {
   margin: 1rem;
   padding: 1rem !important;
-  backdrop-filter: contrast(0.8);
+  backdrop-filter: contrast(0.9);
   border-radius: 1rem;
 }
 
@@ -145,8 +145,8 @@ svg {
 pre {
   border-radius: 1rem;
   padding: 1rem !important;
-  backdrop-filter: contrast(0.8);
-  overflow: scroll;
+  backdrop-filter: contrast(0.9);
+  /* overflow: scroll; */
 }
 
 ul ul {

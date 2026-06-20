@@ -12,7 +12,6 @@ import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { faCalendar, faComment, faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { getBlurData } from "../../lib/getBlurData";
-import Context from "../components/Context";
 import PageBlock from "../components/PageBlock";
 
 const type = "projects";
@@ -44,40 +43,35 @@ export default function Projects({ postData, blurDataURL }) {
         </p>
       </TitlePage>
       <TextBlock>
+        {postData.github || postData.demo ? (
+          <div>
+            {postData.github ? (
+              <FASection>
+                <Link href={postData.github}>
+                  <FontAwesomeIcon icon={faGithubAlt} className="fa-solid fa-fw" style={{ color: "var(--contrast)" }} />
+                </Link>
+                <p>
+                  Check out the source code on <Link href={postData.github}>Github</Link>
+                </p>
+              </FASection>
+            ) : null}
+            {postData.demo ? (
+              <FASection>
+                <Link href={postData.demo}>
+                  <FontAwesomeIcon
+                    icon={faExternalLink}
+                    className="fa-solid fa-fw"
+                    style={{ color: "var(--contrast)" }}
+                  />
+                </Link>
+                <p>
+                  Check out the <Link href={postData.demo}>Demo</Link>
+                </p>
+              </FASection>
+            ) : null}
+          </div>
+        ) : null}
         <PageBlock>
-          {postData.github || postData.demo ? (
-            <Context>
-              <h3>Links</h3>
-              {postData.github ? (
-                <FASection>
-                  <Link href={postData.github}>
-                    <FontAwesomeIcon
-                      icon={faGithubAlt}
-                      className="fa-solid fa-fw"
-                      style={{ color: "var(--contrast)" }}
-                    />
-                  </Link>
-                  <p>
-                    Check out the source code on <Link href={postData.github}>Github</Link>
-                  </p>
-                </FASection>
-              ) : null}
-              {postData.demo ? (
-                <FASection>
-                  <Link href={postData.demo}>
-                    <FontAwesomeIcon
-                      icon={faExternalLink}
-                      className="fa-solid fa-fw"
-                      style={{ color: "var(--contrast)" }}
-                    />
-                  </Link>
-                  <p>
-                    Check out the <Link href={postData.demo}>Demo</Link>
-                  </p>
-                </FASection>
-              ) : null}
-            </Context>
-          ) : null}
           <TextWrap>
             <div className="innerHTML" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           </TextWrap>

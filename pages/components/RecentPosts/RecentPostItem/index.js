@@ -13,6 +13,7 @@ export default function PostItem({ dir, id, title, date, excerpt, image }) {
   return (
     <Link href={`${dir}/${id}`} passHref style={{textDecoration: "none", color: "inherit"}}>
       <div className={styles.wrapper} onClick={() => (window.location.href = `${dir}/${id}`)}>
+        
         <div className={styles.text}>
           <h3>{title}</h3>
           <p><FontAwesomeIcon icon={faCalendar} className="fa-solid" /> {date}</p>
