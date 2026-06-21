@@ -82,7 +82,6 @@ h1 {
   font-size: var(--jd-font);
   font-weight: bold;
   background-color: var(--contrast);
-
 }
 h2 {
   font-family: var(--font-paytone);
@@ -100,7 +99,6 @@ h3 {
   font-size: var(--med-font);
   width: fit-content;
   color: var(--body);
-
 }
 
 h4,
@@ -129,23 +127,17 @@ a:hover {
   color: var(--contrast);
 }
 
-blockquote {
-  margin: 1rem;
-  padding: 1rem !important;
-  backdrop-filter: contrast(0.9);
-  border-radius: 1rem;
-}
-
 svg {
   fill: var(--secondary);
   font-size: calc(2.5 * var(--small-font));
 }
 
-pre {
+pre, blockquote {
   border-radius: 1rem;
   padding: 1rem !important;
   backdrop-filter: contrast(0.9);
-  /* overflow: scroll; */
+  overflow-x: auto;
+  scrollbar-gutter: stable;
 }
 
 ul ul {
